@@ -1,23 +1,24 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.11",
-    "tailwindcss": "^4.1.11"
-  },
-  "name": "portfolio-walid",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wal-z1/Portfolio-walid.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wal-z1/Portfolio-walid/issues"
-  },
-  "homepage": "https://github.com/wal-z1/Portfolio-walid#readme"
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.11",
+		"tailwindcss": "^4.1.11"
+	},
+	"name": "portfolio-walid",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wal-z1/Portfolio-walid.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/wal-z1/Portfolio-walid/issues"
+	},
+	"homepage": "https://github.com/wal-z1/Portfolio-walid#readme"
 }
