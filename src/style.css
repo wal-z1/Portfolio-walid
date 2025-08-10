@@ -1,14 +1,14 @@
-/* Base Styles */
+/* Base styles for full page */
 html,
 body {
-	background-color: #09090b;
+	background: #09090b;
 	height: 100%;
 	margin: 0;
 	display: flex;
 	font-family: "Mozilla Headline", sans-serif;
 }
 
-/* Header Layout */
+/* Header bar */
 #head-thing {
 	max-width: 100%;
 	min-width: 100vw;
@@ -21,67 +21,93 @@ body {
 	align-items: center;
 	padding: 0.75rem 0;
 }
-
-/* Typography */
 #title-text {
 	color: #fafafa;
 	font-weight: 700;
-	font-size: 1.875rem;
+	font-size: 1.5rem;
 	margin-left: 5%;
+	text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+	transition: text-shadow 0.3s ease-in-out;
 }
 
-/* Navigation Bar */
+#title-text:hover {
+	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+@keyframes focus-in-expand {
+	0% {
+		letter-spacing: -0.5em;
+		filter: blur(12px);
+		opacity: 0;
+	}
+	100% {
+		filter: blur(0px);
+		opacity: 1;
+	}
+}
+.focus-in-expand-normal {
+	animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
+		normal both;
+}
+
+/* Navigation container */
 #Nav-bar {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 10px;
-	margin-right: 2%;
+	margin-right: 5%;
 	border: 1px solid #616161;
 	border-radius: 10px;
+	width: 30%;
 }
 
-/* Dropdown blur effect */
+/* Blur effect backgrounds */
 .drop-nav,
 .drop {
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(0, 0%, 64%, 0.849);
+	border-bottom: 1px solid hsla(0, 0%, 48%, 0.849);
 }
 
+/* Drop-nav background */
 .drop-nav {
-	background: hsla(0, 0%, 25%, 0.637);
+	background: hsla(0, 1%, 15%, 0.719);
 }
 
+/* Drop background */
 .drop {
 	background: #09090be0;
 }
 
-/* Nav buttons base */
+/*
+======================
+BUTTONS
+
+=====================
+*/
+/* Buttons inside nav */
 #Nav-bar button {
 	all: unset;
 	font-size: 16px;
+	font-weight: 600;
 	color: #f0f0f0;
 	cursor: pointer;
 	position: relative;
 	z-index: 1;
 	padding: 10px 20px;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	white-space: nowrap;
-
-	/* sizing */
 	height: 6px;
 	width: 10%;
-
 	user-select: none;
 	-webkit-user-select: none;
 	touch-action: manipulation;
 }
 
-/* Button pseudo-elements */
+/* Button backgrounds */
 #Nav-bar button::before,
 #Nav-bar button::after {
 	content: "";
@@ -89,28 +115,30 @@ body {
 	bottom: 0;
 	right: 0;
 	z-index: -99999;
-	transition: all 0.4s;
+	transition: all 0.5s;
 }
 
+/* background for the button */
 #Nav-bar button::before {
 	width: 100%;
 	height: 100%;
-	background: #616161;
+	background: hsl(0, 0%, 28%);
 	border-radius: 6px;
 	transform: translate(0, 0);
 }
 
+/* Blur circle overlay */
 #Nav-bar button::after {
-	width: 35px;
-	height: 35px;
-	background: #ffffff15;
+	width: 25px;
+	height: 25px;
+	background: hsla(0, 0%, 69%, 0.082);
 	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
 	border-radius: 30px;
+	filter: opacity(0);
 	transform: translate(10px, 10px);
 }
 
-/* Button hover effects */
+/* Hover states dor the overall button*/
 #Nav-bar button:hover::before {
 	width: 110%;
 	height: 110%;
@@ -122,9 +150,10 @@ body {
 	height: 100%;
 	border-radius: 6px;
 	transform: translate(0, 0);
+	filter: opacity(100%);
 }
 
-/* Button active effect */
+/* Active state to move down */
 #Nav-bar button:active::after {
 	transition: none;
 	transform: translate(0, 5%);
