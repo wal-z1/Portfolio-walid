@@ -8,6 +8,23 @@ body {
 	font-family: "Mozilla Headline", sans-serif;
 	/* REMOVED: display: flex;*/
 }
+/* Blur effect backgrounds */
+.drop-nav,
+.drop {
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
+}
+
+/* Drop-nav background */
+.drop-nav {
+	background: hsla(0, 1%, 15%, 0.514);
+}
+
+/* Drop background */
+.drop {
+	background: #09090bbe;
+}
 
 /* Header bar */
 #head-thing {
@@ -67,24 +84,6 @@ body {
 	/* REMOVED: `width: 30%`. Let the nav size based on its content for better responsiveness. */
 }
 
-/* Blur effect backgrounds */
-.drop-nav,
-.drop {
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(0, 0%, 48%, 0.849);
-}
-
-/* Drop-nav background */
-.drop-nav {
-	background: hsla(0, 1%, 15%, 0.719);
-}
-
-/* Drop background */
-.drop {
-	background: #09090be0;
-}
-
 /*
 	======================
 	BUTTONS
@@ -131,7 +130,7 @@ body {
 #Nav-bar button::before {
 	width: 100%;
 	height: 100%;
-	background: hsl(0, 0%, 28%);
+	background: hsl(0, 0%, 23%);
 	border-radius: 10px;
 }
 
@@ -139,7 +138,7 @@ body {
 #Nav-bar button::after {
 	width: 25px;
 	height: 25px;
-	background: hsla(0, 0%, 69%, 0.082);
+	background: hsla(0, 0%, 61%, 0.082);
 	backdrop-filter: blur(5px);
 	border-radius: 30px;
 	opacity: 0; /* CHANGE: Use opacity directly, not filter. */
