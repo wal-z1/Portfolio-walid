@@ -18,9 +18,11 @@ body {
 	top: 0;
 	min-width: 100vw;
 	padding: 0.75rem 0;
-
 	flex-wrap: wrap;
 	max-height: 10vh;
+	justify-content: space-between; /*centers around the middle*/
+    align-items: center;              /* center on y axis */
+
 }
 
 /* Effects */
@@ -40,7 +42,6 @@ body {
 /* Navigation bar */
 #Nav-bar {
 	display: flex;
+	gap: 1rem;
 	flex-wrap: wrap;
-	align-self: flex-end;
-	align-content: space-around;
 }
