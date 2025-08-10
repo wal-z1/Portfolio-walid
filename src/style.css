@@ -6,6 +6,7 @@ body {
 	height: 100%;
 	margin: 0;
 	display: flex;
+	font-family: "Mozilla Headline", sans-serif;
 }
 
 /* Header styles */
@@ -19,10 +20,9 @@ body {
 	min-width: 100vw;
 	padding: 0.75rem 0;
 	flex-wrap: wrap;
-	max-height: 10vh;
+	max-height: 7vh;
 	justify-content: space-between; /*centers around the middle*/
-    align-items: center;              /* center on y axis */
-
+	align-items: center; /* center on y axis */
 }
 
 /* Effects */
@@ -37,11 +37,16 @@ body {
 	font-family: "Mozilla Headline", sans-serif;
 	font-weight: 700;
 	font-size: 1.875rem;
+	margin-left: 5%;
 }
 
 /* Navigation bar */
 #Nav-bar {
+	padding: 12px;
+	margin-right: 10%;
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
+	border: #fafafa solid 3px;
+	border-radius: 10px;
 }
