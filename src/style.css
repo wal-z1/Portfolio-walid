@@ -17,12 +17,13 @@ body {
 	background-color: #09090b;
 	top: 0;
 	min-width: 100vw;
-	padding: 0.75rem;
+	padding: 0.75rem 0;
+
 	flex-wrap: wrap;
 	max-height: 10vh;
-	justify-content: space-around;
 }
 
+/* Effects */
 .glow-border-bottom-white {
 	border-bottom: 4px solid #fafafa;
 	box-shadow: 0 4px 10px #fafafa;
@@ -36,8 +37,10 @@ body {
 	font-size: 1.875rem;
 }
 
+/* Navigation bar */
 #Nav-bar {
-	display: flex; /* flex */
-	flex-wrap: wrap; /* flex-wrap */
-	align-self: flex-end; /* self-end */
+	display: flex;
+	flex-wrap: wrap;
+	align-self: flex-end;
+	align-content: space-around;
 }
