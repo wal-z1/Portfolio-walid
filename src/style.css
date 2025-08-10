@@ -2,24 +2,28 @@
 html,
 body {
 	background: #09090b;
-	height: 100%;
+	/* CHANGE: Use min-height */
+	min-height: 100vh;
 	margin: 0;
-	display: flex;
 	font-family: "Mozilla Headline", sans-serif;
+	/* REMOVED: display: flex;*/
 }
 
 /* Header bar */
 #head-thing {
-	max-width: 100%;
-	min-width: 100vw;
+	/* CHANGE: Simplified width to 100%. `min-width: 100vw` can cause overflow. */
+	width: 100%;
 	max-height: 7vh;
 	position: sticky;
 	top: 0;
 	display: flex;
-	flex-wrap: wrap;
+	/* We flex-wrap to nowrap. This is stop the nav bar from wrapping to a new line and we ensure it stays horizontally aligned with the title.  */
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.75rem 0;
+	/* ADDED: A z-index is good practice */
+	z-index: 10;
 }
 #title-text {
 	color: #fafafa;
@@ -55,11 +59,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	gap: 10px; 
 	padding: 10px;
 	margin-right: 5%;
 	border: 1px solid #616161;
 	border-radius: 10px;
-	width: 30%;
+	/* REMOVED: `width: 30%`. Let the nav size based on its content for better responsiveness. */
 }
 
 /* Blur effect backgrounds */
@@ -81,30 +86,34 @@ body {
 }
 
 /*
-======================
-BUTTONS
-
-=====================
+	======================
+	BUTTONS
+	=====================
 */
+
 /* Buttons inside nav */
+.btn-icon {
+	margin-right: 8px; /* ADDED: Space between icon and text */
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+}
+
 #Nav-bar button {
 	all: unset;
-	font-size: 16px;
-	font-weight: 600;
+	box-sizing: border-box; /* ADDED: Standard practice when working with padding. */
+	font-size: 1rem; 
+	font-weight: 500;
 	color: #f0f0f0;
 	cursor: pointer;
 	position: relative;
 	z-index: 1;
-	padding: 10px 20px;
+	padding: 10px 15px; /* Adjusted padding slightly */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	white-space: nowrap;
-	height: 6px;
-	width: 10%;
-	user-select: none;
-	-webkit-user-select: none;
 	touch-action: manipulation;
+	/* REMOVED: Fixed height and width. The button now sizes to its content. */
 }
 
 /* Button backgrounds */
@@ -114,7 +123,7 @@ BUTTONS
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	z-index: -99999;
+	z-index: -1;
 	transition: all 0.5s;
 }
 
@@ -124,7 +133,7 @@ BUTTONS
 	height: 100%;
 	background: hsl(0, 0%, 28%);
 	border-radius: 6px;
-	transform: translate(0, 0);
+
 }
 
 /* Blur circle overlay */
@@ -134,11 +143,11 @@ BUTTONS
 	background: hsla(0, 0%, 69%, 0.082);
 	backdrop-filter: blur(5px);
 	border-radius: 30px;
-	filter: opacity(0);
+	opacity: 0; /* CHANGE: Use opacity directly, not filter. */
 	transform: translate(10px, 10px);
 }
 
-/* Hover states dor the overall button*/
+/* Hover states for the overall button */
 #Nav-bar button:hover::before {
 	width: 110%;
 	height: 110%;
@@ -150,7 +159,7 @@ BUTTONS
 	height: 100%;
 	border-radius: 6px;
 	transform: translate(0, 0);
-	filter: opacity(100%);
+	opacity: 1; /* CHANGE: Use opacity directly, not filter. */
 }
 
 /* Active state to move down */
