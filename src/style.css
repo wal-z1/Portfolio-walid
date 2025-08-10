@@ -21,7 +21,7 @@ body {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0.75rem 0;
+	padding: 1rem 0;
 	/* ADDED: A z-index is good practice */
 	z-index: 10;
 }
@@ -60,9 +60,9 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	gap: 10px;
-	padding: 10px;
-	margin-right: 5%;
-	border: 1px solid #616161;
+	padding: 8px;
+	margin-right: 20px;
+	border: 1px solid #4b4a4a;
 	border-radius: 20px;
 	/* REMOVED: `width: 30%`. Let the nav size based on its content for better responsiveness. */
 }
@@ -108,7 +108,7 @@ body {
 	cursor: pointer;
 	position: relative;
 	z-index: 1;
-	padding: 10px 15px; /* Adjusted padding slightly */
+	padding: 8px 12px; /* Adjusted padding slightly */
 	display: flex;
 	align-items: center;
 	justify-content: center;
