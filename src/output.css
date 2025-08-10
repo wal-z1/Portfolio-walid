@@ -10,10 +10,7 @@
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -191,49 +188,17 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .ml-3 {
-    margin-left: calc(var(--spacing) * 3);
-  }
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
-  }
-  .ml-16 {
-    margin-left: calc(var(--spacing) * 16);
-  }
-  .ml-96 {
-    margin-left: calc(var(--spacing) * 96);
   }
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
-  .size-2 {
-    width: calc(var(--spacing) * 2);
-    height: calc(var(--spacing) * 2);
-  }
-  .size-2\/4 {
-    width: calc(2/4 * 100%);
-    height: calc(2/4 * 100%);
-  }
-  .w-screen {
-    width: 100vw;
-  }
-  .max-w-screen {
-    max-width: 100vw;
+  .max-h-\[10vh\] {
+    max-height: 10vh;
   }
   .min-w-screen {
     min-width: 100vw;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-row {
     flex-direction: row;
@@ -241,40 +206,17 @@
   .flex-wrap {
     flex-wrap: wrap;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
+  .justify-around {
+    justify-content: space-around;
   }
-  .border-b-4 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 4px;
-  }
-  .border-\[\#000000\] {
-    border-color: #000000;
-  }
-  .border-\[\#FAFAFA\] {
-    border-color: #FAFAFA;
-  }
-  .border-\[\#FA\] {
-    border-color: #FA;
-  }
-  .border-\[\#fAD\] {
-    border-color: #fAD;
-  }
-  .border-\[\#ff0000\] {
-    border-color: #ff0000;
-  }
-  .border-\[\#ffffff\] {
-    border-color: #ffffff;
+  .self-end {
+    align-self: flex-end;
   }
   .bg-\[\#09090b\] {
     background-color: #09090b;
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
-  }
-  .px-6 {
-    padding-inline: calc(var(--spacing) * 6);
   }
   .font-mozilla {
     font-family: "Mozilla Headline", sans-serif;
@@ -283,50 +225,40 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
   .text-\[\#FAFAFA\] {
     color: #FAFAFA;
   }
-  .underline {
-    text-decoration-line: underline;
+}
+@layer base {
+  html,	body {
+    height: 100%;
   }
-  .shadow-\[0_4px_10px_\#FAFAFA\] {
+  body {
+    font-family: "Mozilla Headline", sans-serif;
+    color: #FAFAFA;
+  }
+}
+@layer utilities {
+  .glow-border-bottom-white {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+    border-color: #FAFAFA;
     --tw-shadow: 0 4px 10px var(--tw-shadow-color, #FAFAFA);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .shadow-\[0_4px_10px_\#ff0000\] {
-    --tw-shadow: 0 4px 10px var(--tw-shadow-color, #ff0000);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .lg\:px-8 {
-    @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 8);
-    }
-  }
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -393,16 +325,11 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -417,7 +344,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
     }
   }
 }
