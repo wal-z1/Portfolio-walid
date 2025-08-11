@@ -1,1 +1,5 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+/* Skip this line to disable Preflight */
+/* @import "tailwindcss/preflight.css"*/
+@import "tailwindcss/utilities.css" layer(utilities);
