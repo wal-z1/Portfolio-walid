@@ -1,3 +1,7 @@
+/* ======================
+   BASE STYLES
+====================== */
+
 /* Base styles for full page */
 html,
 body {
@@ -6,8 +10,13 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	font-family: "Mozilla Headline", sans-serif;
-	/* REMOVED: display: flex;*/
+	/* REMOVED: display: flex; */
 }
+
+/* ======================
+   BACKGROUND EFFECTS
+====================== */
+
 /* Blur effect backgrounds */
 .drop-nav,
 .drop {
@@ -26,6 +35,10 @@ body {
 	background: #09090bbe;
 }
 
+/* ======================
+   HEADER
+====================== */
+
 /* Header bar */
 #head-thing {
 	/* CHANGE: Simplified width to 100%. `min-width: 100vw` can cause overflow. */
@@ -34,7 +47,7 @@ body {
 	position: sticky;
 	top: 0;
 	display: flex;
-	/* We flex-wrap to nowrap. This is stop the nav bar from wrapping to a new line and we ensure it stays horizontally aligned with the title.  */
+	/* We flex-wrap to nowrap. This is stop the nav bar from wrapping to a new line and we ensure it stays horizontally aligned with the title. */
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
@@ -42,6 +55,10 @@ body {
 	/* ADDED: A z-index is good practice */
 	z-index: 10;
 }
+
+/* ======================
+   TITLE TEXT
+====================== */
 #title-text {
 	color: #fafafa;
 	font-weight: 700;
@@ -55,6 +72,9 @@ body {
 	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
+/* ======================
+   TITLE ANIMATIONS
+====================== */
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
@@ -70,6 +90,10 @@ body {
 	animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
 		normal both;
 }
+
+/* ======================
+   NAVIGATION
+====================== */
 
 /* Navigation container */
 #Nav-bar {
@@ -87,7 +111,7 @@ body {
 /*
 	======================
 	BUTTONS
-	=====================
+	======================
 */
 
 /* Buttons inside nav */
