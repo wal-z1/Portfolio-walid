@@ -5,7 +5,7 @@
 		transform: translateY(20px);
 	}
 	5% {
-		opacity: 1;
+		opacity: 0.75;
 		transform: translateY(0);
 	}
 	25% {
@@ -28,7 +28,7 @@
 		transform: translateX(20px);
 	}
 	5% {
-		opacity: 1;
+		opacity: 0.75;
 		transform: translateX(0);
 	}
 	25% {
@@ -46,27 +46,38 @@
 }
 
 .quote {
+	color: hsl(0, 0%, 80%);
 	position: absolute;
 	opacity: 0;
 	font-style: oblique;
 	font-weight: 300;
-  font-size: 1.5em;
+	font-size: 1.3em;
 }
 
-/* Alternate between the two animations so they don't line up exactly */
+/* alternate between the two animations */
 .quote:nth-child(odd) {
-	animation: fadeSlideUp 20s infinite;
+	animation: fadeSlideUp 25s infinite; /* Extended cycle */
 }
 .quote:nth-child(even) {
-	animation: fadeSlideRight 20s infinite;
+	animation: fadeSlideRight 25s infinite; /* Extended cycle */
 }
 
-/* Staggered delays so they never show at the same time */
-.quote:nth-child(1) { animation-delay: 0s; }
-.quote:nth-child(2) { animation-delay: 5s; }
-.quote:nth-child(3) { animation-delay: 10s; }
-.quote:nth-child(4) { animation-delay: 15s; }
-.quote:nth-child(5) { animation-delay: 25s; }
+/* Adjusted delays for proper sequencing */
+.quote:nth-child(1) {
+	animation-delay: 0s;
+}
+.quote:nth-child(2) {
+	animation-delay: 5s;
+}
+.quote:nth-child(3) {
+	animation-delay: 10s;
+}
+.quote:nth-child(4) {
+	animation-delay: 15s;
+}
+.quote:nth-child(5) {
+	animation-delay: 20s;
+} /* Fixed delay */
 
 .quote-box {
 	margin-left: 2em;
