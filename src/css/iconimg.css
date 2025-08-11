@@ -1,32 +1,25 @@
 #imgp {
+	display: inline-block;
 	border-radius: 30px;
 	border: 3px solid #331181;
 	box-shadow: 3px 3px 15px #4919b985;
-	transition: transform 0.2s ease-in-out;
-	animation: scale-up-center 0.4s forwards, pulsate-bck 2s infinite 0.5s; /
+
+	transition: transform 0.3s cubic-bezier(0, 0.98, 0.79, 1.05);
 }
 #imgp:hover {
-	animation-play-state: paused;
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 
+.scale-in-start {
+	animation: scale-up-center 0.4s cubic-bezier(0, 0.78, 0.59, 1.02) forwards;
+}
 @keyframes scale-up-center {
-	0% {
+	from {
 		transform: scale(0.5);
+		opacity: 0;
 	}
-	100% {
+	to {
 		transform: scale(1);
-	}
-}
-
-@keyframes pulsate-bck {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(0.99);
-	}
-	100% {
-		transform: scale(1);
+		opacity: 1;
 	}
 }
