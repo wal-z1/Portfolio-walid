@@ -98,7 +98,7 @@ body {
 /* Navigation container */
 #Nav-bar {
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap; /*they dont wrap anymore*/
 	justify-content: space-around;
 	gap: 10px;
 	padding: 8px;
