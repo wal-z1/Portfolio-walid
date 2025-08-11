@@ -1,6 +1,7 @@
 .image-side {
 	/* dont shrink for the text  */
 	flex-shrink: 0;
+		border-radius: 10px;
 }
 .text-side {
 	/*grow all u want*/

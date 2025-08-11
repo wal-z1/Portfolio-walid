@@ -1,0 +1,32 @@
+#imgp {
+	border-radius: 30px;
+	border: 3px solid #331181;
+	box-shadow: 3px 3px 15px #4919b985;
+	transition: transform 0.2s ease-in-out;
+	animation: scale-up-center 0.4s forwards, pulsate-bck 2s infinite 0.5s; /
+}
+#imgp:hover {
+	animation-play-state: paused;
+	transform: scale(1.2);
+}
+
+@keyframes scale-up-center {
+	0% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes pulsate-bck {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.99);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
