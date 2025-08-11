@@ -52,3 +52,25 @@
 	animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
 		normal both;
 }
+
+/* ======================
+   BACKGROUND EFFECTS
+====================== */
+
+/* Blur effect backgrounds */
+.drop-nav,
+.drop {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(5px);
+	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
+}
+
+/* Drop-nav background */
+.drop-nav {
+	background: hsla(0, 1%, 15%, 0.377);
+}
+
+/* Drop background */
+.drop {
+	background: #09090b8a;
+}

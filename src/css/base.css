@@ -15,7 +15,7 @@ html,
 body {
 	color: #f0f0f0;
 	background-color: #09090b; /* BASE fall back */
-	background-image: url("./assets/gradient.png");
+	background-image: url("../assets/gradient.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
@@ -26,24 +26,3 @@ body {
 	font-family: "Inter", sans-serif; /* default text */
 }
 
-/* ======================
-   BACKGROUND EFFECTS
-====================== */
-
-/* Blur effect backgrounds */
-.drop-nav,
-.drop {
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
-}
-
-/* Drop-nav background */
-.drop-nav {
-	background: hsla(0, 1%, 15%, 0.514);
-}
-
-/* Drop background */
-.drop {
-	background: #09090bbe;
-}

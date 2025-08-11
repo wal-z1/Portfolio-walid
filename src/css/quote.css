@@ -1,0 +1,16 @@
+
+  /* Fade timing */
+  @keyframes fadeInOut {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+
+  /* Stagger each quote */
+  .quote:nth-child(1) { animation-delay: 0s; }
+  .quote:nth-child(2) { animation-delay: 1s; }
+  .quote:nth-child(3) { animation-delay: 2s; }
+  .quote:nth-child(4) { animation-delay: 3s; }
+  .quote:nth-child(5) { animation-delay: 4s; }
