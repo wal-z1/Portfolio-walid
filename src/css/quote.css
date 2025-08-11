@@ -80,6 +80,17 @@
 } /* Fixed delay */
 
 .quote-box {
-	margin-left: 2em;
+	min-height: 3em;
 	position: relative;
+	max-width: 600px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+@media (max-width: 768px) {
+	.quote-box {
+		min-width: 300px;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		min-height: 5em;
+	}
 }

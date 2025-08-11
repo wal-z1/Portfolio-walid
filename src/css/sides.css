@@ -1,0 +1,21 @@
+.image-side {
+	/* dont shrink for the text  */
+	flex-shrink: 0;
+}
+.text-side {
+	/*grow all u want*/
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+@media (max-width: 768px) {
+	.text-side {
+		/*grow all u want*/
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
