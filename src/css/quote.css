@@ -1,22 +1,28 @@
 /* === FADE + SLIDE TIMING === */
 @keyframes fadeSlideUp {
 	0% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateY(20px);
 	}
 	5% {
+		filter: blur(1px);
+
 		opacity: 0.75;
 		transform: translateY(0);
 	}
 	25% {
+		filter: blur(0px);
 		opacity: 1;
 		transform: translateY(0);
 	}
 	30% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateY(-20px);
 	}
 	100% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateY(-20px);
 	}
@@ -24,22 +30,27 @@
 
 @keyframes fadeSlideRight {
 	0% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateX(20px);
 	}
 	5% {
+		filter: blur(1px);
 		opacity: 0.75;
 		transform: translateX(0);
 	}
 	25% {
+		filter: blur(0px);
 		opacity: 1;
 		transform: translateX(0);
 	}
 	30% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateX(-20px);
 	}
 	100% {
+		filter: blur(10px);
 		opacity: 0;
 		transform: translateX(-20px);
 	}
