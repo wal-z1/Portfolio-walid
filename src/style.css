@@ -113,6 +113,15 @@ body {
 	BUTTONS
 	======================
 */
+/* When screen <= 768px → hide text */
+@media (max-width: 768px) {
+	#Nav-bar span {
+		display: none;
+	}
+	#Nav-bar .btn-icon {
+		margin-right: 0; /* Remove empty space */
+	}
+}
 
 /* Buttons inside nav */
 .btn-icon {
