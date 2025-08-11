@@ -1,0 +1,38 @@
+/* ======================
+   HERO SECTION
+====================== */
+
+#here {
+	padding: 5%;
+	display: inline-block;
+}
+
+.hero-content h1 {
+	margin: 0px;
+	font-size: 6em;
+	font-family: "Mozilla Headline", sans-serif;
+	transition: text-shadow 0.3s ease-in-out;
+}
+
+.hero-content h1:hover {
+	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Hero animation */
+@keyframes tracking-in-expand {
+	0% {
+		letter-spacing: 0.5em;
+		opacity: 0;
+	}
+	40% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.tracking-in-expand {
+	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1
+		normal both;
+}
