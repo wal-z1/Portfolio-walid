@@ -13,14 +13,15 @@ accent-purple-vibrant: #a855f7;
 /* Base styles for full page */
 html,
 body {
+	color: #f0f0f0;
 	background-color: #09090b; /*BASE fall back*/
 	background-image: url("./assets/gradient.png");
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
-
 	min-height: 100vh;
+	min-width: 100vw; /*to not be scaled down and scrollable*/
 	margin: 0;
 	font-family: "Inter", sans-serif; /*default text*/
 	/* REMOVED: display: flex; */
@@ -212,4 +213,32 @@ body {
 #Nav-bar button:active::after {
 	transition: none;
 	transform: translate(0, 5%);
+}
+
+/*Hero*/
+@keyframes tracking-in-expand {
+	0% {
+		letter-spacing: 0.5em;
+		opacity: 0;
+	}
+	40% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.tracking-in-expand {
+	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1
+		normal both;
+}
+.hero-content h1 {
+	font-size: 4em;
+	font-family: "Mozilla Headline", sans-serif;
+	transition: text-shadow 0.3s ease-in-out;
+}
+
+.hero-content h1:hover {
+	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
