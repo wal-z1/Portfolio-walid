@@ -233,8 +233,14 @@ body {
 	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1
 		normal both;
 }
+
+#here {
+	padding: 5%;
+	display: inline-block;
+}
 .hero-content h1 {
-	font-size: 4em;
+	margin: 0px;
+	font-size: 6em;
 	font-family: "Mozilla Headline", sans-serif;
 	transition: text-shadow 0.3s ease-in-out;
 }
