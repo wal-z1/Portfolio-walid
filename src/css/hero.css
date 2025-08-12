@@ -8,12 +8,15 @@
 .hero-content {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2em;
 }
-
-
-
-
+@media (max-width: 1084px) {
+	.hero-content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2em;
+	}
+}
 @media (max-width: 768px) {
 	.hero-content {
 		flex-direction: column;
