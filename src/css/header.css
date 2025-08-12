@@ -5,7 +5,6 @@
 /* Header bar */
 #head-thing {
 	width: 100%;
-	max-height: 7vh;
 	position: sticky;
 	top: 0;
 	display: flex;
@@ -15,7 +14,6 @@
 	padding: 1rem 0;
 	z-index: 10;
 }
-
 /* ======================
    TITLE TEXT
 ====================== */
