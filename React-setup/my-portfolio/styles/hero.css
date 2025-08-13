@@ -1,0 +1,81 @@
+/* ======================
+   HERO SECTION
+====================== */ /* Add some overall padding to the section */
+.hero {
+	padding: 2em 4em;
+}
+
+.hero-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+@media (max-width: 1084px) {
+	.hero-content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2em;
+	}
+}
+@media (max-width: 768px) {
+	.hero-content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2em;
+	}
+}
+
+#here {
+	padding: 2em 0;
+	display: inline-block;
+}
+.hero-content h1 {
+	margin: 0px;
+	font-size: 3.5em;
+	font-family: "Mozilla Headline", sans-serif;
+}
+.hero-content h1 span:nth-child(2) {
+	color: hsl(258, 96%, 72%);
+	transition: all 0.6s cubic-bezier(0, 0.67, 0.58, 1);
+	text-shadow: 0 0 10px hsla(258, 96%, 72%, 0);
+}
+
+.hero-content h1 span:nth-child(2):hover {
+	/*brighter color when edge*/
+	color: hsl(258, 100%, 85%);
+
+	text-shadow: 0 0 5px hsla(258, 96%, 72%, 0.8),
+		0 0 15px hsla(258, 96%, 72%, 0.6), 0 0 30px hsla(258, 96%, 72%, 0.4);
+}
+
+/* Hero animation */
+@keyframes tracking-in-expand {
+	0% {
+		letter-spacing: 0.5em;
+		opacity: 0;
+	}
+	40% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.tracking-in-expand {
+	animation: tracking-in-expand 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1
+		normal both;
+}
+
+.blink::after {
+	font-weight: 100;
+	content: "|";
+	animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+	50% {
+		opacity: 0;
+	}
+}

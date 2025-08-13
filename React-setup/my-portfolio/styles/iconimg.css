@@ -1,0 +1,25 @@
+#imgp {
+	display: inline-block;
+	border-radius: 30px;
+	border: 3px solid #331181;
+	box-shadow: 3px 3px 15px #4919b985;
+
+	transition: transform 0.3s cubic-bezier(0, 0.98, 0.79, 1.05);
+}
+#imgp:hover {
+	transform: scale(1.1);
+}
+
+.scale-in-start {
+	animation: scale-up-center 0.4s cubic-bezier(0, 0.78, 0.59, 1.02) forwards;
+}
+@keyframes scale-up-center {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
