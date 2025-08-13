@@ -10,7 +10,7 @@
 	"devDependencies": {},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "npx @tailwindcss/cli -i ./original/tailwind-css/input.css -o ./original/tailwind-css/output.css --watch"
+		"dev": "npx @tailwindcss/cli -i ./tailwind-css/input.css -o ./tailwind-css/output.css --watch"
 	},
 	"repository": {
 		"type": "git",
