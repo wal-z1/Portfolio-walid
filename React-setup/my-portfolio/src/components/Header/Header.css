@@ -1,3 +1,9 @@
+
+
+/* ======================
+   HEADER
+====================== */
+
 /* Header bar */
 #head-thing {
 	width: 100%;
@@ -9,13 +15,10 @@
 	align-items: center;
 	padding: 1rem 0;
 	z-index: 10;
-	background: #09090b8a; /* from .drop */
-	backdrop-filter: blur(10px); /* from .drop */
-	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
 }
-
-/* Title Text */
+/* ======================
+   TITLE TEXT
+====================== */
 #title-text {
 	font-family: "Mozilla Headline", sans-serif;
 	color: #fafafa;
@@ -30,12 +33,9 @@
 	text-shadow: 0 0 10px rgba(255, 255, 255, 1);
 }
 
-/* Title Animation */
-.focus-in-expand-normal {
-	animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
-		normal both;
-}
-
+/* ======================
+   TITLE ANIMATIONS
+====================== */
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
@@ -46,4 +46,25 @@
 		filter: blur(0px);
 		opacity: 1;
 	}
+}
+
+.focus-in-expand-normal {
+	animation: focus-in-expand 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s 1
+		normal both;
+}
+
+/* ======================
+   BACKGROUND EFFECTS
+====================== */
+
+/* Shared blur effect for Header and Nav */
+.drop {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(5px);
+	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
+}
+
+/* Drop background */
+.drop {
+	background: #09090b8a;
 }

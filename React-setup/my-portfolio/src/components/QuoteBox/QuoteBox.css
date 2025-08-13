@@ -1,54 +1,6 @@
-.quote-box {
-	min-height: 3em;
-	position: relative;
-	max-width: 600px;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	padding-bottom: 1em;
-}
 
-.quote {
-	color: hsl(0, 0%, 80%);
-	position: absolute;
-	opacity: 0;
-	font-style: oblique;
-	font-weight: 300;
-	font-size: 1.3em;
-}
 
-/* alternate between the two animations */
-.quote:nth-child(odd) {
-	animation: fadeSlideUp 25s infinite;
-}
-.quote:nth-child(even) {
-	animation: fadeSlideRight 25s infinite;
-}
-
-/* Adjusted delays for proper sequencing */
-.quote:nth-child(1) {
-	animation-delay: 0s;
-}
-.quote:nth-child(2) {
-	animation-delay: 5s;
-}
-.quote:nth-child(3) {
-	animation-delay: 10s;
-}
-.quote:nth-child(4) {
-	animation-delay: 15s;
-}
-.quote:nth-child(5) {
-	animation-delay: 20s;
-}
-
-@media (max-width: 768px) {
-	.quote-box {
-		min-width: 300px;
-		min-height: 5em;
-	}
-}
-
-/* Animations */
+/* === FADE + SLIDE TIMING === */
 @keyframes fadeSlideUp {
 	0% {
 		filter: blur(10px);
@@ -57,6 +9,7 @@
 	}
 	5% {
 		filter: blur(1px);
+
 		opacity: 0.75;
 		transform: translateY(0);
 	}
@@ -102,5 +55,56 @@
 		filter: blur(10px);
 		opacity: 0;
 		transform: translateX(-20px);
+	}
+}
+
+.quote {
+	color: hsl(0, 0%, 80%);
+	position: absolute;
+	opacity: 0;
+	font-style: oblique;
+	font-weight: 300;
+	font-size: 1.3em;
+}
+
+/* alternate between the two animations */
+.quote:nth-child(odd) {
+	animation: fadeSlideUp 25s infinite; /* Extended cycle */
+}
+.quote:nth-child(even) {
+	animation: fadeSlideRight 25s infinite; /* Extended cycle */
+}
+
+/* Adjusted delays for proper sequencing */
+.quote:nth-child(1) {
+	animation-delay: 0s;
+}
+.quote:nth-child(2) {
+	animation-delay: 5s;
+}
+.quote:nth-child(3) {
+	animation-delay: 10s;
+}
+.quote:nth-child(4) {
+	animation-delay: 15s;
+}
+.quote:nth-child(5) {
+	animation-delay: 20s;
+} /* Fixed delay */
+
+.quote-box {
+	min-height: 3em;
+	position: relative;
+	max-width: 600px;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	padding-bottom: 1em;
+}
+@media (max-width: 768px) {
+	.quote-box {
+		min-width: 300px;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		min-height: 5em;
 	}
 }
