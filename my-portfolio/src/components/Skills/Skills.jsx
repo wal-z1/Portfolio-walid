@@ -1,14 +1,41 @@
 import SkillCard from "./Skillcard.jsx";
 {
-	/*comment space */
+	/*ill come and do this section later */
 }
 function Skills() {
 	return (
-		<SkillCard
-			title={"hi"}
-			description={"hiii"}
-			imageUrl={"https://placehold.co/300"}
-		/>
+		<div>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+			<SkillCard
+				title={"hi"}
+				description={"hiii"}
+				imageUrl={"https://placehold.co/300"}
+			/>
+		</div>
 	);
 }
 
