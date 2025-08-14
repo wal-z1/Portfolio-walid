@@ -11,7 +11,7 @@ function App() {
 			<Header />
 			<Hero />
 			<Aboutme />
-			<SkillCard title={"hi"} description={"hiii"} imageUrl={"https://placehold.co/300"}/>
+			
 		</>
 	);
 }

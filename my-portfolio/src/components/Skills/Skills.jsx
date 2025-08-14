@@ -5,9 +5,9 @@ import SkillCard from "./Skillcard.jsx";
 function Skills() {
 	return (
 		<SkillCard
-			title={test}
-			description={Hello}
-			imageUrl={"https://placehold.co/50"}
+			title={"hi"}
+			description={"hiii"}
+			imageUrl={"https://placehold.co/300"}
 		/>
 	);
 }

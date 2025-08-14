@@ -3,12 +3,12 @@ function SkillCard({ title, description, imageUrl }) {
 		<div
 			className=" 
         w-[65%] max-w-md 
-        flex items-center rounded-lg shadow-sm
+        flex items-center rounded-lg shadow-lg 
        
         bg-[rgba(46,28,70,0.1)] backdrop-blur-sm backdrop-saturate-100
 
         border-1 border-[#441570] 
-        shadow-lg shadow-purple-700/20 
+        shadow-purple-700/20 
 
         transition-colors duration-300 
         hover:border-[hsl(271,70%,64%)]
