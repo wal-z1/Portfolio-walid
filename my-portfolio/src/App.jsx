@@ -4,13 +4,14 @@
 import Header from "./components/Header/Header.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 import Aboutme from "./components/About-me/aboutme.jsx";
-
+import SkillCard from "./components/Skills/Skillcard.jsx";
 function App() {
 	return (
 		<>
 			<Header />
 			<Hero />
 			<Aboutme />
+			<SkillCard title={"hi"} description={"hiii"} imageUrl={"https://placehold.co/300"}/>
 		</>
 	);
 }
