@@ -24,7 +24,10 @@ function Hero() {
 						<button className="font-outfit rounded-lg border-2 border-[rgb(33,15,49)] bg-[#501c81] px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition hover:brightness-120 active:brightness-90 cursor-pointer">
 							View My Work
 						</button>
-						<button className="font-outfit rounded-lg border-2 border-[#441570] bg-transparent px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition-colors hover:bg-[#501c81] cursor-pointer">
+						<button
+							className="font-outfit rounded-lg border-2 border-[#441570] bg-transparent px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition-colors hover:bg-[#501c81] cursor-pointer
+
+						">
 							Contact Me
 						</button>
 					</div>

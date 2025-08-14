@@ -1,6 +1,10 @@
 function Aboutme() {
 	return (
-		<div className="flex justify-center items-center  py-8 px-4 sm:px-8 md:px-16">
+		<div
+			className="
+		
+
+		flex justify-center items-center  py-8 px-4 sm:px-8 md:px-16">
 			<div
 				id="text-s"
 				className="
@@ -26,6 +30,8 @@ function Aboutme() {
 				<p
 					className="
 					text-left text-lg leading-relaxed text-slate-300 md:text-xl
+
+		
 				">
 					I am a Computer Science Engineering student at the Higher National
 					School of Computer Science in Algeria. I enjoy working with
