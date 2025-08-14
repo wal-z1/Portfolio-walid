@@ -18,7 +18,6 @@ function Aboutme() {
 				<h1
 					className="
 					 self-center
-					
 					 font-bold text-slate-100 mb-4
 				">
 					About Me
