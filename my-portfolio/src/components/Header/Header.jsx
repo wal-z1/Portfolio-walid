@@ -1,6 +1,6 @@
 import Nav from "../Nav/Nav.jsx";
 import "./Header.css";
-	
+
 function Header() {
 	return (
 		<header id="head-thing" className="drop">
