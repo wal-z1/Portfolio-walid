@@ -28,6 +28,20 @@ body {
 	font-family: "Inter", sans-serif; /* default text */
 }
 
+.scale-in-start {
+	animation: scale-up-center 0.4s cubic-bezier(0, 0.78, 0.59, 1.02) forwards;
+}
+@keyframes scale-up-center {
+	from {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
 /*tailwind setup*/
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap");

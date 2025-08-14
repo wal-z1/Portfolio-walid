@@ -1,5 +1,3 @@
-
-
 /* ======================
    HERO SECTION
 ====================== */
@@ -91,20 +89,6 @@
 }
 #imgp:hover {
 	transform: scale(1.1);
-}
-
-.scale-in-start {
-	animation: scale-up-center 0.4s cubic-bezier(0, 0.78, 0.59, 1.02) forwards;
-}
-@keyframes scale-up-center {
-	from {
-		transform: scale(0.5);
-		opacity: 0;
-	}
-	to {
-		transform: scale(1);
-		opacity: 1;
-	}
 }
 
 .image-side {
