@@ -4,7 +4,7 @@ import SkillCard from "./Skillcard.jsx";
 }
 function Skills() {
 	return (
-		<div className="min-h-auto flex justify-center items-center flex-wrap  gap-4">
+		<div className=" grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
 			<SkillCard
 				title={"hi"}
 				description={"hiii"}
