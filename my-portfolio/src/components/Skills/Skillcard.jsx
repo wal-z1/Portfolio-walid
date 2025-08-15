@@ -5,7 +5,7 @@ function SkillCard({ title, description, imageUrl }) {
 		<div
 			className=" 
 
-        flex items-center rounded-lg shadow-lg 
+        flex items-center rounded-sm shadow-lg 
        
         bg-[rgba(46,28,70,0.1)] backdrop-blur-sm backdrop-saturate-100
 
