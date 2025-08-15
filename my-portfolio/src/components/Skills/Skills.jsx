@@ -93,10 +93,10 @@ function ShuffleInArray(array, amount) {
 	let copy = [...array];
 	for (i = 0; i < amount; i++) {
 		let RNG = random(0, copy.length);
-		result.push(copy.slice(RNG, RNG + 1));
-		copy = copy.splice(RNG, 1);
+		result.push(copy[RNG]);
+		copy.splice(RNG, 1);
 	}
-	return result; //result is the new array with that amount
+	return result;
 }
 console.log(ShuffleInArray(skillsData, 6));
 
