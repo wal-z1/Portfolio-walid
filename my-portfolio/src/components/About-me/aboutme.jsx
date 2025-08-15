@@ -7,17 +7,7 @@ function Aboutme() {
 		flex justify-center items-center  py-8 px-4 sm:px-8 md:px-16">
 			<div
 				id="text-s"
-				className="
-					
-					w-full max-w-4xl flex flex-col items-start rounded-xl
-					p-6 md:p-8
-					
-					bg-[rgba(59,11,65,0.1)] backdrop-blur-sm backdrop-saturate-100
-
-					border-2 border-[#441570]
-					transition-all duration-300 
-					hover:border-[#a855f7] 
-					hover:shadow-2xl hover:shadow-purple-700/20
+				className="w-full max-w-4xl flex flex-col items-start rounded-xl p-6 md:p-8 bg-[rgba(59,11,65,0.1)] backdrop-blur-sm backdrop-saturate-100 border-2 border-[#441570] transition-all duration-300 hover:border-[#a855f7] hover:shadow-2xl hover:shadow-purple-700/20
 				">
 				<h1
 					className="
@@ -30,8 +20,6 @@ function Aboutme() {
 				<p
 					className="
 					text-left text-lg leading-relaxed text-slate-300 md:text-xl
-
-		
 				">
 					I am a Computer Science Engineering student at the Higher National
 					School of Computer Science in Algeria. I enjoy working with

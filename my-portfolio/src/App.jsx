@@ -4,7 +4,7 @@
 import Header from "./components/Header/Header.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 import Aboutme from "./components/About-me/aboutme.jsx";
-import SkillCard from "./components/Skills/Skillcard.jsx";
+import Skills from "./components/Skills/Skills.jsx";
 import BackgroundEle from "./components/BackgroundEle.jsx";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
 			<Header />
 			<Hero />
 			<Aboutme />
+			<Skills />
 		</>
 	);
 }
