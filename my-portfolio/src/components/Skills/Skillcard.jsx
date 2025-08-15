@@ -1,8 +1,10 @@
+// REMOVED: w-[65%] max-w-md. The card is now flexible.
+
 function SkillCard({ title, description, imageUrl }) {
 	return (
 		<div
 			className=" 
-        w-[65%] max-w-md 
+
         flex items-center rounded-lg shadow-lg 
        
         bg-[rgba(46,28,70,0.1)] backdrop-blur-sm backdrop-saturate-100
