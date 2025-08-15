@@ -9,12 +9,6 @@ const skillsData = [
 			"https://img.icons8.com/?size=96&id=40670&format=png&color=ffffff",
 	},
 	{
-		title: "C++",
-		description: "Programming Languages",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=40669&format=png&color=ffffff",
-	},
-	{
 		title: "Python",
 		description: "Programming Languages",
 		imageUrl:
