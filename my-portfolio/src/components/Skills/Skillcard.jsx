@@ -1,5 +1,3 @@
-// REMOVED: w-[65%] max-w-md. The card is now flexible.
-
 function SkillCard({ title, description, imageUrl }) {
 	return (
 		<div
@@ -15,7 +13,7 @@ function SkillCard({ title, description, imageUrl }) {
         transition-colors duration-300 
         hover:border-[hsl(271,70%,64%)]
       ">
-			<div className="p-2 flex-shrink-0">
+			<div className="p-1 flex-shrink-0">
 				<img
 					className="w-16 h-16 object-contain"
 					src={imageUrl}
@@ -23,7 +21,7 @@ function SkillCard({ title, description, imageUrl }) {
 				/>
 			</div>
 
-			<div className="flex flex-col justify-center p-4 leading-normal">
+			<div className="flex flex-col justify-center px-3 leading-normal">
 				<h5 className="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
 					{title}
 				</h5>

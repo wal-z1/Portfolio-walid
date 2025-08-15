@@ -82,7 +82,10 @@ const skillsData = [
 	},
 ];
 // Display function that works
-let RNGlength = Math.floor(Math.random() * skillsData.length);
+// random function
+function random(min, max) {
+	return min + Math.random() * (max - min);
+}
 const randomSkillsArray = [];
 
 function Skills() {
