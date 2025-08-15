@@ -81,6 +81,8 @@ const skillsData = [
 			"https://iconape.com/wp-content/png_logo_vector/microsoft-office-icon-2019.png",
 	},
 ];
+// Display function that works 
+
 
 function Skills() {
 	return (
