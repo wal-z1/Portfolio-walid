@@ -1,6 +1,6 @@
 import SkillCard from "./Skillcard.jsx";
 {
-	/*ill come and do this section later */
+	/*ill need to use a grid for better respo , and show a card based on device */
 }
 function Skills() {
 	return (
