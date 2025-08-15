@@ -81,8 +81,9 @@ const skillsData = [
 			"https://iconape.com/wp-content/png_logo_vector/microsoft-office-icon-2019.png",
 	},
 ];
-// Display function that works 
-
+// Display function that works
+let RNGlength = Math.floor(Math.random() * skillsData.length);
+const randomSkillsArray = [];
 
 function Skills() {
 	return (
