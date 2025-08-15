@@ -86,7 +86,15 @@ const skillsData = [
 function random(min, max) {
 	return min + Math.random() * (max - min);
 }
-const randomSkillsArray = [];
+
+function ShuffleInArray(array, amount) {
+	let RNG = random(0, array.length);
+	let copy = array;
+	for (i = 0; i < amount; i++){
+		
+	}
+		 return result; //result is the new array with that amount
+}
 
 function Skills() {
 	return (
