@@ -98,7 +98,6 @@ function ShuffleInArray(array, amount) {
 	}
 	return result;
 }
-console.log(ShuffleInArray(skillsData, 6));
 
 function Skills() {
 	return (
@@ -117,9 +116,9 @@ function Skills() {
                     bg-[#09090b]/20 border-t-2 border-purple-700/50 
                     shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.svg')]
                 ">
-				{skillsData.map((skill, index) => (
+				{/*ok let's display the shuffled ones first */}
+				{ShuffleInArray(skillsData, 6).map((skill) => (
 					<SkillCard
-						key={index}
 						title={skill.title}
 						description={skill.description}
 						imageUrl={skill.imageUrl}
