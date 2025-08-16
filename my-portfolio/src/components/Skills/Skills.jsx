@@ -1,8 +1,9 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState } from "react";
 import SkillCard from "./Skillcard.jsx";
-import ShowMoreButton from "./ShowMore.jsx";
+import ShowMoreButton from "./ShowMore&less.jsx";
 
-const skillsData = [
+// Constants
+const SKILLS_DATA = [
 	{
 		title: "C",
 		description: "Programming Languages",
@@ -84,51 +85,43 @@ const skillsData = [
 ];
 
 // Utility functions
-function random(min, max) {
+const getRandomNumber = (min, max) => {
 	return Math.floor(min + Math.random() * (max - min));
-}
+};
 
-function ShuffleInArray(array, amount) {
-	let i;
-	let result = [];
-	let copy = [...array];
-	for (i = 0; i < amount; i++) {
+const shuffleArray = (array, amount) => {
+	const result = [];
+	const copy = [...array];
+
+	for (let i = 0; i < amount; i++) {
 		if (copy.length === 0) {
-			console.error("Problem on the SuffleAmount BEING 0");
+			console.error("Problem with shuffle amount being 0");
 			break;
 		}
 
-		let RNG = random(0, copy.length);
-		result.push(copy[RNG]);
-		copy.splice(RNG, 1);
+		const randomIndex = getRandomNumber(0, copy.length);
+		result.push(copy[randomIndex]);
+		copy.splice(randomIndex, 1);
 	}
-	return result;
-}
 
-// Component
-function Skills() {
-	const [ShuffledState, setShuffledSkills] = useState(() =>
-		ShuffleInArray(skillsData, skillsData.length)
+	return result;
+};
+
+// Main component
+const Skills = () => {
+	const [shuffledSkills, setShuffledSkills] = useState(() =>
+		shuffleArray(SKILLS_DATA, SKILLS_DATA.length)
 	);
-	const [VisibleAmount, SetVisibleAmount] = useState(6);
+	const [visibleAmount, setVisibleAmount] = useState(6);
 
 	return (
 		<section>
-			<h1
-				className="
-                    text-center font-bold text-slate-100 font-outfit leading-relaxed
-                    text-4xl md:text-5xl
-                    mb-12
-                ">
+			<h1 className="text-center font-bold text-slate-100 font-outfit leading-relaxed text-4xl md:text-5xl mb-12">
 				Skills
 			</h1>
-			<div
-				className="
-                    px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
-                    bg-[#09090b]/20 border-t-2 border-purple-700/50 
-                    shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]
-                ">
-				{ShuffledState.slice(0, VisibleAmount).map((skill) => (
+
+			<div className="px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#09090b]/20 border-t-2 border-purple-700/50 shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]">
+				{shuffledSkills.slice(0, visibleAmount).map((skill) => (
 					<SkillCard
 						key={skill.title}
 						title={skill.title}
@@ -136,16 +129,16 @@ function Skills() {
 						imageUrl={skill.imageUrl}
 					/>
 				))}
-				<div className="flex justify-center col-span-full ">
+
+				<div className="flex justify-center col-span-full">
 					<ShowMoreButton
-						callback={() => {
-							SetVisibleAmount((prev) => prev + 3);
-						}}
+						text="Show More"
+						callback={() => setVisibleAmount((prev) => prev + 3)}
 					/>
 				</div>
 			</div>
 		</section>
 	);
-}
+};
 
 export default Skills;
