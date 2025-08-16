@@ -10,11 +10,11 @@ import BackgroundEle from "./components/BackgroundEle.jsx";
 function App() {
 	return (
 		<>
-			<BackgroundEle />
 			<Header />
 			<Hero />
 			<Aboutme />
 			<Skills />
+			<BackgroundEle />
 		</>
 	);
 }
