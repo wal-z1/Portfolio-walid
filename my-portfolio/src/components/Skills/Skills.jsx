@@ -1,8 +1,7 @@
+import React, { useState, useEffect, use } from "react";
 import SkillCard from "./Skillcard.jsx";
 import ShowMoreButton from "./ShowMore.jsx";
-import React, { useState, useEffect } from "react";
 
-// Data with corrected and more specific icon URLs.
 const skillsData = [
 	{
 		title: "C",
@@ -83,8 +82,8 @@ const skillsData = [
 			"https://iconape.com/wp-content/png_logo_vector/microsoft-office-icon-2019.png",
 	},
 ];
-// Display function that works
-// random function
+
+// Utility functions
 function random(min, max) {
 	return Math.floor(min + Math.random() * (max - min));
 }
@@ -94,7 +93,6 @@ function ShuffleInArray(array, amount) {
 	let result = [];
 	let copy = [...array];
 	for (i = 0; i < amount; i++) {
-		// A check to prevent errors if amount > array.length
 		if (copy.length === 0) {
 			console.error("Problem on the SuffleAmount BEING 0");
 			break;
@@ -107,13 +105,13 @@ function ShuffleInArray(array, amount) {
 	return result;
 }
 
+// Component
 function Skills() {
-	{
-		/*ok let's save state*/
-	}
 	const [ShuffledState, setShuffledSkills] = useState(() =>
 		ShuffleInArray(skillsData, skillsData.length)
 	);
+	const [VisibleAmount, SetVisibleAmount] = useState(6);
+
 	return (
 		<section>
 			<h1
@@ -130,7 +128,7 @@ function Skills() {
                     bg-[#09090b]/20 border-t-2 border-purple-700/50 
                     shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]
                 ">
-				{ShuffledState.map((skill) => (
+				{ShuffledState.slice(0, VisibleAmount).map((skill) => (
 					<SkillCard
 						key={skill.title}
 						title={skill.title}
@@ -139,7 +137,11 @@ function Skills() {
 					/>
 				))}
 				<div className="flex justify-center col-span-full ">
-					<ShowMoreButton callback={() => {}} />
+					<ShowMoreButton
+						callback={(VisibleAmount) => {
+							SetVisibleAmount(VisibleAmount + 3);
+						}}
+					/>
 				</div>
 			</div>
 		</section>
