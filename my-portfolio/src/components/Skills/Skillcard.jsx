@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SkillCard({ title, description, imageUrl }) {
 	return (
 		<div
@@ -33,5 +35,11 @@ function SkillCard({ title, description, imageUrl }) {
 		</div>
 	);
 }
+
+SkillCard.PropTypes = {
+	title,
+	description,
+	imageUrl: PropTypes.string,
+};
 
 export default SkillCard;
