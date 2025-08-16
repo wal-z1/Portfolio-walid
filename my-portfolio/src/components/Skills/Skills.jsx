@@ -139,11 +139,7 @@ function Skills() {
 					/>
 				))}
 				<div className="flex justify-center col-span-full ">
-					<ShowMoreButton
-						callback={() => {
-							
-						}}
-					/>
+					<ShowMoreButton callback={() => {}} />
 				</div>
 			</div>
 		</section>
