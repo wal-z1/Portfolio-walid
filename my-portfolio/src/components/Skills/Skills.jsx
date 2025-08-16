@@ -138,8 +138,8 @@ function Skills() {
 				))}
 				<div className="flex justify-center col-span-full ">
 					<ShowMoreButton
-						callback={(VisibleAmount) => {
-							SetVisibleAmount(VisibleAmount + 3);
+						callback={() => {
+							SetVisibleAmount((prev) => prev + 3);
 						}}
 					/>
 				</div>
