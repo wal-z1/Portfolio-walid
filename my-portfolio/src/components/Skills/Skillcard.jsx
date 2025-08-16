@@ -41,5 +41,10 @@ SkillCard.PropTypes = {
 	description,
 	imageUrl: PropTypes.string,
 };
-//debugging worth 
+SkillCard.defaultProps = {
+	title: "Untitled",
+	description: "no Description",
+	imageUrl: "ImageURL",
+};
+//debugging worth
 export default SkillCard;
