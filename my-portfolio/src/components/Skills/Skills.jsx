@@ -126,6 +126,7 @@ function Skills() {
 				{/*ok let's display the shuffled ones first */}
 				{ShuffleInArray(skillsData, 6).map((skill) => (
 					<SkillCard
+					key={skill.title}
 						title={skill.title}
 						description={skill.description}
 						imageUrl={skill.imageUrl}
