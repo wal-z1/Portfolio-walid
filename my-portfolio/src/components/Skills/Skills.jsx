@@ -134,7 +134,7 @@ function Skills() {
 					/>
 				))}
 				<div className="flex justify-center col-span-full ">
-					<ShowMoreButton callback={()=>console.log("test")} />
+					<ShowMoreButton callback={()=>/* INSERT THE SHOW MORE FUNCTION */} />
 				</div>
 			</div>
 		</section>
