@@ -125,7 +125,7 @@ function Skills() {
                     shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]
                 ">
 				{/*ok let's display the shuffled ones first */}
-				{ShuffleInArray(skillsData, 6).map((skill) => (
+				{ShuffleInArray(skillsData, skillsData.length).map((skill) => (
 					<SkillCard
 						key={skill.title}
 						title={skill.title}
@@ -134,7 +134,11 @@ function Skills() {
 					/>
 				))}
 				<div className="flex justify-center col-span-full ">
-					<ShowMoreButton callback={()=>/* INSERT THE SHOW MORE FUNCTION */} />
+					<ShowMoreButton
+						callback={() => {
+							/* INSERT THE SHOW MORE FUNCTION */
+						}}
+					/>
 				</div>
 			</div>
 		</section>
