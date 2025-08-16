@@ -36,9 +36,9 @@ function SkillCard({ title, description, imageUrl }) {
 	);
 }
 
-SkillCard.PropTypes = {
-	title,
-	description,
+SkillCard.propTypes = {
+	title: PropTypes.string,
+	description: PropTypes.string,
 	imageUrl: PropTypes.string,
 };
 SkillCard.defaultProps = {

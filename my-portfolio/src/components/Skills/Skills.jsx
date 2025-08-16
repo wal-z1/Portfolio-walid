@@ -1,5 +1,5 @@
 import SkillCard from "./Skillcard.jsx";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Data with corrected and more specific icon URLs.
 const skillsData = [
@@ -93,6 +93,12 @@ function ShuffleInArray(array, amount) {
 	let result = [];
 	let copy = [...array];
 	for (i = 0; i < amount; i++) {
+		// A check to prevent errors if amount > array.length
+		if (copy.length === 0) {
+			console.error("Problem on the SuffleAmount BEING 0");
+			break;
+		}
+
 		let RNG = random(0, copy.length);
 		result.push(copy[RNG]);
 		copy.splice(RNG, 1);
@@ -115,7 +121,7 @@ function Skills() {
 				className="
                     px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8
                     bg-[#09090b]/20 border-t-2 border-purple-700/50 
-                    shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.svg')]
+                    shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]
                 ">
 				{/*ok let's display the shuffled ones first */}
 				{ShuffleInArray(skillsData, 6).map((skill) => (
