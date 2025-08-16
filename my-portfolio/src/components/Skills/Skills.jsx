@@ -132,7 +132,7 @@ const Skills = () => {
 
 				<div className="flex justify-center col-span-full">
 					<ShowMoreButton
-						text="Show More"
+						boolean={true}
 						callback={() => setVisibleAmount((prev) => prev + 3)}
 					/>
 				</div>
