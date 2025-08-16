@@ -56,8 +56,8 @@ body {
 /*MAKE SURE TO USE THIS ON extandable elements*/
 @keyframes tilt-in-fwd-br {
 	0% {
-		transform: rotateY(20deg) rotateX(-35deg) translate(300px, 300px)
-			skew(35deg, -10deg);
+		transform: rotateY(8deg) rotateX(-10deg) translate(15px, 40px)
+			skew(8deg, -3deg);
 		opacity: 0;
 	}
 	100% {

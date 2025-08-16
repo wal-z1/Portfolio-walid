@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SkillCard from "./Skillcard.jsx";
-import ShowMoreButton from "./ShowMore&less.jsx";
+import ShowButton from "./ShowButton.jsx";
 
 // Constants
 const SKILLS_DATA = [
@@ -131,10 +131,17 @@ const Skills = () => {
 				))}
 
 				<div className="flex justify-center col-span-full">
-					<ShowMoreButton
-						boolean={true}
-						callback={() => setVisibleAmount((prev) => prev + 3)}
-					/>
+					{visibleAmount >= shuffledSkills.length ? (
+						<ShowButton
+							boolean={false}
+							callback={() => setVisibleAmount((prev) => (prev = 6))}
+						/>
+					) : (
+						<ShowButton
+							boolean={true}
+							callback={() => setVisibleAmount((prev) => prev + 3)}
+						/>
+					)}
 				</div>
 			</div>
 		</section>

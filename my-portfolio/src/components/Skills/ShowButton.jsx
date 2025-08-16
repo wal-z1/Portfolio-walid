@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-function ShowMoreButton({ boolean, callback }) {
+function ShowButton({ boolean, callback }) {
 	if (boolean === true) {
 		return (
 			<button
@@ -26,9 +26,9 @@ function ShowMoreButton({ boolean, callback }) {
 					src="https://img.icons8.com/?size=100&id=40025&format=png&color=FAFAFA"
 					alt="expand icon"
 				/>
-				<span className="ml-2 ">Show Less</span>
+				<span className="ml-2 ">Collapse</span>
 			</button>
 		);
 	}
 }
-export default ShowMoreButton;
+export default ShowButton;
