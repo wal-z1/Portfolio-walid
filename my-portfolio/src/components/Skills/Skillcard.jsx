@@ -41,5 +41,5 @@ SkillCard.PropTypes = {
 	description,
 	imageUrl: PropTypes.string,
 };
-
+//debugging worth 
 export default SkillCard;
