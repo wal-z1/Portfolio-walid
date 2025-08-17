@@ -3,29 +3,7 @@ import SkillCard from "./Skillcard.jsx";
 import ShowButton from "./ShowButton.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import SKILLS_DATA from "./SkillsData.jsx";
-
-const getRandomNumber = (min, max) => {
-	return Math.floor(min + Math.random() * (max - min));
-};
-
-const shuffleArray = (array, amount) => {
-	const result = [];
-	const copy = [...array];
-
-	for (let i = 0; i < amount; i++) {
-		if (copy.length === 0) break;
-		const randomIndex = getRandomNumber(0, copy.length);
-		result.push(copy[randomIndex]);
-		copy.splice(randomIndex, 1);
-	}
-
-	return result;
-};
-
 const Skills = () => {
-	const [shuffledSkills, setShuffledSkills] = useState(() =>
-		shuffleArray(SKILLS_DATA, SKILLS_DATA.length)
-	);
 	const [visibleAmount, setVisibleAmount] = useState(6);
 
 	return (
@@ -43,7 +21,7 @@ const Skills = () => {
 				transition={{ duration: 0.5, ease: "easeInOut" }}
 				className="px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#09090b]/20 border-t-2 border-purple-700/50 shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]">
 				<AnimatePresence>
-					{shuffledSkills.slice(0, visibleAmount).map((skill) => (
+					{SKILLS_DATA.slice(0, visibleAmount).map((skill) => (
 						<SkillCard
 							key={skill.title}
 							title={skill.title}
@@ -53,7 +31,7 @@ const Skills = () => {
 					))}
 
 					<div className="flex justify-center col-span-full">
-						{visibleAmount >= shuffledSkills.length ? (
+						{visibleAmount >= SKILLS_DATA.length ? (
 							<ShowButton
 								boolean={false}
 								callback={() => setVisibleAmount(6)}
