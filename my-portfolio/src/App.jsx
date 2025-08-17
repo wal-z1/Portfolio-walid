@@ -3,7 +3,7 @@ import Hero from "./components/Hero/Hero.jsx";
 import Aboutme from "./components/About-me/aboutme.jsx";
 import Skills from "./components/Skills/Skills.jsx";
 import BackgroundEle from "./components/BackgroundEle.jsx";
-import Timelinecrad from "./components/Time-line/timelinecard.jsx";
+import Timeline_container from "./components/Time-line/Timeline_container.jsx";
 function App() {
 	return (
 		<>
@@ -12,7 +12,7 @@ function App() {
 			<Hero />
 			<Aboutme />
 			<Skills />
-			<Timelinecrad />
+			<Timeline_container />
 		</>
 	);
 }
