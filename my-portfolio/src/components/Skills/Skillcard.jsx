@@ -7,7 +7,7 @@ function SkillCard({ title, description, imageUrl }) {
 			// The exit animation now moves the card up and fades it out.
 			exit={{ opacity: 0, y: -20 }}
 			// Added a specific "ease" for a smoother feel.
-			transition={{ duration: 0.3, ease: "easeOut" }}
+			transition={{ duration: 0.5, ease: "easeOut" }}
 			className=" 
 				tilt-in-fwd-br
         flex items-center rounded-sm shadow-lg 

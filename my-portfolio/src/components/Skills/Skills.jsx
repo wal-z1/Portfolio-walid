@@ -134,17 +134,21 @@ const Skills = () => {
 							imageUrl={skill.imageUrl}
 						/>
 					))}
+
+					<div className="flex justify-center col-span-full">
+						{visibleAmount >= shuffledSkills.length ? (
+							<ShowButton
+								boolean={false}
+								callback={() => setVisibleAmount(6)}
+							/>
+						) : (
+							<ShowButton
+								boolean={true}
+								callback={() => setVisibleAmount((prev) => prev + 3)}
+							/>
+						)}
+					</div>
 				</AnimatePresence>
-				<div className="flex justify-center col-span-full">
-					{visibleAmount >= shuffledSkills.length ? (
-						<ShowButton boolean={false} callback={() => setVisibleAmount(6)} />
-					) : (
-						<ShowButton
-							boolean={true}
-							callback={() => setVisibleAmount((prev) => prev + 3)}
-						/>
-					)}
-				</div>
 			</motion.div>
 		</section>
 	);
