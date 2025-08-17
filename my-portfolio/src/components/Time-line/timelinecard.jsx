@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 function Timelinecrad({ title, url, text, timetext }) {
 	return (
 		<div className="flex my-2 bg-[rgba(46,28,70,0.1)] border-1 border-[#441570] rounded-xl w-170">
