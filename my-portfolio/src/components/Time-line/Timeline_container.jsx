@@ -7,6 +7,7 @@ function Timeline_container() {
 		<div>
 			{Timeline_DATA.map((event) => (
 				<Timelinecrad
+					title={event.title}
 					key={event.title}
 					category={event.category}
 					text={event.text}
