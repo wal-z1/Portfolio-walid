@@ -30,6 +30,12 @@ const SKILLS_DATA = [
 			"https://img.icons8.com/?size=96&id=21278&format=png&color=ffffff",
 	},
 	{
+		title: "Framer-Motion",
+		description: "An open source animation library for React",
+		imageUrl:
+			"https://user-images.githubusercontent.com/7850794/164965509-2a8dc49e-2ed7-4243-a2c9-481b03bbc31a.png",
+	},
+	{
 		title: "React",
 		description: "Web Technologies",
 		imageUrl:

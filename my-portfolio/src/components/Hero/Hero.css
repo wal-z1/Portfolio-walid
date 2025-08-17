@@ -79,17 +79,6 @@
 		opacity: 0;
 	}
 }
-#imgp {
-	display: inline-block;
-	border-radius: 30px;
-	border: 3px solid #331181;
-	box-shadow: 3px 3px 15px #4919b985;
-
-	transition: transform 0.3s cubic-bezier(0, 0.98, 0.79, 1.05);
-}
-#imgp:hover {
-	transform: scale(1.1);
-}
 
 .image-side {
 	/* dont shrink for the text  */

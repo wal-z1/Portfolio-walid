@@ -1,6 +1,7 @@
 import QuoteBox from "../QuoteBox/QuoteBox.jsx";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import "./Hero.css";
+import { motion } from "framer-motion";
 function Hero() {
 	return (
 		<section className="hero">
@@ -34,8 +35,27 @@ function Hero() {
 
 					<SocialLinks />
 				</div>
-				<div className="image-side scale-in-start">
-					<img id="imgp" src="https://placehold.co/300" alt="Person Picture" />{" "}
+
+				<div className="image-side">
+					<motion.img
+						initial={{ opacity: 0, scale: 0.5 }} /*pop up fade animation */
+						animate={{ opacity: 1, scale: 1 }} /* nothing state */
+						whileHover={{
+							/* jump up and roate and glow*/ scale: 1.1,
+							y: -10,
+							rotate: 1,
+							boxShadow: "0px 10px 30px rgba(168, 85, 247, 0.6)",
+						}}
+						whileTap={{ scale: 0.95, rotate: -1 }} /*when clicked get's small */
+						transition={{
+							type: "spring",
+							stiffness: 300,
+							damping: 15,
+						}} /*bounce animation */
+						className="inline-block rounded-[30px] border-2 border-[#331181] shadow-[3px_3px_15px_rgba(73,25,185,0.53)]"
+						src="https://placehold.co/300"
+						alt="Person Picture"
+					/>
 				</div>
 			</div>
 		</section>
