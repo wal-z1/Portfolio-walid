@@ -122,12 +122,16 @@ const Skills = () => {
 
 			<div className="px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#09090b]/20 border-t-2 border-purple-700/50 shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]">
 				{shuffledSkills.slice(0, visibleAmount).map((skill) => (
-					<SkillCard
-						key={skill.title}
-						title={skill.title}
-						description={skill.description}
-						imageUrl={skill.imageUrl}
-					/>
+					<AnimatePresence>
+						<SkillCard
+							key={skill.title}
+							animate={{ opacity: 1, scale: 1 }}
+							exit={{ opacity: 0, scale: 0 }}
+							title={skill.title}
+							description={skill.description}
+							imageUrl={skill.imageUrl}
+						/>
+					</AnimatePresence>
 				))}
 
 				<div className="flex justify-center col-span-full">
