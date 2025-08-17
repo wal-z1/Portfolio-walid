@@ -16,7 +16,7 @@ function SkillCard({ title, description, imageUrl }) {
 				x: 0,
 				y: 0,
 			}}
-			exit={{ opacity: 0, y: 20 }}
+			exit={{ opacity: 0, scale: 0.95, y: -10 }}
 			transition={{ duration: 0.5, ease: "easeOut" }}
 			className="flex items-center rounded-sm shadow-lg bg-[rgba(46,28,70,0.1)] backdrop-blur-sm backdrop-saturate-100 border-1 border-[#441570] shadow-purple-700/20 transition-colors duration-300 hover:border-[hsl(271,70%,64%)]">
 			<div className="p-1 flex-shrink-0">

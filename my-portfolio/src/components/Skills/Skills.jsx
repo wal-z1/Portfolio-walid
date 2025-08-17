@@ -2,87 +2,7 @@ import React, { useState } from "react";
 import SkillCard from "./Skillcard.jsx";
 import ShowButton from "./ShowButton.jsx";
 import { motion, AnimatePresence } from "framer-motion";
-
-const SKILLS_DATA = [
-	{
-		title: "C",
-		description: "Programming Languages",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=40670&format=png&color=ffffff",
-	},
-	{
-		title: "Python",
-		description: "Programming Languages",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=13441&format=png&color=ffffff",
-	},
-	{
-		title: "JavaScript",
-		description: "Web Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=108784&format=png&color=ffffff",
-	},
-	{
-		title: "HTML",
-		description: "Web Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=20909&format=png&color=ffffff",
-	},
-	{
-		title: "CSS / Tailwind",
-		description: "Web Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=21278&format=png&color=ffffff",
-	},
-	{
-		title: "React",
-		description: "Web Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=NfbyHexzVEDk&format=png&color=ffffff",
-	},
-	{
-		title: "Linux (Kali / Ubuntu)",
-		description: "Tools & Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=17842&format=png&color=ffffff",
-	},
-	{
-		title: "Git / GitHub",
-		description: "Tools & Technologies",
-		imageUrl:
-			"https://img.icons8.com/?size=96&id=20906&format=png&color=ffffff",
-	},
-	{
-		title: "Adobe Premiere Pro",
-		description: "Creative Tools",
-		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/96px-Adobe_Premiere_Pro_CC_icon.svg.png",
-	},
-	{
-		title: "Figma",
-		description: "Creative Tools",
-		imageUrl:
-			"https://static.vecteezy.com/system/resources/previews/065/386/871/non_2x/figma-logo-icon-figma-app-editable-transparent-background-premium-social-media-design-for-digital-download-free-png.png",
-	},
-	{
-		title: "Adobe After Effects",
-		description: "Creative Tools",
-		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/96px-Adobe_After_Effects_CC_icon.svg.png",
-	},
-	{
-		title: "Photoshop",
-		description: "Creative Tools",
-		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/96px-Adobe_Photoshop_CC_icon.svg.png",
-	},
-	{
-		title: "Microsoft Suite",
-		description: "Office Tools (Word, Excel, PowerPoint)",
-		imageUrl:
-			"https://iconape.com/wp-content/png_logo_vector/microsoft-office-icon-2019.png",
-	},
-];
+import SKILLS_DATA from "./SkillsData.jsx";
 
 const getRandomNumber = (min, max) => {
 	return Math.floor(min + Math.random() * (max - min));
@@ -112,7 +32,7 @@ const Skills = () => {
 		<motion.section
 			initial={{ opacity: 0, y: -50 }}
 			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ margin: "-100px" }}
+			viewport={{ once: true, margin: "-100px" }}
 			transition={{ duration: 0.8 }}>
 			<h1 className="text-center font-bold text-slate-100 font-outfit leading-relaxed text-4xl md:text-5xl mb-12">
 				Skills
