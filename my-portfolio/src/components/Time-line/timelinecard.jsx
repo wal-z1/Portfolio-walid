@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Timelinecrad({ category, title, url, text, timetext }) {
 	return (
 		<>
-			<div className="flex my-2 bg-[rgba(46,28,70,0.1)] border-1 border-[#441570] rounded-xl w-170">
+			<div className="flex my-2 bg-[rgba(46,28,70,0.1)] border-1 border-[#441570] rounded-xl w-[25rem] md:w-[35rem]">
 				<img
 					src={
 						url ||

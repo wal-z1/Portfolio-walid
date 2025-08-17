@@ -13,11 +13,9 @@ accent-purple-vibrant: #a855f7;
 
 #root {
 	position: relative;
-	isolation: isolate; /* This creates a new stacking context */
-
-	/* These lines are MOVED from the body rule below */
-	background-image: url("../public/Images/gradient.png"); /* Corrected path for Vite */
-	background-repeat: no-repeat;
+	isolation: isolate;
+	background-image: url("../public/Images/gradient.png");
+	background-repeat: repeat;
 	background-position: center center;
 	background-attachment: fixed;
 	background-size: cover;
@@ -27,12 +25,7 @@ html,
 body {
 	color: #f0f0f0;
 	background-color: #09090b; /* BASE fall back */
-	/* REMOVED */
-	/* background-image: url("../public/Images/gradient.png"); */
-	/* background-repeat: no-repeat; */
-	/* background-position: center center; */
-	/* background-attachment: fixed; */
-	/* background-size: cover; */
+
 	min-height: 100dvh;
 	min-height: 100vh;
 	min-width: 100%;
