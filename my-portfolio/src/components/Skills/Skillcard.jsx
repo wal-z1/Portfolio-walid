@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { motion } from "framer-motion";
 function SkillCard({ title, description, imageUrl }) {
 	return (
 		<div
