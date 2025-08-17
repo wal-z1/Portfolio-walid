@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 function Timelinecrad({ category, title, url, text, timetext }) {
 	return (
 		<>
@@ -25,5 +26,8 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 		</>
 	);
 }
+Timelinecrad.defaultProps = {
+	url: "https://img.icons8.com/?size=100&id=4LZxtKlARvqr&format=png&color=FAFAFA",
+};
 
 export default Timelinecrad;
