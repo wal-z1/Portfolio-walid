@@ -1,27 +1,24 @@
-function timelinecrad() {
+function Timelinecrad() {
 	return (
-		<div class="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
-			<div class="mx-3 mb-0 border-b border-slate-200 pt-3 pb-2 px-1">
-				<span class="text-sm font-medium text-slate-600">
-					MAYBE CHANGE FOR icon
-				</span>
-			</div>
-
-			<div class="p-4">
-				<h5 class="mb-2 text-slate-800 text-xl font-semibold">TITLE</h5>
-				<p class="text-slate-600 leading-normal font-light">
+		<div className=" flex flex-col my-2 bg-[rgba(46,28,70,0.1)] border-1 border-[#441570] rounded-lg w-96">
+			<div className="p-2">
+				{/*add a before element that has the icon image on left */}
+				<h5 className="mb-2 text-slate-100 text-xl font-semibold">TITLE</h5>
+				<p className="text-slate-300 leading-normal font-light">
 					DESC TEXT Lorem ipsum dolor sit amet consectetur, adipisicing elit.
 					Illo, qui, dolorum vel soluta repellendus minima numquam alias impedit
 					neque autem modi, accusantium explicabo! Ad quidem nemo culpa
 					consequuntur maxime commodi.
 				</p>
 			</div>
-			<div class="mx-3 border-t border-slate-200 pb-3 pt-2 px-1">
-				<span class="text-sm text-slate-600 font-medium">
+
+			<div className="mx-3 border-t border-[#441570] pb-3 pt-2 px-1">
+				<span className="text-sm text-[#b190b9] font-medium">
 					Last updated: TIME
 				</span>
 			</div>
 		</div>
 	);
 }
-export default timelinecrad;
+
+export default Timelinecrad;

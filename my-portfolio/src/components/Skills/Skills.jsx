@@ -19,7 +19,7 @@ const Skills = () => {
 			<motion.div
 				layout
 				transition={{ duration: 0.5, ease: "easeInOut" }}
-				className="px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#09090b]/20 border-t-2 border-purple-700/50 shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]">
+				className="px-10 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-[#09090b]/20 border-t-2 border-b-2 border-purple-700/50 shadow-[0_-15px_30px_-10px_rgba(168,85,247,0.2)] bg-[url('/Images/noise.png')]">
 				<AnimatePresence>
 					{SKILLS_DATA.slice(0, visibleAmount).map((skill) => (
 						<SkillCard
