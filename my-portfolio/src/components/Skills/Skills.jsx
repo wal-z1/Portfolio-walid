@@ -109,7 +109,11 @@ const Skills = () => {
 	const [visibleAmount, setVisibleAmount] = useState(6);
 
 	return (
-		<section>
+		<motion.section
+			initial={{ opacity: 0, y: -50 }}
+			whileInView={{ opacity: 1, y: 0 }}
+			viewport={{ margin: "-100px" }}
+			transition={{ duration: 0.8 }}>
 			<h1 className="text-center font-bold text-slate-100 font-outfit leading-relaxed text-4xl md:text-5xl mb-12">
 				Skills
 			</h1>
@@ -143,7 +147,7 @@ const Skills = () => {
 					</div>
 				</AnimatePresence>
 			</motion.div>
-		</section>
+		</motion.section>
 	);
 };
 
