@@ -27,7 +27,7 @@ function SkillCard({ title, description, imageUrl }) {
 				/>
 			</div>
 			<div className="flex flex-col justify-center px-3 leading-normal">
-				<h5 className="mb-1 text-xl font-bold tracking-tight text-white">
+				<h5 className="mb-1 mt-3 text-xl font-bold tracking-tight text-white">
 					{title}
 				</h5>
 				<p className="mt-1 text-sm font-normal text-gray-400">{description}</p>
