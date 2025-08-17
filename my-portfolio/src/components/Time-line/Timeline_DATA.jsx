@@ -5,14 +5,12 @@ const TIMELINE_DATA = [
 		title: "Computer Science Engineering Student",
 		text: "Currently pursuing a degree at the Higher National School of Computer Science (ESI), Algiers.",
 		timetext: "2024 - Present",
-		url: "", // Graduation Cap Icon
 	},
 	{
 		category: "Education",
 		title: "Baccalaureate in Mathematics",
-		text: "Graduated from Nasri Ramdan High School with honors, achieving a score of 18.66/20.",
+		text: "Graduated from Nasri Ramdan High, achieving a score of 18.66/20.",
 		timetext: "July 2024",
-		url: "",
 	},
 	{
 		category: "Professional Experience",

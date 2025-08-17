@@ -6,7 +6,10 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 			<span>{category}</span>
 			<div className="flex my-2 bg-[rgba(46,28,70,0.1)] border-1 border-[#441570] rounded-xl w-170">
 				<img
-					src={url}
+					src={
+						url ||
+						"https://img.icons8.com/?size=100&id=4LZxtKlARvqr&format=png&color=FAFAFA"
+					}
 					className="w-16 h-16 object-contain mt-2 p-3"
 					alt={`icon`}></img>
 				<div className=" flex flex-col ">
@@ -26,8 +29,5 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 		</>
 	);
 }
-Timelinecrad.defaultProps = {
-	url: "https://img.icons8.com/?size=100&id=4LZxtKlARvqr&format=png&color=FAFAFA",
-};
 
 export default Timelinecrad;
