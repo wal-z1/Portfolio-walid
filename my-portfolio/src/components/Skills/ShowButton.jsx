@@ -1,9 +1,12 @@
 import { useCallback } from "react";
+import { motion } from "framer-motion";
 
 function ShowButton({ boolean, callback }) {
 	if (boolean === true) {
 		return (
-			<button
+			<motion.button
+				whileHover={{ scale: 1.1 }}
+				whileTap={{ scale: 0.9 }}
 				className="font-outfit rounded-sm border-1 border-[#441570] bg-transparent px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition-colors hover:bg-[hsl(271,64%,10%)] cursor-pointer 
 						"
 				onClick={callback}>
@@ -13,11 +16,13 @@ function ShowButton({ boolean, callback }) {
 					alt="expand icon"
 				/>
 				<span className="ml-2 ">Show More</span>
-			</button>
+			</motion.button>
 		);
 	} else {
 		return (
-			<button
+			<motion.button
+				whileHover={{ scale: 1.1 }}
+				whileTap={{ scale: 0.9 }}
 				className="font-outfit rounded-sm border-1 border-[#441570] bg-transparent px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition-colors hover:bg-[hsl(271,64%,10%)] cursor-pointer 
 						"
 				onClick={callback}>
@@ -27,7 +32,7 @@ function ShowButton({ boolean, callback }) {
 					alt="expand icon"
 				/>
 				<span className="ml-2 ">Collapse</span>
-			</button>
+			</motion.button>
 		);
 	}
 }

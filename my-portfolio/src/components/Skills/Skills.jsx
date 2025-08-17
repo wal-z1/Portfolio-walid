@@ -3,7 +3,6 @@ import SkillCard from "./Skillcard.jsx";
 import ShowButton from "./ShowButton.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Constants
 const SKILLS_DATA = [
 	{
 		title: "C",
@@ -85,7 +84,6 @@ const SKILLS_DATA = [
 	},
 ];
 
-// Utility functions
 const getRandomNumber = (min, max) => {
 	return Math.floor(min + Math.random() * (max - min));
 };
@@ -95,11 +93,7 @@ const shuffleArray = (array, amount) => {
 	const copy = [...array];
 
 	for (let i = 0; i < amount; i++) {
-		if (copy.length === 0) {
-			console.error("Problem with shuffle amount being 0");
-			break;
-		}
-
+		if (copy.length === 0) break;
 		const randomIndex = getRandomNumber(0, copy.length);
 		result.push(copy[randomIndex]);
 		copy.splice(randomIndex, 1);
@@ -108,7 +102,6 @@ const shuffleArray = (array, amount) => {
 	return result;
 };
 
-// Main component
 const Skills = () => {
 	const [shuffledSkills, setShuffledSkills] = useState(() =>
 		shuffleArray(SKILLS_DATA, SKILLS_DATA.length)
