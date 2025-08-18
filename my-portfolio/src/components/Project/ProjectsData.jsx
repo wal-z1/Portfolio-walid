@@ -13,5 +13,6 @@ export const PROJECTS_DATA = [
 			"My personal portfolio website to showcase my projects, skills, and professional experience.",
 
 		liveUrl: "https://github.com/wal-z1/Portfolio-walid",
+		imageUrl: "/Images/Screenshot-portfolio.png",
 	},
 ];
