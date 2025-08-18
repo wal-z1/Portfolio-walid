@@ -9,8 +9,10 @@ const Skills = () => {
 			initial={{ opacity: 0, y: -40 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true, margin: "-100px" }}
-			transition={{ duration: 0.8 }}>
-			<div className="flex flex-wrap justify-center gap-2 md:gap-3">
+			transition={{ duration: 0.8 }}
+			className="py-8" /* Removed px-1 */
+		>
+			<div className="flex flex-wrap justify-center gap-4"> 
 				{SKILLS_DATA.map((skill) => (
 					<SkillCard
 						key={skill.title}
