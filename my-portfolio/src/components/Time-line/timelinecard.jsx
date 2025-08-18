@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 function Timelinecrad({ category, title, url, text, timetext }) {
 	return (
 		<motion.div
-			initial={{ opacity: 0, x: 50 }}
+			initial={{ opacity: 0, x: 20 }}
 			whileInView={{ opacity: 1, x: 0 }}
-			viewport={{ once: true, amount: 0.3 }}
+			viewport={{ amount: 0.3 }}
 			transition={{ duration: 0.5, ease: "easeOut" }}
 			whileTap={{ scale: 0.97 }}
 			className="
@@ -26,9 +26,7 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 			<div className="flex flex-col flex-grow">
 				<div className="pt-2 px-2">
 					<span className="font-outfit text-gray-400 text-sm">{category}</span>
-					<h5 className="mb-1 text-slate-100 text-xl font-semibold">
-						{title}
-					</h5>
+					<h5 className="mb-1 text-slate-100 text-xl font-semibold">{title}</h5>
 					<p className="text-slate-300 leading-snug font-light text-sm">
 						{text}
 					</p>
