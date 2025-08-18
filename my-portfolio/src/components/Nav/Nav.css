@@ -1,112 +1,75 @@
-
-
 /* ======================
-   NAVIGATION
-====================== */
+    NAVIGATION - REWORKED
+   ====================== */
 
-/* Blur effect applied to Nav specifically */
 .drop-nav {
+	background-color: rgba(18, 16, 28, 0.4);
 	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(0, 0%, 37%, 0.849);
-    background: hsla(0, 1%, 15%, 0.377);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(138, 77, 201, 0.4);
 }
 
-
-/* Navigation container */
 #Nav-bar {
 	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	gap: 10px;
-	padding: 8px;
-	margin-right: 20px;
-	border: 1px solid #4b4a4a;
-	border-radius: 20px;
-}
-
-/* When screen <= 768px → hide text */
-@media (max-width: 768px) {
-	#Nav-bar span {
-		display: none;
-	}
-	#Nav-bar .btn-icon {
-		margin-right: 0;
-	}
-}
-
-/* Buttons inside nav */
-.btn-icon {
-	margin-right: 8px;
-	width: 20px;
-	height: 20px;
-	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	gap: 24px;
+	padding: 12px 24px;
+	border-radius: 9999px;
 }
 
 #Nav-bar button {
 	all: unset;
 	box-sizing: border-box;
+	font-family: Outfit, sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
-	font-family: Outfit, sans-serif;
-	color: #f0f0f0;
-	cursor: pointer;
-	position: relative;
-	z-index: 1;
-	padding: 8px 12px;
+	color: #e0e0e0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	touch-action: manipulation;
+	gap: 8px;
+	cursor: pointer;
+	position: relative;
+	transition: color 0.3s ease;
 }
 
-/* Button backgrounds */
-#Nav-bar button::before,
-#Nav-bar button::after {
+#Nav-bar button:hover {
+	color: #ffffff;
+}
+
+#Nav-bar button span {
+	position: relative;
+}
+
+#Nav-bar button span::after {
 	content: "";
 	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: -1;
-	transition: all 0.5s;
-}
-
-/* background for the button */
-#Nav-bar button::before {
+	bottom: -4px;
+	left: 0;
 	width: 100%;
-	height: 100%;
-	background: hsl(0, 0%, 23%);
-	border-radius: 10px;
+	height: 1.5px;
+	background-color: #ffffff;
+	transform: scaleX(0);
+	transform-origin: center;
+	transition: transform 0.3s ease-out;
 }
 
-/* Blur circle overlay */
-#Nav-bar button::after {
-	width: 25px;
-	height: 25px;
-	background: hsla(0, 0%, 61%, 0.082);
-	backdrop-filter: blur(5px);
-	border-radius: 30px;
-	opacity: 0;
-	transform: translate(10px, 10px);
+#Nav-bar button:hover span::after {
+	transform: scaleX(1);
 }
 
-/* Hover states */
-#Nav-bar button:hover::before {
-	width: 110%;
-	height: 110%;
-	transform: translate(5%, 20%);
+.btn-icon {
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
 }
 
-#Nav-bar button:hover::after {
-	width: 100%;
-	height: 100%;
-	border-radius: 10px;
-	transform: translate(0, 0);
-	opacity: 1;
-}
-
-/* Active state */
-#Nav-bar button:active::after {
-	transition: none;
-	transform: translate(0, 5%);
+@media (max-width: 768px) {
+	#Nav-bar {
+		gap: 40px;
+		padding: 10px 16px;
+	}
+	#Nav-bar span {
+		display: none;
+	}
 }
