@@ -60,7 +60,7 @@ const SKILLS_DATA = [
 		title: "Figma",
 		description: "Creative Tools",
 		imageUrl:
-			"https://static.vecteezy.com/system/resources/previews/065/386/871/non_2x/figma-logo-icon-figma-app-editable-transparent-background-premium-social-media-design-for-digital-download-free-png.png",
+			"https://miro.medium.com/v2/resize:fit:1400/1*6XgfDCVn81AYX68Xvd2I-g@2x.png",
 	},
 	{
 		title: "Adobe Premiere Pro",
