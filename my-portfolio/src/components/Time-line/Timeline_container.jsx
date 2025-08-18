@@ -17,7 +17,7 @@ function Timeline_container() {
 					<div
 						className="
               w-full pb-4 border-l-2 ml-1 pl-8 border-purple-950
-              shadow-[-2px_0px_15px_-5px_rgba(168,85,247,0.15)]
+              
             ">
 						<Timelinecrad
 							title={event.title}
