@@ -10,7 +10,7 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 			transition={{ duration: 0.5, ease: "easeOut" }}
 			whileTap={{ scale: 0.97 }}
 			className="
-                flex my-2 rounded-xl w-[22rem] md:w-[30rem]
+                flex rounded-xl w-full
                 bg-[rgba(46,28,70,0.1)] backdrop-blur-sm backdrop-saturate-100
                 border border-[#441570]
                 transition-colors duration-300 hover:border-[hsl(271,70%,64%)]
@@ -20,7 +20,7 @@ function Timelinecrad({ category, title, url, text, timetext }) {
 					url ||
 					"https://img.icons8.com/?size=100&id=4LZxtKlARvqr&format=png&color=FAFAFA"
 				}
-				className="w-16 h-16 object-contain self-center p-3"
+				className="w-16 h-16 object-contain self-center p-3 flex-shrink-0"
 				alt="icon"
 			/>
 			<div className="flex flex-col flex-grow">

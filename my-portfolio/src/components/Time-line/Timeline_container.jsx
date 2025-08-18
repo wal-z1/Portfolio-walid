@@ -4,21 +4,23 @@ import Timelinecrad from "./timelinecard";
 function Timeline_container() {
 	return (
 		<div>
-			{Timeline_DATA.map((event) => (
-				<div key={event.title} className="flex items-start">
-					<div className="flex flex-col items-center">
+			{Timeline_DATA.map((event, index) => (
+				<div key={event.title} className="flex">
+					<div className="flex flex-col items-center mr-6">
 						<div
 							className="
-                h-4 w-4 flex-shrink-0 rounded-full m-1
+                h-3 w-3 flex-shrink-0 rounded-full
                 bg-purple-500
-                shadow-[0_0_10px_rgba(168,85,247,0.7)]
+                shadow-[0_0_8px_rgba(168,85,247,0.7)]
               "></div>
+						<div className="w-px flex-grow bg-purple-950/50"></div>
 					</div>
+
 					<div
-						className="
-              w-full pb-4 border-l-2 ml-1 pl-8 border-purple-950
-              
-            ">
+						className={`
+                            w-full pb-8
+                            }
+                        `}>
 						<Timelinecrad
 							title={event.title}
 							category={event.category}
