@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 function Timelinecrad({ category, title, url, text, timetext }) {
 	return (
 		<motion.div
-			initial={{ opacity: 0, x: 20 }}
+			initial={{ opacity: 0, x: 10 }}
 			whileInView={{ opacity: 1, x: 0 }}
 			viewport={{ amount: 0.3 }}
 			transition={{ duration: 0.5, ease: "easeOut" }}
