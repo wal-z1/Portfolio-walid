@@ -18,13 +18,14 @@ accent-purple-vibrant: #a855f7;
 	background-repeat: repeat;
 	background-position: center center;
 	background-attachment: fixed;
+	overflow-x: hidden;
 }
 
 html,
 body {
 	color: #f0f0f0;
 	background-color: #09090b; /* BASE fall back */
-
+	overflow-x: hidden;
 	min-height: 100dvh;
 	min-height: 100vh;
 	min-width: 100%;
