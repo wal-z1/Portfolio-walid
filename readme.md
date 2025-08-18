@@ -1,4 +1,4 @@
-# <span style="color: #a855f7">Portfolio</span> Under Development
+# <span style="color: #a855f7">Portfolio</span>
 
 ## <span style="color: #fafafa">Check it out...</span>
 
