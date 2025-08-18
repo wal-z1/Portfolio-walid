@@ -18,13 +18,14 @@
 	border-radius: 9999px;
 }
 
-#Nav-bar button {
-	all: unset;
-	box-sizing: border-box;
+#Nav-bar a {
+
+	text-decoration: none;
+	color: #e0e0e0;
+
 	font-family: Outfit, sans-serif;
 	font-size: 1rem;
 	font-weight: 500;
-	color: #e0e0e0;
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -33,16 +34,16 @@
 	transition: color 0.3s ease;
 }
 
-#Nav-bar button:hover {
+#Nav-bar a:hover {
 	color: #ffffff;
 }
 
-#Nav-bar button span {
+#Nav-bar a span {
 	position: relative;
 }
 
-#Nav-bar button span::after {
-	content: "";
+#Nav-bar a span::after {
+	content: '';
 	position: absolute;
 	bottom: -4px;
 	left: 0;
@@ -54,7 +55,7 @@
 	transition: transform 0.3s ease-out;
 }
 
-#Nav-bar button:hover span::after {
+#Nav-bar a:hover span::after {
 	transform: scaleX(1);
 }
 
@@ -66,7 +67,7 @@
 
 @media (max-width: 768px) {
 	#Nav-bar {
-		gap: 40px;
+		gap: 16px;
 		padding: 10px 16px;
 	}
 	#Nav-bar span {
