@@ -12,7 +12,7 @@ const Skills = () => {
 			transition={{ duration: 0.8 }}
 			className="py-8" /* Removed px-1 */
 		>
-			<div className="flex flex-wrap justify-center gap-4"> 
+			<div className="flex flex-wrap justify-center md:gap-2 gap-0">
 				{SKILLS_DATA.map((skill) => (
 					<SkillCard
 						key={skill.title}

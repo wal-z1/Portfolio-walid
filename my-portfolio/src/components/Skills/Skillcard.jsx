@@ -19,7 +19,7 @@ function SkillCard({ title, description, imageUrl }) {
             ">
 			<div className="mb-1">
 				<img
-					className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
+					className="w-10 h-10 sm:w-14 sm:h-14 object-contain"
 					src={imageUrl}
 					alt={`${title} icon`}
 				/>

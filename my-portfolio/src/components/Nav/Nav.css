@@ -16,10 +16,10 @@
 	gap: 24px;
 	padding: 12px 24px;
 	border-radius: 9999px;
+	margin-right: 10px;
 }
 
 #Nav-bar a {
-
 	text-decoration: none;
 	color: #e0e0e0;
 
@@ -43,7 +43,7 @@
 }
 
 #Nav-bar a span::after {
-	content: '';
+	content: "";
 	position: absolute;
 	bottom: -4px;
 	left: 0;
