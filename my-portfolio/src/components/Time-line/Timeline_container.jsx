@@ -4,6 +4,9 @@ import Timelinecrad from "./timelinecard";
 function Timeline_container() {
 	return (
 		<div className="py-12">
+			<h1 className="text-center font-bold text-slate-100 font-outfit leading-relaxed text-4xl md:text-5xl mb-12">
+				Timeline
+			</h1>
 			{Timeline_DATA.map((event) => (
 				<div key={event.title} className="flex items-start">
 					<div className="flex flex-col items-center">
