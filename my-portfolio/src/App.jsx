@@ -5,10 +5,13 @@ import BackgroundEle from "./components/BackgroundEle.jsx";
 import Two_Grid from "./components/Two_Grid/Two_Grid.jsx";
 import ProjectsContainer from "./components/Project/ProjectContainer.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
 	return (
 		<>
+			<Analytics />
+
 			<BackgroundEle />
 			<Header />
 			<Hero />
