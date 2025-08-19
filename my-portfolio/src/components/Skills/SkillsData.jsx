@@ -50,7 +50,7 @@ const SKILLS_DATA = [
 			"https://img.icons8.com/?size=96&id=20906&format=png&color=ffffff",
 	},
 	{
-		title: "Linux (Kali / Ubuntu)",
+		title: "Linux (Ubuntu)",
 		description: "Tools & Technologies",
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=17842&format=png&color=ffffff",
