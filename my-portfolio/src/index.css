@@ -12,7 +12,7 @@ accent-purple-vibrant: #a855f7;
 /* Base styles for full page */
 
 #root {
-	overflow-x: hidden;
+	overflow-x: clip;
 	position: relative;
 	isolation: isolate;
 	background-image: url("../public/Images/gradient.png");
