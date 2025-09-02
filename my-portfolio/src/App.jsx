@@ -24,8 +24,8 @@ function App() {
 			</section>
 			<footer id="contact">
 				<Footer />
+				<Analytics />
 			</footer>
-			<Analytics />
 		</>
 	);
 }
