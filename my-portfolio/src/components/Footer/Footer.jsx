@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { formatRelative } from "date-fns";
 import SocialLinks from "../SocialLinks/SocialLinks";
-
+//hello
 function Footer() {
 	const [commitDate, setCommitDate] = useState("Loading...");
 
