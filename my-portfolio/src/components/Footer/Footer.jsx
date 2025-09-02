@@ -1,8 +1,27 @@
+import { useEffect, useState } from "react";
+import { formatRelative } from "date-fns";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 function Footer() {
-	// The last update date
-	const lastUpdate = "8/18/2025";
+	const [commitDate, setCommitDate] = useState("Loading...");
+
+	async function fetchCommits() {
+		try {
+			const res = await fetch(
+				"https://api.github.com/repos/wal-z1/Portfolio-walid/commits"
+			);
+			const data = await res.json();
+			const latestDate = data[0].commit.author.date;
+			setCommitDate(formatRelative(new Date(latestDate), new Date()));
+		} catch (err) {
+			console.error(err);
+			setCommitDate("Error Fetching Data");
+		}
+	}
+
+	useEffect(() => {
+		fetchCommits();
+	}, []);
 
 	return (
 		<footer className="bg-[#100E17] text-gray-400 py-8">
@@ -29,7 +48,9 @@ function Footer() {
 				</div>
 
 				<div className="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2">
-					<p className="text-xs text-gray-500">Walid Bouneika © {lastUpdate}</p>
+					<p className="text-xs text-gray-500">
+						Walid Bouhenika © Last updated {commitDate}
+					</p>
 					<p className="text-xs text-gray-500">
 						Built with React, Framer-motion, and Tailwind CSS.
 					</p>
