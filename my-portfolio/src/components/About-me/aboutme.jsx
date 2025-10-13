@@ -21,14 +21,13 @@ function Aboutme() {
 
 				<p
 					className="
-					text-left text-lg leading-relaxed text-slate-300 md:text-xl
+					 text-lg leading-relaxed text-slate-300 md:text-xl text-center
 				">
 					I am a Computer Science Engineering student at the Higher National
 					School of Computer Science in Algeria. I enjoy working with
-					technology, finding innovative methods to solve problems, and making
-					sure what I created really works. Personally, I like to do things
-					correctly, enjoy keeping things clean, and appreciate whatever I am
-					doing.
+					technology, turning ideas into something real, and watching them take
+					shape. I focus on doing things well, keeping them simple, and always
+					choosing quality over quantity.
 				</p>
 			</motion.div>
 		</div>
