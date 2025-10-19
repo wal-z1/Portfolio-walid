@@ -80,13 +80,6 @@ const SKILLS_DATA = [
 		imageUrl:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/96px-Adobe_Photoshop_CC_icon.svg.png",
 	},
-
-	{
-		title: "Microsoft Suite",
-		description: "Office Tools (Word, Excel, PowerPoint)",
-		imageUrl:
-			"https://iconape.com/wp-content/png_logo_vector/microsoft-office-icon-2019.png",
-	},
 ];
 
 export default SKILLS_DATA;
