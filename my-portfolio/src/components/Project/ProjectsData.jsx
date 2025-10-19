@@ -1,4 +1,11 @@
 export const PROJECTS_DATA = [
+		{
+		title: "Sand",
+		description:
+			"A social platform named Sand, focused on clean design and simplicity.\nThe Frontend is mostly built however no backend integration YET!",
+		liveUrl: "https://github.com/wal-z1/Sand",
+		imageUrl: "/Images/SANDUncompletedScreen.png",
+	},
 	{
 		title: "Book Tracker",
 		description:
@@ -20,11 +27,5 @@ export const PROJECTS_DATA = [
 		liveUrl: "https://github.com/wal-z1/Portfolio-walid",
 		imageUrl: "/Images/Screenshot-portfolio.png",
 	},
-	{
-		title: "Sand",
-		description:
-			"A social platform named Sand, focused on clean design and simplicity.The Frontend is mostly built however no backend integration YET...",
-		liveUrl: "https://github.com/wal-z1/Sand",
-		imageUrl: "/Images/SANDUncompletedScreen.png",
-	},
+
 ];
