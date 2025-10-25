@@ -24,6 +24,12 @@ const SKILLS_DATA = [
 			"https://img.icons8.com/?size=96&id=21278&format=png&color=ffffff",
 	},
 	{
+		title: "FastAPI",
+		description: "Web Technologies",
+		imageUrl:
+			"https://avatars.githubusercontent.com/u/156354296?s=280&v=4",
+	},
+	{
 		title: "HTML",
 		description: "Web Technologies",
 		imageUrl:
