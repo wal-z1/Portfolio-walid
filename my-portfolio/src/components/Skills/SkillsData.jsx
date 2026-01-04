@@ -5,6 +5,12 @@ const SKILLS_DATA = [
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=NfbyHexzVEDk&format=png&color=ffffff",
 	},
+{
+		title: "FastAPI",
+		description: "Web Technologies",
+		imageUrl:
+			"https://avatars.githubusercontent.com/u/156354296?s=280&v=4",
+	},
 	{
 		title: "Framer-Motion",
 		description: "An open source animation library for React",
@@ -50,7 +56,7 @@ const SKILLS_DATA = [
 			"https://img.icons8.com/?size=96&id=20906&format=png&color=ffffff",
 	},
 	{
-		title: "Linux (Ubuntu)",
+		title: "Linux",
 		description: "Tools & Technologies",
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=17842&format=png&color=ffffff",
