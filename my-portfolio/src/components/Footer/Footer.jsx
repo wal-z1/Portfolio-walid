@@ -32,8 +32,8 @@ function Footer() {
 							Walid Bouhenika
 						</h3>
 						<p className="text-sm leading-relaxed">
-							A portfolio of my work in computer science and software
-							development.
+							A portfolio of my work in computer science engineering, coding
+							projects, and skills, projects ...
 						</p>
 					</div>
 
