@@ -1,6 +1,12 @@
 const TIMELINE_DATA = [
 	// recent first
 	{
+		category: "Achievement",
+		title: "First On-Site CTF - BSides Algiers 2025",
+		text: "Competed with Team IrgaZEN at BSides Algiers 7th edition hosted by Shellmates. Placed #7 on-site and #18 online out of 330 teams.",
+		timetext: "December 2024",
+	},
+	{
 		category: "Education",
 		title: "Computer Science Engineering Student",
 		text: "Currently pursuing a degree at the Higher National School of Computer Science (ESI), Algiers.",

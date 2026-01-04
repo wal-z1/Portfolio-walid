@@ -5,7 +5,7 @@ const SKILLS_DATA = [
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=NfbyHexzVEDk&format=png&color=ffffff",
 	},
-{
+	{
 		title: "FastAPI",
 		description: "Web Technologies",
 		imageUrl:
@@ -22,6 +22,12 @@ const SKILLS_DATA = [
 		description: "Web Technologies",
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=108784&format=png&color=ffffff",
+	},
+	{
+		title: "TypeScript",
+		description: "Web Technologies",
+		imageUrl:
+			"https://img.icons8.com/?size=96&id=uJM6fQYqDaZK&format=png&color=ffffff",
 	},
 	{
 		title: "CSS / Tailwind",
@@ -41,14 +47,12 @@ const SKILLS_DATA = [
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=40670&format=png&color=ffffff",
 	},
-
 	{
 		title: "Python",
 		description: "Programming Languages",
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=13441&format=png&color=ffffff",
 	},
-
 	{
 		title: "Git / GitHub",
 		description: "Tools & Technologies",
@@ -61,7 +65,6 @@ const SKILLS_DATA = [
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=17842&format=png&color=ffffff",
 	},
-
 	{
 		title: "Figma",
 		description: "Creative Tools",
