@@ -17,8 +17,8 @@ function Hero() {
 					<QuoteBox />
 
 					<span className="inline-block w-full lg:w-[650px] font-light text-lg text-white text-shadow-[3px_1px_10px_rgba(255,255,255,0.8)]">
-						Computer Science student at ESI Algiers who enjoys coding, solving
-						problems, and learning whatever tech catches my interest.
+						Computer Science student @ESI Algiers, into coding, CTFs, tech, and
+						whatever else catches my interest.
 					</span>
 					<hr className="w-11/12 lg:w-[30rem] m-3 ml-0 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)] max-[1084px]:self-center" />
 					<div className="button-container flex items-center gap-4 max-[1084px]:self-center">

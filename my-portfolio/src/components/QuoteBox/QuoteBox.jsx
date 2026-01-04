@@ -1,5 +1,5 @@
 import "./QuoteBox.css";
-	
+
 function QuoteBox() {
 	return (
 		<span className="quote-box">
@@ -9,7 +9,7 @@ function QuoteBox() {
 			<div className="quote">"Happiness depends upon ourselves."</div>
 			<div className="quote">
 				"The greatest enemy of knowledge is not ignorance, it is the illusion of
-				knowledge"
+				knowledge."
 			</div>
 			<div className="quote">
 				"To solve a problem means to reduce it to something already known."
@@ -17,8 +17,15 @@ function QuoteBox() {
 			<div className="quote">
 				"He who has a why to live can bear almost any how."
 			</div>
+			<div className="quote">
+				"It is one thing to desire, another to be in capacity fit for what we
+				desire."
+			</div>
+			<div className="quote">
+				"The chains of habit are too weak to be felt until they are too strong
+				to be broken."
+			</div>
 		</span>
 	);
 }
-
 export default QuoteBox;
