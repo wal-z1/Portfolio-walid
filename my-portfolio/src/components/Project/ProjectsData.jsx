@@ -24,14 +24,14 @@ export const PROJECTS_DATA = [
 		title: "Echo",
 		description:
 			"Real-time chat application with FastAPI WebSocket backend and React frontend.\nSupports multiple chat rooms with live user presence and instant message broadcasting.",
-		imageUrl: "/Images/echo.png",
+		imageUrl: "/Images/ECHO.png",
 		liveUrl: "https://github.com/wal-z1/Echo",
 	},
 	{
 		title: "GLSL Shader Experiments",
 		description:
 			"Collection of GLSL fragment shaders exploring graphics programming concepts.\nBuilt with Three.js and React, demonstrating visual effects and mathematical animations.",
-		imageUrl: "/Images/opengl.png",
+		imageUrl: "/Images/opengl.jpg",
 		liveUrl: "https://github.com/wal-z1/GLSL-mini",
 	},
 	{
