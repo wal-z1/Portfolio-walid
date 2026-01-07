@@ -21,6 +21,20 @@ export const PROJECTS_DATA = [
 		liveUrl: "https://github.com/wal-z1/1CP-Avg",
 	},
 	{
+		title: "Echo",
+		description:
+			"Real-time chat application with FastAPI WebSocket backend and React frontend.\nSupports multiple chat rooms with live user presence and instant message broadcasting.",
+		imageUrl: "/Images/echo.png",
+		liveUrl: "https://github.com/wal-z1/Echo",
+	},
+	{
+		title: "GLSL Shader Experiments",
+		description:
+			"Collection of GLSL fragment shaders exploring graphics programming concepts.\nBuilt with Three.js and React, demonstrating visual effects and mathematical animations.",
+		imageUrl: "/Images/opengl.png",
+		liveUrl: "https://github.com/wal-z1/GLSL-mini",
+	},
+	{
 		title: "Check My GitHub",
 		description:
 			"For more projects, visit my GitHub profile where I regularly update my repositories.",
