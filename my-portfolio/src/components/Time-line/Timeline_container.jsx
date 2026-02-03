@@ -6,19 +6,19 @@ function Timeline_container() {
 		<div>
 			{Timeline_DATA.map((event, index) => (
 				<div key={event.title} className="flex">
-					<div className="flex flex-col items-center mr-6">
+					<div className="flex flex-col items-center mr-4">
 						<div
 							className="
-                h-3 w-3 flex-shrink-0 rounded-full
-                bg-purple-500
-                shadow-[0_0_8px_rgba(168,85,247,0.7)]
+                h-2.5 w-2.5 flex-shrink-0 rounded-full
+                bg-slate-400
+                shadow-[0_0_8px_rgba(148,163,184,0.6)]
               "></div>
-						<div className="w-px flex-grow bg-purple-950/50"></div>
+						<div className="w-px flex-grow bg-slate-700/50"></div>
 					</div>
 
 					<div
 						className={`
-                            w-full pb-8
+                            w-full pb-4
                             }
                         `}>
 						<Timelinecrad

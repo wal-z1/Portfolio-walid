@@ -3,18 +3,18 @@
    ====================== */
 
 .drop-nav {
-	background-color: rgba(18, 16, 28, 0.4);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(138, 77, 201, 0.4);
+	background-color: rgba(18, 20, 28, 0.5);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	border: 1px solid rgba(100, 120, 160, 0.3);
 }
 
 #Nav-bar {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 24px;
-	padding: 12px 24px;
+	gap: 16px;
+	padding: 8px 16px;
 	border-radius: 9999px;
 	margin-right: 10px;
 }
@@ -24,11 +24,11 @@
 	color: #e0e0e0;
 
 	font-family: Outfit, sans-serif;
-	font-size: 1rem;
+	font-size: 0.9375rem;
 	font-weight: 500;
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 6px;
 	cursor: pointer;
 	position: relative;
 	transition: color 0.3s ease;
@@ -67,8 +67,8 @@
 
 @media (max-width: 768px) {
 	#Nav-bar {
-		gap: 16px;
-		padding: 10px 16px;
+		gap: 12px;
+		padding: 6px 12px;
 	}
 	#Nav-bar span {
 		display: none;

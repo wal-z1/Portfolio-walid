@@ -11,7 +11,7 @@
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem 0;
+	padding: 0.5rem 0;
 	z-index: 10;
 }
 /* ======================
@@ -37,7 +37,7 @@
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
-		filter: blur(12px);
+		filter: blur(4px);
 		opacity: 0;
 	}
 	100% {
@@ -57,12 +57,12 @@
 
 /* Shared blur effect for Header and Nav */
 .drop {
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(5px);
-	border-bottom: 1px solid hsla(287, 20%, 37%, 0.849);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(4px);
+	border-bottom: 1px solid hsla(220, 20%, 35%, 0.6);
 }
 
 /* Drop background */
 .drop {
-	background: #0a040f8a;
+	background: #0a0c0f8a;
 }

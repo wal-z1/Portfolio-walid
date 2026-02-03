@@ -1,60 +1,57 @@
-
-
 /* === FADE + SLIDE TIMING === */
 @keyframes fadeSlideUp {
 	0% {
-		filter: blur(10px);
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateY(20px);
+		transform: translateY(10px);
 	}
-	5% {
-		filter: blur(1px);
-
-		opacity: 0.75;
-		transform: translateY(0);
-	}
-	25% {
+	3% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateY(0);
 	}
-	30% {
-		filter: blur(10px);
+	11% {
+		filter: blur(0px);
+		opacity: 1;
+		transform: translateY(0);
+	}
+	14% {
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(-10px);
 	}
 	100% {
-		filter: blur(10px);
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateY(-20px);
+		transform: translateY(-10px);
 	}
 }
 
 @keyframes fadeSlideRight {
 	0% {
-		filter: blur(10px);
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateX(20px);
+		transform: translateX(10px);
 	}
-	5% {
-		filter: blur(1px);
-		opacity: 0.75;
-		transform: translateX(0);
-	}
-	25% {
+	3% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateX(0);
 	}
-	30% {
-		filter: blur(10px);
+	11% {
+		filter: blur(0px);
+		opacity: 1;
+		transform: translateX(0);
+	}
+	14% {
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateX(-20px);
+		transform: translateX(-10px);
 	}
 	100% {
-		filter: blur(10px);
+		filter: blur(3px);
 		opacity: 0;
-		transform: translateX(-20px);
+		transform: translateX(-10px);
 	}
 }
 
@@ -64,33 +61,39 @@
 	opacity: 0;
 	font-style: oblique;
 	font-weight: 300;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 /* alternate between the two animations */
 .quote:nth-child(odd) {
-	animation: fadeSlideUp 25s infinite; /* Extended cycle */
+	animation: fadeSlideUp 28s infinite;
 }
 .quote:nth-child(even) {
-	animation: fadeSlideRight 25s infinite; /* Extended cycle */
+	animation: fadeSlideRight 28s infinite;
 }
 
-/* Adjusted delays for proper sequencing */
+/* Adjusted delays for all 7 quotes */
 .quote:nth-child(1) {
 	animation-delay: 0s;
 }
 .quote:nth-child(2) {
-	animation-delay: 5s;
+	animation-delay: 4s;
 }
 .quote:nth-child(3) {
-	animation-delay: 10s;
+	animation-delay: 8s;
 }
 .quote:nth-child(4) {
-	animation-delay: 15s;
+	animation-delay: 12s;
 }
 .quote:nth-child(5) {
+	animation-delay: 16s;
+}
+.quote:nth-child(6) {
 	animation-delay: 20s;
-} /* Fixed delay */
+}
+.quote:nth-child(7) {
+	animation-delay: 24s;
+}
 
 .quote-box {
 	min-height: 3em;
@@ -98,7 +101,7 @@
 	max-width: 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 }
 @media (max-width: 768px) {
 	.quote-box {

@@ -16,23 +16,23 @@ function Hero() {
 
 					<QuoteBox />
 
-					<span className="inline-block w-full lg:w-[650px] font-light text-lg text-white text-shadow-[3px_1px_10px_rgba(255,255,255,0.8)]">
-						Computer Science student @ESI Algiers, into coding, CTFs, tech, and
-						whatever else catches my interest.
-					</span>
-					<hr className="w-11/12 lg:w-[30rem] m-3 ml-0 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)] max-[1084px]:self-center" />
-					<div className="button-container flex items-center gap-4 max-[1084px]:self-center">
+					<p className="w-full lg:w-[600px] font-light text-lg text-slate-200 leading-relaxed mb-3">
+						CS Student @ESI Algiers — coding random projects and doing CTFs for
+						fun. I make random things, check out the repos.
+					</p>
+					<hr className="w-11/12 lg:w-[28rem] my-2 ml-0 bg-white shadow-[0_0_8px_rgba(255,255,255,0.4)] max-[1084px]:self-center" />
+					<div className="button-container flex items-center gap-3 max-[1084px]:self-center">
 						<a
 							href="#projects"
 							role="button"
-							className="font-outfit rounded-lg border-2 border-[rgb(33,15,49)] bg-[#501c81] px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition hover:brightness-120 active:brightness-90 cursor-pointer no-underline">
+							className="font-outfit rounded-lg border-2 border-[#1e2940] bg-[#2d3a52] px-5 py-2.5 text-lg font-medium text-[#FAFAFA] transition hover:brightness-110 active:brightness-90 cursor-pointer no-underline">
 							View My Work
 						</a>
 
 						<a
 							href="#contact"
 							role="button"
-							className="font-outfit rounded-lg border-2 border-[#441570] bg-transparent px-6 py-3 text-lg font-medium text-[#FAFAFA] text-shadow-[1px_1px_3px_rgba(0,0,0,0.5)] transition-colors hover:bg-[#501c81] cursor-pointer no-underline">
+							className="font-outfit rounded-lg border-2 border-[#3d4a63] bg-transparent px-5 py-2.5 text-lg font-medium text-[#FAFAFA] transition-colors hover:bg-[#2d3a52] cursor-pointer no-underline">
 							Contact Me
 						</a>
 					</div>
@@ -41,25 +41,17 @@ function Hero() {
 				</div>
 
 				<div className="image-side">
-					<motion.img
-						initial={{ opacity: 0, scale: 0.5 }} /*pop up fade animation */
-						animate={{ opacity: 1, scale: 1 }} /* nothing state */
-						whileHover={{
-							/* jump up and roate and glow*/ scale: 1.1,
-							y: -10,
-							rotate: 1,
-							boxShadow: "0px 10px 30px rgba(168, 85, 247, 0.6)",
-						}}
-						whileTap={{ scale: 0.95, rotate: -1 }} /*when clicked get's small */
-						transition={{
-							type: "spring",
-							stiffness: 300,
-							damping: 15,
-						}} /*bounce animation */
-						className="inline-block rounded-[30px] border-2 border-[#331181] shadow-[3px_3px_15px_rgba(73,25,185,0.53)] w-[300px] h-[300px]  object-contain"
-						src="/Images/pfp.jpg"
-						alt="Person Picture"
-					/>
+					<div className="image-wrapper">
+						{/* Animated blob background */}
+						<div className="blob blob-1"></div>
+						<div className="blob blob-2"></div>
+						<div className="blob blob-3"></div>
+						<img
+							className="profile-img"
+							src="/Images/pfp.jpg"
+							alt="Person Picture"
+						/>
+					</div>
 				</div>
 			</div>
 		</section>

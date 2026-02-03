@@ -9,17 +9,17 @@ function SkillCard({ title, description, imageUrl }) {
 			transition={{ duration: 0.5, ease: "easeOut" }}
 			whileTap={{ scale: 0.97 }}
 			className="
-                aspect-square w-32 md:w-36 flex-shrink-0
+                aspect-square w-28 md:w-32 flex-shrink-0
                 flex flex-col items-center text-center justify-center
-                p-2 m-2
-                rounded-lg shadow-lg bg-[rgba(46,28,70,0.1)]
-                backdrop-blur-sm backdrop-saturate-100 border border-[#441570]
-                shadow-purple-900/20 transition-colors duration-300
-                hover:border-[hsl(271,70%,64%)]
+                p-1.5 m-1
+                rounded-lg shadow-lg bg-[rgba(30,40,60,0.2)]
+                border border-[#3d4a63]
+                shadow-slate-900/20 transition-colors duration-300
+                hover:border-[hsl(220,40%,55%)]
             ">
 			<div className="mb-1">
 				<img
-					className="w-10 h-10 sm:w-14 sm:h-14 object-contain"
+					className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
 					src={imageUrl}
 					alt={`${title} icon`}
 				/>

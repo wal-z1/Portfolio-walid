@@ -9,7 +9,7 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 			transition={{ duration: 0.6, ease: "easeOut" }}
 			whileHover={{ y: -8, transition: { duration: 0.3 } }}
 			className="
-        rounded-lg bg-[#161421] border border-[#2d2844] 
+        rounded-lg bg-[#12161e] border border-[#2d3a4d] 
         overflow-hidden flex flex-col h-full
       ">
 			<div className="overflow-hidden">
@@ -26,10 +26,10 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 				/>
 			</div>
 
-			<div className="p-5 flex flex-col flex-grow">
+			<div className="p-3 flex flex-col flex-grow">
 				<h3
 					className="
-            text-xl font-bold text-white mb-2 
+            text-lg font-bold text-white mb-1 
             m-0 p-0 leading-snug
           ">
 					{title}
@@ -43,14 +43,14 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 					{description}
 				</p>
 
-				<div className="flex justify-between items-center mt-6">
+				<div className="flex justify-between items-center mt-3">
 					<a
 						href={liveUrl}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="
-              text-purple-400 font-semibold text-sm flex items-center gap-2
-              hover:text-purple-300 transition-colors duration-300
+              text-blue-400 font-semibold text-sm flex items-center gap-2
+              hover:text-blue-300 transition-colors duration-300
               no-underline m-0 p-0
             ">
 						Check Out
