@@ -1,14 +1,15 @@
 function SocialLinks() {
 	return (
-		<div className="flex items-center space-x-4 mt-8 max-[1084px]:self-center">
+		<div className="flex items-center space-x-3 mt-8 max-[1084px]:self-center">
+			{/* GitHub */}
 			<a
 				href="https://github.com/wal-z1"
 				target="_blank"
 				rel="noopener noreferrer"
-				aria-label="Visit my GitHub profile"
-				className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 text-white transition-all duration-300 hover:bg-zinc-700 hover:scale-110">
+				aria-label="GitHub"
+				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
 				<svg
-					className="h-6 w-6"
+					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="none"
@@ -20,14 +21,15 @@ function SocialLinks() {
 				</svg>
 			</a>
 
+			{/* LinkedIn */}
 			<a
 				href="https://www.linkedin.com/in/bouhenika-walid/"
 				target="_blank"
 				rel="noopener noreferrer"
-				aria-label="Connect with me on LinkedIn"
-				className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 text-white transition-all duration-300 hover:bg-zinc-700 hover:scale-110">
+				aria-label="LinkedIn"
+				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
 				<svg
-					className="h-6 w-6"
+					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="none"
@@ -41,12 +43,13 @@ function SocialLinks() {
 				</svg>
 			</a>
 
+			{/* Email */}
 			<a
 				href="mailto:ow_bouhenika@esi.dz"
-				aria-label="Send me an email"
-				className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-800 text-white transition-all duration-300 hover:bg-zinc-700 hover:scale-110">
+				aria-label="Email"
+				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
 				<svg
-					className="h-6 w-6"
+					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					fill="none"
@@ -56,6 +59,45 @@ function SocialLinks() {
 					strokeLinejoin="round">
 					<rect x="2" y="4" width="20" height="16" rx="2" />
 					<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+				</svg>
+			</a>
+
+			{/* Divider */}
+			<div className="w-px h-6 bg-slate-600"></div>
+
+			{/* picoCTF */}
+			<a
+				href="https://play.picoctf.org/users/walid_z1"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="picoCTF"
+				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				<img
+					src="/picomonochrome.png"
+					alt="picoCTF"
+					className="h-6 w-6 object-contain"
+				/>
+			</a>
+
+			{/* HackTheBox */}
+			<a
+				href="https://app.hackthebox.com/public/users/2941075"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="HackTheBox"
+				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				<svg
+					className="h-5 w-5"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					strokeWidth="1.5"
+					strokeLinecap="round"
+					strokeLinejoin="round">
+					<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+					<path d="m3.3 7 8.7 5 8.7-5" />
+					<path d="M12 22V12" />
 				</svg>
 			</a>
 		</div>

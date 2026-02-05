@@ -3,14 +3,6 @@ import "./Nav.css";
 function Nav() {
 	return (
 		<nav id="Nav-bar" className="drop-nav">
-			<a href="#about">
-				<img
-					src="https://img.icons8.com/ios-glyphs/24/ffffff/user--v1.png"
-					alt="About icon"
-					className="btn-icon"
-				/>
-				<span>About Me</span>
-			</a>
 			<a href="#skills-experience">
 				<img
 					src="https://img.icons8.com/?size=100&id=11240&format=png&color=ffffff"
