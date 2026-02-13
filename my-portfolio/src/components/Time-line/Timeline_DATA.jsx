@@ -3,8 +3,7 @@ const TIMELINE_DATA = [
 	{
 		category: "Achievement",
 		title: "Onsite CTF - Cyber Summit - 2026",
-		text: "Competed with Team IrgaZEN at Cyber Summit hosted by Shellmates & Quanta Club. Placed #2 tied with the 1st team on points... Because Of time difference.
-",
+		text: "Competed with Team IrgaZEN at Cyber Summit hosted by Shellmates & Quanta Club. Placed #2, tied with the 1st team on points because of time difference.",
 		timetext: "February 2026",
 	},
 	{
