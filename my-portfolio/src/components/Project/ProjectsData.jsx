@@ -1,8 +1,9 @@
 export const PROJECTS_DATA = [
 	{
 		title: "CTF Writeups",
-		description: "CTF challenge writeups and solutions. They are Posted on Medium and Github.",
-		liveUrl: "https://medium.com/@ow_bouhenika",
+		description:
+			"CTF challenge writeups and solutions. They are Posted on Medium and Gitbook.",
+		liveUrl: "https://wal-z1.gitbook.io/ctf-writeups/",
 		imageUrl:
 			"https://wal-z1.gitbook.io/ctf-writeups/~gitbook/image?url=https%3A%2F%2F2624154400-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F4OvKEpLXu1wSu4axZw47%252Fuploads%252FIpUdZCncnMwSHYOrK8Gj%252Fimage.png%3Falt%3Dmedia%26token%3D9c012983-2c3f-409c-b926-4a3ca4cecbdd&width=400&dpr=3&quality=100&sign=33a826a4&sv=2",
 	},
