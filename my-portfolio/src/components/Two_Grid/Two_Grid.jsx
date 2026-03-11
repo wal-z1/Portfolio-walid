@@ -1,29 +1,48 @@
 import Skills from "../Skills/Skills";
 import Timeline_container from "../Time-line/Timeline_container";
+import { motion } from "framer-motion";
+import {
+	fadeUp,
+	staggerContainer,
+	viewportReveal,
+} from "../../lib/motionVariants";
 
 function Two_grid() {
 	return (
-		<div
+		<motion.div
 			className="
-      max-w-7xl mx-auto px-2 md:px-4 py-6 
-      grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-6
+      mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-8 px-3 py-10 md:px-5 lg:grid-cols-2
     ">
 			{/* Skills Section */}
-			<div>
-				<h1 className="text-center font-bold text-slate-100 font-outfit text-3xl md:text-4xl mb-2">
+			<motion.div
+				className="rounded-2xl border border-[#5a3e8f]/45 bg-[#0d111740] p-4 shadow-[0_12px_36px_rgba(0,0,0,0.2)] backdrop-blur-[2px] sm:p-6"
+				variants={staggerContainer(0.08, 0.02)}
+				initial="hidden"
+				whileInView="visible"
+				viewport={viewportReveal}>
+				<motion.h1
+					variants={fadeUp(10)}
+					className="mb-3 text-center font-outfit text-3xl font-bold text-slate-100 md:text-4xl">
 					Skills
-				</h1>
+				</motion.h1>
 				<Skills />
-			</div>
+			</motion.div>
 
 			{/* Timeline Section */}
-			<div>
-				<h1 className="text-center font-bold text-slate-100 font-outfit text-3xl md:text-4xl mb-6">
+			<motion.div
+				className="rounded-2xl border border-[#5a3e8f]/45 bg-[#0d111740] p-4 shadow-[0_12px_36px_rgba(0,0,0,0.2)] backdrop-blur-[2px] sm:p-6"
+				variants={staggerContainer(0.08, 0.08)}
+				initial="hidden"
+				whileInView="visible"
+				viewport={viewportReveal}>
+				<motion.h1
+					variants={fadeUp(10)}
+					className="mb-6 text-center font-outfit text-3xl font-bold text-slate-100 md:text-4xl">
 					Timeline
-				</h1>
+				</motion.h1>
 				<Timeline_container />
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 }
 

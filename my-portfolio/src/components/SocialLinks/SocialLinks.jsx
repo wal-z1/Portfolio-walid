@@ -1,13 +1,35 @@
-function SocialLinks() {
+import { motion } from "framer-motion";
+import {
+	fadeUp,
+	hoverLift,
+	staggerContainer,
+	tapPress,
+	viewportReplay,
+} from "../../lib/motionVariants";
+
+function SocialLinks({ align = "center" }) {
+	const isLeft = align === "left";
+	const containerAlignment = isLeft
+		? "justify-start self-start max-[1084px]:self-start"
+		: "justify-center max-[1084px]:self-center";
+
 	return (
-		<div className="flex items-center space-x-3 mt-8 max-[1084px]:self-center">
+		<motion.div
+			className={`mt-8 flex flex-wrap items-center gap-3 ${containerAlignment}`}
+			variants={staggerContainer(0.05, 0.04)}
+			initial="hidden"
+			whileInView="visible"
+			viewport={viewportReplay}>
 			{/* GitHub */}
-			<a
+			<motion.a
 				href="https://github.com/wal-z1"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="GitHub"
-				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				variants={fadeUp(8)}
+				whileHover={hoverLift}
+				whileTap={tapPress}
+				className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 text-white shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-[#46267a]">
 				<svg
 					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
@@ -19,15 +41,18 @@ function SocialLinks() {
 					strokeLinejoin="round">
 					<path d="M9 19c-4.3 1.4 -4.3-2.5 -6-3m12 5v-3.5c0-1 .1-1.4 -.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3 -3.5 1.3a12.3 12.3 0 0 0-6.2 0c-2.4-1.6 -3.5-1.3 -3.5-1.3a4.2 4.2 0 0 0-.1 3.2a4.6 4.6 0 0 0-1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6.6 -.6 1.2 -.5 2V21" />
 				</svg>
-			</a>
+			</motion.a>
 
 			{/* LinkedIn */}
-			<a
+			<motion.a
 				href="https://www.linkedin.com/in/bouhenika-walid/"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="LinkedIn"
-				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				variants={fadeUp(8)}
+				whileHover={hoverLift}
+				whileTap={tapPress}
+				className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 text-white shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-[#46267a]">
 				<svg
 					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
@@ -41,13 +66,16 @@ function SocialLinks() {
 					<rect x="2" y="9" width="4" height="12" />
 					<circle cx="4" cy="4" r="2" />
 				</svg>
-			</a>
+			</motion.a>
 
 			{/* Email */}
-			<a
+			<motion.a
 				href="mailto:ow_bouhenika@esi.dz"
 				aria-label="Email"
-				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				variants={fadeUp(8)}
+				whileHover={hoverLift}
+				whileTap={tapPress}
+				className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 text-white shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-[#46267a]">
 				<svg
 					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
@@ -60,32 +88,40 @@ function SocialLinks() {
 					<rect x="2" y="4" width="20" height="16" rx="2" />
 					<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
 				</svg>
-			</a>
+			</motion.a>
 
 			{/* Divider */}
-			<div className="w-px h-6 bg-slate-600"></div>
+			<motion.div
+				variants={fadeUp(8)}
+				className="h-6 w-px bg-slate-600/80"></motion.div>
 
 			{/* picoCTF */}
-			<a
+			<motion.a
 				href="https://play.picoctf.org/users/walid_z1"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="picoCTF"
-				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				variants={fadeUp(8)}
+				whileHover={hoverLift}
+				whileTap={tapPress}
+				className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-[#46267a]">
 				<img
 					src="/picomonochrome.png"
 					alt="picoCTF"
 					className="h-6 w-6 object-contain"
 				/>
-			</a>
+			</motion.a>
 
 			{/* HackTheBox */}
-			<a
+			<motion.a
 				href="https://app.hackthebox.com/public/users/2941075"
 				target="_blank"
 				rel="noopener noreferrer"
 				aria-label="HackTheBox"
-				className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-800 text-white transition-all duration-300 hover:bg-slate-700 hover:scale-110">
+				variants={fadeUp(8)}
+				whileHover={hoverLift}
+				whileTap={tapPress}
+				className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-slate-800 text-white shadow-[0_8px_18px_rgba(0,0,0,0.25)] transition-all duration-300 hover:bg-[#46267a]">
 				<svg
 					className="h-5 w-5"
 					xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +135,8 @@ function SocialLinks() {
 					<path d="m3.3 7 8.7 5 8.7-5" />
 					<path d="M12 22V12" />
 				</svg>
-			</a>
-		</div>
+			</motion.a>
+		</motion.div>
 	);
 }
 

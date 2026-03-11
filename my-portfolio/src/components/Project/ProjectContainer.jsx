@@ -1,18 +1,32 @@
 import ProjectCard from "./ProjectCard";
 import { PROJECTS_DATA } from "./ProjectsData";
+import { motion } from "framer-motion";
+import {
+	inOutFadeUp,
+	staggerContainer,
+	viewportReplay,
+} from "../../lib/motionVariants";
 
 function ProjectsContainer() {
 	return (
-		<section className="py-6">
-			<h2 className="text-center font-bold text-slate-100 text-3xl md:text-4xl mb-6 mt-0">
+		<motion.section
+			className="py-10 sm:py-12"
+			variants={staggerContainer(0.1, 0.04)}
+			initial="hidden"
+			whileInView="visible"
+			viewport={viewportReplay}>
+			<motion.h2
+				variants={inOutFadeUp(10)}
+				className="mb-7 mt-0 text-center text-3xl font-bold text-slate-100 md:text-4xl">
 				Projects
-			</h2>
-			<div
+			</motion.h2>
+			<motion.div
+				variants={inOutFadeUp(10)}
 				className="
-          max-w-7xl mx-auto px-2
-          grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4
+          mx-auto grid max-w-7xl grid-cols-1 gap-5 px-3
+          md:grid-cols-2 md:px-5 lg:grid-cols-3
         ">
-				{PROJECTS_DATA.map((project) => (
+				{PROJECTS_DATA.map((project, index) => (
 					<ProjectCard
 						key={project.title}
 						title={project.title}
@@ -20,10 +34,11 @@ function ProjectsContainer() {
 						imageUrl={project.imageUrl}
 						techIcons={project.techIcons}
 						liveUrl={project.liveUrl}
+						index={index}
 					/>
 				))}
-			</div>
-		</section>
+			</motion.div>
+		</motion.section>
 	);
 }
 

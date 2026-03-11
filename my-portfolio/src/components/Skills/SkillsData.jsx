@@ -8,8 +8,7 @@ const SKILLS_DATA = [
 	{
 		title: "FastAPI",
 		description: "Web Technologies",
-		imageUrl:
-			"https://avatars.githubusercontent.com/u/156354296?s=280&v=4",
+		imageUrl: "https://avatars.githubusercontent.com/u/156354296?s=280&v=4",
 	},
 	{
 		title: "Framer-Motion",
@@ -75,19 +74,19 @@ const SKILLS_DATA = [
 		title: "Adobe Premiere Pro",
 		description: "Creative Tools",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/96px-Adobe_Premiere_Pro_CC_icon.svg.png",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/500px-Adobe_Premiere_Pro_CC_icon.svg.png",
 	},
 	{
 		title: "Adobe After Effects",
 		description: "Creative Tools",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/96px-Adobe_After_Effects_CC_icon.svg.png",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/3840px-Adobe_After_Effects_CC_icon.svg.png",
 	},
 	{
 		title: "Photoshop",
 		description: "Creative Tools",
 		imageUrl:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/96px-Adobe_Photoshop_CC_icon.svg.png",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/3840px-Adobe_Photoshop_CC_icon.svg.png",
 	},
 ];
 

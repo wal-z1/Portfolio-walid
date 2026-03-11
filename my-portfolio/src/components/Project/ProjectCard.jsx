@@ -1,16 +1,30 @@
 import { motion } from "framer-motion";
+import {
+	inOutFadeUp,
+	hoverLift,
+	tapPress,
+	viewportReplay,
+} from "../../lib/motionVariants";
 
-function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
+function ProjectCard({
+	title,
+	description,
+	imageUrl,
+	techIcons,
+	liveUrl,
+	index = 0,
+}) {
 	return (
-		<motion.div
-			initial={{ opacity: 0, y: 50 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ amount: 0.3 }}
-			transition={{ duration: 0.6, ease: "easeOut" }}
-			whileHover={{ y: -8, transition: { duration: 0.3 } }}
+		<motion.article
+			variants={inOutFadeUp(16, index * 0.02)}
+			initial="hidden"
+			whileInView="visible"
+			viewport={viewportReplay}
+			whileHover={hoverLift}
+			whileTap={tapPress}
 			className="
-        rounded-lg bg-[#12161e] border border-[#2d3a4d] 
-        overflow-hidden flex flex-col h-full
+				group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#5a3e8f]/50
+		bg-[#161026db] shadow-[0_14px_38px_rgba(0,0,0,0.26)] backdrop-blur-[2px]
       ">
 			<div className="overflow-hidden">
 				<img
@@ -20,16 +34,17 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 					}
 					alt={`${title} project screenshot`}
 					className="
-            w-full h-48 object-cover object-top 
+            h-48 w-full object-cover object-top
             align-middle max-w-full border-0
+            transition-transform duration-500 group-hover:scale-[1.03]
           "
 				/>
 			</div>
 
-			<div className="p-3 flex flex-col flex-grow">
+			<div className="flex flex-grow flex-col p-4">
 				<h3
 					className="
-            text-lg font-bold text-white mb-1 
+            mb-1 text-lg font-bold text-white
             m-0 p-0 leading-snug
           ">
 					{title}
@@ -37,20 +52,22 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 
 				<p
 					className="
-            text-gray-400 text-sm leading-relaxed flex-grow 
+            flex-grow text-sm leading-relaxed text-gray-400
             m-0 p-0
           ">
 					{description}
 				</p>
 
-				<div className="flex justify-between items-center mt-3">
-					<a
+				<div className="mt-4 flex items-center justify-between border-t border-[#5a3e8f]/40 pt-3">
+					<motion.a
 						href={liveUrl}
 						target="_blank"
 						rel="noopener noreferrer"
+						whileHover={{ scale: 1.04 }}
+						whileTap={tapPress}
 						className="
-              text-blue-400 font-semibold text-sm flex items-center gap-2
-              hover:text-blue-300 transition-colors duration-300
+			  group/link flex items-center gap-2 text-sm font-semibold text-[#8a74b8]
+			  transition-colors duration-300 hover:text-[#b09dd3]
               no-underline m-0 p-0
             ">
 						Check Out
@@ -64,12 +81,12 @@ function ProjectCard({ title, description, imageUrl, techIcons, liveUrl }) {
 							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
-							className="inline-block"
+							className="inline-block transition-transform duration-300 group-hover/link:translate-x-0.5"
 						/>
-					</a>
+					</motion.a>
 				</div>
 			</div>
-		</motion.div>
+		</motion.article>
 	);
 }
 

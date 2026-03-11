@@ -20,19 +20,18 @@
 	font-family: "Mozilla Headline", sans-serif;
 }
 .hero-content h1 span:nth-child(2) {
-	color: hsl(230, 60%, 70%);
+	color: #7051a7;
 	transition: all 0.6s cubic-bezier(0, 0.67, 0.58, 1);
-	text-shadow: 0 0 10px hsla(230, 60%, 70%, 0);
+	text-shadow: 0 0 10px rgba(70, 38, 122, 0);
 }
 
 .hero-content h1 span:nth-child(2):hover {
 	/*brighter color when edge*/
-	color: hsl(230, 70%, 82%);
+	color: #8a74b8;
 
 	text-shadow:
-		0 0 5px hsla(230, 60%, 70%, 0.8),
-		0 0 15px hsla(230, 60%, 70%, 0.6),
-		0 0 30px hsla(230, 60%, 70%, 0.4);
+		0 0 4px rgba(70, 38, 122, 0.5),
+		0 0 10px rgba(112, 81, 167, 0.28);
 }
 
 /* Hero animation */
@@ -84,6 +83,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transform-style: preserve-3d;
 }
 
 .profile-img {
@@ -92,8 +92,12 @@
 	width: 260px;
 	height: 260px;
 	border-radius: 30px;
-	border: 2px solid #3d4a63;
+	border: 1px solid #5a3e8f;
 	object-fit: cover;
+	box-shadow:
+		0 12px 34px rgba(15, 23, 42, 0.4),
+		0 0 12px rgba(90, 62, 143, 0.16);
+	will-change: transform, box-shadow;
 	transition:
 		transform 0.4s ease,
 		box-shadow 0.4s ease;
@@ -101,7 +105,9 @@
 
 .image-wrapper:hover .profile-img {
 	transform: scale(1.03);
-	box-shadow: 0 0 25px rgba(100, 140, 200, 0.4);
+	box-shadow:
+		0 14px 30px rgba(15, 23, 42, 0.42),
+		0 0 16px rgba(112, 81, 167, 0.24);
 }
 
 /* Animated blobs */
@@ -117,7 +123,7 @@
 .blob-1 {
 	width: 180px;
 	height: 180px;
-	background: linear-gradient(135deg, #4a6fa5 0%, #6b8cce 100%);
+	background: linear-gradient(135deg, #46267a 0%, #7051a7 100%);
 	top: -20px;
 	left: -20px;
 	animation: blob-float-1 8s ease-in-out infinite;
@@ -126,7 +132,7 @@
 .blob-2 {
 	width: 150px;
 	height: 150px;
-	background: linear-gradient(135deg, #5d7cbf 0%, #8ba4d9 100%);
+	background: linear-gradient(135deg, #311a55 0%, #58378f 100%);
 	bottom: -10px;
 	right: -30px;
 	animation: blob-float-2 7s ease-in-out infinite;
@@ -135,7 +141,7 @@
 .blob-3 {
 	width: 120px;
 	height: 120px;
-	background: linear-gradient(135deg, #3d5a80 0%, #98c1d9 100%);
+	background: linear-gradient(135deg, #281345 0%, #8a74b8 100%);
 	bottom: 20px;
 	left: -10px;
 	animation: blob-float-3 9s ease-in-out infinite;
@@ -245,6 +251,17 @@
 
 	.hero-content h1 {
 		font-size: 2.5em; /* Reduced font size for smaller screens */
+	}
+
+	.image-wrapper {
+		width: 240px;
+		height: 240px;
+	}
+
+	.profile-img {
+		width: 205px;
+		height: 205px;
+		border-radius: 24px;
 	}
 
 	.text-side {

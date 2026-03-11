@@ -1,19 +1,32 @@
 import Timeline_DATA from "./Timeline_DATA";
 import Timelinecrad from "./timelinecard";
+import { motion } from "framer-motion";
+import {
+	inOutFadeUp,
+	staggerContainer,
+	viewportReplay,
+} from "../../lib/motionVariants";
 
 function Timeline_container() {
 	return (
-		<div>
+		<motion.div
+			variants={staggerContainer(0.08, 0.03)}
+			initial="hidden"
+			whileInView="visible"
+			viewport={viewportReplay}>
 			{Timeline_DATA.map((event, index) => (
-				<div key={event.title} className="flex">
+				<motion.div
+					key={event.title}
+					className="flex"
+					variants={inOutFadeUp(10, index * 0.02)}>
 					<div className="flex flex-col items-center mr-4">
 						<div
 							className="
                 h-2.5 w-2.5 flex-shrink-0 rounded-full
-                bg-slate-400
-                shadow-[0_0_8px_rgba(148,163,184,0.6)]
+				bg-[#8f74be]
+				shadow-[0_0_8px_rgba(143,116,190,0.65)]
               "></div>
-						<div className="w-px flex-grow bg-slate-700/50"></div>
+						<div className="w-px flex-grow bg-[#5a3e8f]/55"></div>
 					</div>
 
 					<div
@@ -29,9 +42,9 @@ function Timeline_container() {
 							timetext={event.timetext}
 						/>
 					</div>
-				</div>
+				</motion.div>
 			))}
-		</div>
+		</motion.div>
 	);
 }
 
