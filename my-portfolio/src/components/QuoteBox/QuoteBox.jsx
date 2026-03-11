@@ -2,6 +2,25 @@ import "./QuoteBox.css";
 import { motion } from "framer-motion";
 import { fadeIn, viewportReplay } from "../../lib/motionVariants";
 
+const QUOTES = [
+	'"Happiness depends upon ourselves." — Aristotle',
+	'"We suffer more in imagination than in reality." — Seneca',
+	'"The unexamined life is not worth living." — Socrates',
+	'"He who has a why can bear almost any how." — Nietzsche',
+	'"No man is free who is not master of himself." — Epictetus',
+	'"Knowledge is power." — Francis Bacon',
+	'"Liberty consists in doing what one desires." — John Stuart Mill',
+	'"Man is condemned to be free." — Jean-Paul Sartre',
+	'"The mind is everything." — Marcus Aurelius',
+	'"Act only according to that maxim…" — Immanuel Kant',
+	'"Happiness depends upon ourselves."',
+	'"The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge."',
+	'"To solve a problem means to reduce it to something already known."',
+	'"He who has a why to live can bear almost any how."',
+	'"It is one thing to desire, another to be in capacity fit for what we desire."',
+	'"The chains of habit are too weak to be felt until they are too strong to be broken."',
+];
+
 function QuoteBox() {
 	return (
 		<motion.span
@@ -10,56 +29,17 @@ function QuoteBox() {
 			initial="hidden"
 			whileInView="visible"
 			viewport={viewportReplay}>
-			<div className="quote px-1">
-				"Logic will get you from A to B. Imagination will take you everywhere."
-			</div>
-			<div className="quote px-1">
-				"Happiness depends upon ourselves." — Aristotle
-			</div>
-			<div className="quote px-1">
-				"We suffer more in imagination than in reality." — Seneca
-			</div>
-			<div className="quote px-1">
-				"The unexamined life is not worth living." — Socrates
-			</div>
-			<div className="quote px-1">
-				"He who has a why can bear almost any how." — Nietzsche
-			</div>
-			<div className="quote px-1">
-				"No man is free who is not master of himself." — Epictetus
-			</div>
-			<div className="quote px-1">"Knowledge is power." — Francis Bacon</div>
-			<div className="quote px-1">
-				"Liberty consists in doing what one desires." — John Stuart Mill
-			</div>
-			<div className="quote px-1">
-				"Man is condemned to be free." — Jean-Paul Sartre
-			</div>
-			<div className="quote px-1">
-				"The mind is everything." — Marcus Aurelius
-			</div>
-			<div className="quote px-1">
-				"Act only according to that maxim…" — Immanuel Kant
-			</div>
-			<div className="quote px-1">"Happiness depends upon ourselves."</div>
-			<div className="quote px-1">
-				"The greatest enemy of knowledge is not ignorance, it is the illusion of
-				knowledge."
-			</div>
-			<div className="quote px-1">
-				"To solve a problem means to reduce it to something already known."
-			</div>
-			<div className="quote px-1">
-				"He who has a why to live can bear almost any how."
-			</div>
-			<div className="quote px-1">
-				"It is one thing to desire, another to be in capacity fit for what we
-				desire."
-			</div>
-			<div className="quote px-1">
-				"The chains of habit are too weak to be felt until they are too strong
-				to be broken."
-			</div>
+			{QUOTES.map((quote, index) => (
+				<div
+					key={`${quote}-${index}`}
+					className={`quote px-1 ${index % 2 === 0 ? "quote-up" : "quote-right"}`}
+					style={{
+						"--quote-index": index,
+						"--quote-total": QUOTES.length,
+					}}>
+					{quote}
+				</div>
+			))}
 		</motion.span>
 	);
 }

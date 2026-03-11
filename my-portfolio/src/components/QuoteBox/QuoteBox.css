@@ -5,17 +5,17 @@
 		opacity: 0;
 		transform: translateY(10px);
 	}
-	3% {
+	1.4% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateY(0);
 	}
-	11% {
+	4.6% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateY(0);
 	}
-	14% {
+	5.3% {
 		filter: blur(3px);
 		opacity: 0;
 		transform: translateY(-10px);
@@ -33,17 +33,17 @@
 		opacity: 0;
 		transform: translateX(10px);
 	}
-	3% {
+	1.4% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateX(0);
 	}
-	11% {
+	4.6% {
 		filter: blur(0px);
 		opacity: 1;
 		transform: translateX(0);
 	}
-	14% {
+	5.3% {
 		filter: blur(3px);
 		opacity: 0;
 		transform: translateX(-10px);
@@ -62,37 +62,19 @@
 	font-style: oblique;
 	font-weight: 300;
 	font-size: 1.02em;
+	animation-duration: calc(var(--quote-total) * 3.2s);
+	animation-delay: calc(var(--quote-index) * 3.2s);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
 }
 
-/* alternate between the two animations */
-.quote:nth-child(odd) {
-	animation: fadeSlideUp 28s infinite;
-}
-.quote:nth-child(even) {
-	animation: fadeSlideRight 28s infinite;
+.quote-up {
+	animation-name: fadeSlideUp;
 }
 
-/* Adjusted delays for all 7 quotes */
-.quote:nth-child(1) {
-	animation-delay: 0s;
-}
-.quote:nth-child(2) {
-	animation-delay: 4s;
-}
-.quote:nth-child(3) {
-	animation-delay: 8s;
-}
-.quote:nth-child(4) {
-	animation-delay: 12s;
-}
-.quote:nth-child(5) {
-	animation-delay: 16s;
-}
-.quote:nth-child(6) {
-	animation-delay: 20s;
-}
-.quote:nth-child(7) {
-	animation-delay: 24s;
+.quote-right {
+	animation-name: fadeSlideRight;
 }
 
 .quote-box {
