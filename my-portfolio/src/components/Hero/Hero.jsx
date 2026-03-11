@@ -37,7 +37,7 @@ function Hero() {
 		target: imageRef,
 		offset: ["start end", "end start"],
 	});
-	const floatY = useTransform(scrollYProgress, [0, 1], [18, -18]);
+	const floatY = useTransform(scrollYProgress, [0, 1], [12, -12]);
 
 	const handlePointerMove = (event) => {
 		const rect = event.currentTarget.getBoundingClientRect();
@@ -54,18 +54,18 @@ function Hero() {
 
 	return (
 		<motion.section
-			className="hero px-4 pb-6 pt-4 sm:px-6 lg:px-10"
+			className="hero px-3 pb-3 pt-2 sm:px-5 lg:px-8"
 			variants={fadeIn(0.08)}
 			initial="hidden"
 			animate="visible">
 			<motion.div
-				className="hero-content mx-auto w-full max-w-7xl items-center gap-8 lg:gap-10"
+				className="hero-content mx-auto w-full max-w-7xl items-center gap-6 lg:gap-8"
 				variants={staggerContainer(0.1, 0.02)}
 				initial="hidden"
 				whileInView="visible"
 				viewport={viewportReveal}>
 				<motion.div
-					className="text-side relative z-10 rounded-2xl border border-[#5a3e8f]/55 bg-[#0a0c0f45] p-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] backdrop-blur-[3px] sm:p-6"
+					className="text-side relative z-10 rounded-2xl border border-[#5a3e8f]/55 bg-[#0a0c0f45] p-3 shadow-[0_14px_45px_rgba(0,0,0,0.28)] backdrop-blur-[3px] sm:p-4"
 					variants={fadeUp(12)}>
 					<span id="here">
 						<h1 className="tracking-in-expand blink">
@@ -76,13 +76,13 @@ function Hero() {
 
 					<QuoteBox />
 
-					<p className="w-full lg:w-[600px] font-light text-lg text-slate-200 leading-relaxed mb-3">
+					<p className="mb-2 w-full text-base font-light leading-relaxed text-slate-200 lg:w-[600px] lg:text-lg">
 						CS Student @ESI Algiers — coding random projects and doing CTFs for
 						fun. I make random things, check out the repos.
 					</p>
-					<hr className="my-3 ml-0 w-11/12 bg-white shadow-[0_0_8px_rgba(255,255,255,0.4)] max-[1084px]:self-center lg:w-[28rem]" />
+					<hr className="my-2 ml-0 w-11/12 bg-white shadow-[0_0_8px_rgba(255,255,255,0.4)] max-[1084px]:self-center lg:w-[28rem]" />
 					<motion.div
-						className="button-container flex flex-wrap items-center gap-3 max-[1084px]:justify-center max-[1084px]:self-center"
+						className="button-container flex flex-wrap items-center gap-2 max-[1084px]:justify-center max-[1084px]:self-center"
 						variants={staggerContainer(0.08, 0.02)}>
 						<motion.a
 							href="#projects"
@@ -90,7 +90,7 @@ function Hero() {
 							variants={fadeUp(10)}
 							whileHover={hoverLift}
 							whileTap={tapPress}
-							className="cursor-pointer rounded-lg border border-[#6a4d9f] bg-[#46267a] px-5 py-2.5 font-outfit text-lg font-medium text-[#FAFAFA] no-underline shadow-[0_8px_25px_rgba(70,38,122,0.42)] transition hover:brightness-110 active:brightness-90">
+							className="cursor-pointer rounded-lg border border-[#6a4d9f] bg-[#46267a] px-4 py-2 font-outfit text-base font-medium text-[#FAFAFA] no-underline shadow-[0_8px_25px_rgba(70,38,122,0.42)] transition hover:brightness-110 active:brightness-90">
 							View My Work
 						</motion.a>
 
@@ -100,7 +100,7 @@ function Hero() {
 							variants={fadeUp(10)}
 							whileHover={hoverLift}
 							whileTap={tapPress}
-							className="cursor-pointer rounded-lg border border-[#5a3e8f]/70 bg-[#311a55]/70 px-5 py-2.5 font-outfit text-lg font-medium text-[#FAFAFA] no-underline shadow-[0_6px_18px_rgba(0,0,0,0.2)] transition-colors hover:bg-[#58378f]">
+							className="cursor-pointer rounded-lg border border-[#5a3e8f]/70 bg-[#311a55]/70 px-4 py-2 font-outfit text-base font-medium text-[#FAFAFA] no-underline shadow-[0_6px_18px_rgba(0,0,0,0.2)] transition-colors hover:bg-[#58378f]">
 							Contact Me
 						</motion.a>
 					</motion.div>

@@ -2,7 +2,7 @@
    HERO SECTION
 ====================== */
 .hero {
-	padding: 1em 2em;
+	padding: 0.75em 1em;
 }
 
 .hero-content {
@@ -11,12 +11,12 @@
 }
 
 #here {
-	padding: 1em 0;
+	padding: 0.55em 0;
 	display: inline-block;
 }
 .hero-content h1 {
 	margin: 0px;
-	font-size: 3.5em;
+	font-size: 3.1em;
 	font-family: "Mozilla Headline", sans-serif;
 }
 .hero-content h1 span:nth-child(2) {
@@ -216,13 +216,13 @@
 
 @media (max-width: 1084px) {
 	.hero {
-		padding: 1em 1em;
+		padding: 0.6em 0.8em;
 	}
 	.hero-content {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		gap: 1em;
+		gap: 0.8em;
 	}
 	.image-side {
 		margin-left: auto;
@@ -239,18 +239,18 @@
 }
 @media (max-width: 768px) {
 	.hero {
-		padding: 0.5em 0.5em;
+		padding: 0.35em 0.35em;
 	}
 
 	.hero-content {
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		gap: 1em;
+		gap: 0.75em;
 	}
 
 	.hero-content h1 {
-		font-size: 2.5em; /* Reduced font size for smaller screens */
+		font-size: 2.2em; /* Reduced font size for smaller screens */
 	}
 
 	.image-wrapper {

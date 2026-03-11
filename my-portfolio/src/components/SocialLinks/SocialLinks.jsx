@@ -15,7 +15,7 @@ function SocialLinks({ align = "center" }) {
 
 	return (
 		<motion.div
-			className={`mt-8 flex flex-wrap items-center gap-3 ${containerAlignment}`}
+			className={`mt-5 flex flex-wrap items-center gap-2.5 ${containerAlignment}`}
 			variants={staggerContainer(0.05, 0.04)}
 			initial="hidden"
 			whileInView="visible"

@@ -61,7 +61,7 @@
 	opacity: 0;
 	font-style: oblique;
 	font-weight: 300;
-	font-size: 1.1em;
+	font-size: 1.02em;
 }
 
 /* alternate between the two animations */
@@ -96,18 +96,18 @@
 }
 
 .quote-box {
-	min-height: 3em;
+	min-height: 2.4em;
 	position: relative;
-	max-width: 600px;
+	max-width: 560px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	padding-bottom: 0.5em;
+	padding-bottom: 0.25em;
 }
 @media (max-width: 768px) {
 	.quote-box {
-		min-width: 300px;
+		min-width: 240px;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
-		min-height: 5em;
+		min-height: 4em;
 	}
 }

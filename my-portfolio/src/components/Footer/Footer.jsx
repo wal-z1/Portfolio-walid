@@ -34,13 +34,13 @@ function Footer() {
 
 	return (
 		<motion.footer
-			className="border-t border-[#5a3e8f]/35 bg-[#0d1117d9] py-8 text-slate-400 backdrop-blur-[2px]"
+			className="border-t border-[#5a3e8f]/35 bg-[#0d1117d9] py-6 text-slate-400 backdrop-blur-[2px]"
 			variants={staggerContainer(0.08, 0.02)}
 			initial="hidden"
 			whileInView="visible"
 			viewport={viewportReveal}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div className="flex flex-col justify-between gap-6 lg:flex-row">
+				<div className="flex flex-col justify-between gap-4 lg:flex-row">
 					<motion.div className="lg:w-1/2" variants={fadeUp(10)}>
 						<h3 className="mb-1 text-lg font-semibold text-slate-100">
 							Walid Bouhenika
@@ -60,7 +60,7 @@ function Footer() {
 
 				<motion.div
 					variants={fadeUp(10, 0.1)}
-					className="mt-6 flex flex-col items-center justify-between gap-2 border-t border-[#5a3e8f]/35 pt-4 sm:flex-row">
+					className="mt-4 flex flex-col items-center justify-between gap-1 border-t border-[#5a3e8f]/35 pt-3 sm:flex-row">
 					<p className="text-xs text-slate-600">
 						© {new Date().getFullYear()} · Updated{" "}
 						{isLoading ? (
