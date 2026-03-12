@@ -5,7 +5,7 @@ import SKILLS_DATA from "./SkillsData.jsx";
 import {
 	fadeUp,
 	staggerContainer,
-	viewportReplay,
+	viewportReveal,
 } from "../../lib/motionVariants";
 
 const Skills = () => {
@@ -15,7 +15,7 @@ const Skills = () => {
 			variants={staggerContainer(0.06, 0.02)}
 			initial="hidden"
 			whileInView="visible"
-			viewport={viewportReplay}>
+			viewport={viewportReveal}>
 			<motion.div
 				variants={fadeUp(8)}
 				className="flex flex-wrap justify-center gap-1.5 md:gap-2">

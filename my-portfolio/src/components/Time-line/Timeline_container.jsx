@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
 	inOutFadeUp,
 	staggerContainer,
-	viewportReplay,
+	viewportReveal,
 } from "../../lib/motionVariants";
 
 function Timeline_container() {
@@ -13,12 +13,13 @@ function Timeline_container() {
 			variants={staggerContainer(0.08, 0.03)}
 			initial="hidden"
 			whileInView="visible"
-			viewport={viewportReplay}>
+			viewport={viewportReveal}>
 			{Timeline_DATA.map((event, index) => (
 				<motion.div
 					key={event.title}
 					className="flex"
-					variants={inOutFadeUp(10, index * 0.02)}>
+					variants={inOutFadeUp(10, index * 0.02, false)}
+					style={{ willChange: "transform, opacity" }}>
 					<div className="flex flex-col items-center mr-4">
 						<div
 							className="

@@ -116,7 +116,10 @@
 	border-radius: 50%;
 	filter: blur(40px);
 	opacity: 0.4;
-	transition: all 0.6s ease;
+	transition:
+		transform 0.6s ease,
+		opacity 0.6s ease;
+	will-change: transform, opacity;
 	z-index: 1;
 }
 
@@ -150,7 +153,6 @@
 /* Hover effects for blobs */
 .image-wrapper:hover .blob {
 	opacity: 0.7;
-	filter: blur(30px);
 }
 
 .image-wrapper:hover .blob-1 {

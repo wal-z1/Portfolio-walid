@@ -3,24 +3,25 @@ import {
 	inOutFadeUp,
 	hoverLift,
 	tapPress,
-	viewportReplay,
+	viewportReveal,
 } from "../../lib/motionVariants";
 
 function SkillCard({ title, description, imageUrl, index = 0 }) {
 	return (
 		<motion.div
-			variants={inOutFadeUp(12, index * 0.02)}
+			variants={inOutFadeUp(12, index * 0.02, false)}
 			initial="hidden"
 			whileInView="visible"
-			viewport={viewportReplay}
+			viewport={viewportReveal}
 			whileHover={hoverLift}
 			whileTap={tapPress}
+			style={{ willChange: "transform, opacity" }}
 			className="
 				m-1 flex aspect-square w-28 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-[#5a3e8f]/50
 				bg-[rgba(70,38,122,0.22)] p-2 text-center
-                shadow-[0_8px_20px_rgba(15,23,42,0.25)] transition-all duration-300 md:w-32
+				shadow-[0_8px_20px_rgba(15,23,42,0.25)] transition-all duration-300 md:w-32
 				hover:border-[#7a62ac]
-            ">
+			">
 			<div className="mb-1">
 				<img
 					className="w-10 h-10 sm:w-12 sm:h-12 object-contain"

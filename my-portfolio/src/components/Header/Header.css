@@ -37,11 +37,9 @@
 @keyframes focus-in-expand {
 	0% {
 		letter-spacing: -0.5em;
-		filter: blur(4px);
 		opacity: 0;
 	}
 	100% {
-		filter: blur(0px);
 		opacity: 1;
 	}
 }
@@ -57,8 +55,6 @@
 
 /* Shared blur effect for Header and Nav */
 .drop {
-	backdrop-filter: blur(6px);
-	-webkit-backdrop-filter: blur(4px);
 	box-shadow:
 		0 8px 24px rgba(0, 0, 0, 0.28),
 		0 0 0 1px rgba(255, 255, 255, 0.14);
