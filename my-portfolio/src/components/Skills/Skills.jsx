@@ -1,24 +1,11 @@
 import React from "react";
 import SkillCard from "./Skillcard.jsx";
-import { motion } from "framer-motion";
 import SKILLS_DATA from "./SkillsData.jsx";
-import {
-	fadeUp,
-	staggerContainer,
-	viewportReveal,
-} from "../../lib/motionVariants";
 
 const Skills = () => {
 	return (
-		<motion.section
-			className="py-2"
-			variants={staggerContainer(0.06, 0.02)}
-			initial="hidden"
-			whileInView="visible"
-			viewport={viewportReveal}>
-			<motion.div
-				variants={fadeUp(8)}
-				className="flex flex-wrap justify-center gap-1.5 md:gap-2">
+		<section className="py-1">
+			<div className="flex flex-wrap justify-center gap-1 md:gap-1.5">
 				{SKILLS_DATA.map((skill, index) => (
 					<SkillCard
 						key={skill.title}
@@ -28,8 +15,8 @@ const Skills = () => {
 						index={index}
 					/>
 				))}
-			</motion.div>
-		</motion.section>
+			</div>
+		</section>
 	);
 };
 
