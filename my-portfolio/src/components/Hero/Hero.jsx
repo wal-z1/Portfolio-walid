@@ -12,7 +12,7 @@ import {
 function Hero() {
 	return (
 		<motion.section
-			className="md3-section md3-hero"
+			className="md3-section md3-hero md3-reveal"
 			variants={fadeIn(0.08)}
 			initial="hidden"
 			animate="visible">
@@ -25,10 +25,17 @@ function Hero() {
 				<motion.div
 					className="md3-card md3-card--filled md3-hero__text"
 					variants={fadeUp(12)}>
+					<div className="md3-hero__mobile-photo" aria-hidden="true">
+						<img
+							className="md3-hero__mobile-photo-img"
+							src="/Images/pfp.png"
+							alt=""
+						/>
+					</div>
 					<span id="here">
 						<h1 className="md-display md3-hero__headline">
-							<span>Hi I'm </span>
-							<span className="inline-block">Walid Bouhenika</span>
+							<span className="md3-hero__intro">Hi I'm </span>
+							<span className="md3-hero__name">Walid Bouhenika</span>
 						</h1>
 					</span>
 
@@ -53,7 +60,7 @@ function Hero() {
 							href="#contact"
 							role="button"
 							variants={fadeUp(10)}
-							className="md3-button md3-button--tonal">
+							className="md3-button md3-button--text">
 							Contact Me
 						</motion.a>
 					</motion.div>
@@ -63,9 +70,10 @@ function Hero() {
 
 				<motion.div className="md3-hero__image" variants={fadeUp(18, 0.05)}>
 					<div className="md3-hero__image-frame">
+						<div className="md3-hero__image-ring" aria-hidden="true" />
 						<img
 							className="md3-hero__image-photo"
-							src="/Images/pfp.jfif"
+							src="/Images/pfp.png"
 							alt="Person Picture"
 						/>
 					</div>

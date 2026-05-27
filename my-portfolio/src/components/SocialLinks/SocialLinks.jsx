@@ -8,14 +8,12 @@ import {
 } from "../../lib/motionVariants";
 
 function SocialLinks({ align = "center" }) {
-	const isLeft = align === "left";
-	const containerAlignment = isLeft
-		? "justify-start self-start max-[1084px]:self-start"
-		: "justify-center max-[1084px]:self-center";
+	const alignment = align === "left" ? "left" : "center";
 
 	return (
 		<motion.div
-			className={`mt-5 flex flex-wrap items-center gap-2 ${containerAlignment}`}
+			className="md3-social-links mt-5 flex flex-wrap items-center gap-2"
+			data-align={alignment}
 			variants={staggerContainer(0.05, 0.04)}
 			initial="hidden"
 			whileInView="visible"
@@ -29,8 +27,7 @@ function SocialLinks({ align = "center" }) {
 				variants={fadeUp(8)}
 				whileHover={hoverLift}
 				whileTap={tapPress}
-				className="md3-icon-button"
-				style={{ border: "1px solid var(--md-outline-variant)" }}>
+				className="md3-icon-button md3-icon-button--outline">
 				<svg
 					className="md3-icon-button__icon"
 					viewBox="0 0 24 24"
@@ -51,8 +48,7 @@ function SocialLinks({ align = "center" }) {
 				variants={fadeUp(8)}
 				whileHover={hoverLift}
 				whileTap={tapPress}
-				className="md3-icon-button"
-				style={{ border: "1px solid var(--md-outline-variant)" }}>
+				className="md3-icon-button md3-icon-button--outline">
 				<svg
 					className="md3-icon-button__icon"
 					viewBox="0 0 24 24"
@@ -71,8 +67,7 @@ function SocialLinks({ align = "center" }) {
 				variants={fadeUp(8)}
 				whileHover={hoverLift}
 				whileTap={tapPress}
-				className="md3-icon-button"
-				style={{ border: "1px solid var(--md-outline-variant)" }}>
+				className="md3-icon-button md3-icon-button--outline">
 				<svg
 					className="md3-icon-button__icon"
 					viewBox="0 0 24 24"
@@ -107,12 +102,11 @@ function SocialLinks({ align = "center" }) {
 				variants={fadeUp(8)}
 				whileHover={hoverLift}
 				whileTap={tapPress}
-				className="md3-icon-button"
-				style={{ border: "1px solid var(--md-outline-variant)" }}>
+				className="md3-icon-button md3-icon-button--outline">
 				<img
 					src="/picomonochrome.png"
 					alt="picoCTF"
-					className="md3-icon-button__icon"
+					className="md3-icon-button__icon md3-pico-icon"
 				/>
 			</motion.a>
 
@@ -125,8 +119,7 @@ function SocialLinks({ align = "center" }) {
 				variants={fadeUp(8)}
 				whileHover={hoverLift}
 				whileTap={tapPress}
-				className="md3-icon-button"
-				style={{ border: "1px solid var(--md-outline-variant)" }}>
+				className="md3-icon-button md3-icon-button--outline">
 				<svg
 					className="md3-icon-button__icon"
 					viewBox="0 0 24 24"

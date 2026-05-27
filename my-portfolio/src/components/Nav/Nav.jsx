@@ -23,9 +23,6 @@ const navItems = [
 
 function Nav() {
 	const [activeHash, setActiveHash] = useState(navItems[0].href);
-	const [theme, setTheme] = useState(
-		document.documentElement.dataset.theme || "light",
-	);
 
 	useEffect(() => {
 		const updateHash = () => {
@@ -36,25 +33,6 @@ function Nav() {
 		window.addEventListener("hashchange", updateHash);
 		return () => window.removeEventListener("hashchange", updateHash);
 	}, []);
-
-	useEffect(() => {
-		const handleThemeChange = (event) => {
-			if (event?.detail) {
-				setTheme(event.detail);
-			}
-		};
-		window.addEventListener("md3-theme-change", handleThemeChange);
-		return () =>
-			window.removeEventListener("md3-theme-change", handleThemeChange);
-	}, []);
-
-	const toggleTheme = () => {
-		const next = theme === "dark" ? "light" : "dark";
-		setTheme(next);
-		document.documentElement.dataset.theme = next;
-		localStorage.setItem("md3-theme", next);
-		window.dispatchEvent(new CustomEvent("md3-theme-change", { detail: next }));
-	};
 
 	return (
 		<motion.nav
@@ -79,17 +57,6 @@ function Nav() {
 						</motion.a>
 					);
 				})}
-				<motion.button
-					type="button"
-					variants={fadeUp(10)}
-					className="md3-bottom-nav__item md3-bottom-nav__item--action"
-					aria-label="Toggle dark mode"
-					onClick={toggleTheme}>
-					<span className="md3-bottom-nav__icon">
-						{theme === "dark" ? "light_mode" : "dark_mode"}
-					</span>
-					<span className="md3-bottom-nav__label">Theme</span>
-				</motion.button>
 			</div>
 		</motion.nav>
 	);

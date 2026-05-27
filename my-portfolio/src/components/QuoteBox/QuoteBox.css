@@ -49,9 +49,9 @@
 	color: var(--md-on-surface-variant);
 	position: absolute;
 	opacity: 0;
-	font-style: oblique;
-	font-weight: 600;
-	font-size: 0.95em;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 1rem;
 	width: 100%;
 	left: 0;
 	text-align: center;
@@ -78,7 +78,14 @@
 	margin: 0 auto;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	padding-bottom: 0.25em;
+	padding: 8px 16px;
+	border-radius: 999px;
+	background: var(--md-quote-bg);
+	border: 1px solid var(--md-quote-border);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--md-theme-transition);
 }
 @media (max-width: 768px) {
 	.quote-box {

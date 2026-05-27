@@ -19,8 +19,7 @@ function Two_grid() {
 				viewport={viewportReveal}>
 				<motion.h1
 					variants={fadeUp(10)}
-					className="md-headline"
-					style={{ textAlign: "center" }}>
+					className="md-headline md3-section-title">
 					Skills
 				</motion.h1>
 				<Skills />
@@ -35,8 +34,7 @@ function Two_grid() {
 				viewport={viewportReveal}>
 				<motion.h1
 					variants={fadeUp(10)}
-					className="md-headline"
-					style={{ textAlign: "center" }}>
+					className="md-headline md3-section-title">
 					Timeline
 				</motion.h1>
 				<Timeline_container />

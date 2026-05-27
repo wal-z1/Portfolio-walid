@@ -1,74 +1,266 @@
 /* ======================
    HERO SECTION (MD3)
 ====================== */
+.md3-hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.md3-hero::before {
+	content: "";
+	position: absolute;
+	inset: -10% -5% auto;
+	height: 70%;
+	background-image: radial-gradient(
+		circle at 1px 1px,
+		var(--md-hero-mesh) 1.2px,
+		transparent 0
+	);
+	background-size: 26px 26px;
+	opacity: 0.6;
+	pointer-events: none;
+}
+
 .md3-hero__content {
 	display: grid;
-	gap: 20px;
+	gap: 32px;
 	align-items: center;
+	position: relative;
+	z-index: 1;
 }
 
 .md3-hero__text {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	border: 1px solid var(--md-outline-variant);
+	padding: 24px;
+	border-radius: var(--md-shape-xl);
+	background: var(--md-hero-card-bg);
+	border: 1px solid var(--md-border);
+	box-shadow: var(--md-card-shadow);
+	overflow: hidden;
+	animation: heroCardIn 600ms var(--md-ease-standard) both;
 }
 
-html[data-theme="dark"] .md3-hero__text {
-	border: 1px solid var(--md-outline-variant);
-	border-top: 2px solid var(--md-primary-container);
+.md3-hero__text::before {
+	content: "";
+	position: absolute;
+	inset: -40% 0 auto 0;
+	height: 60%;
+	background: radial-gradient(
+		circle at top,
+		var(--md-hero-card-glow) 0,
+		transparent 70%
+	);
+	opacity: 0.9;
+	pointer-events: none;
+	z-index: 0;
 }
 
-.md3-hero__headline span:last-child {
+.md3-hero__text > * {
+	position: relative;
+	z-index: 1;
+}
+
+.md3-hero__mobile-photo {
+	width: 96px;
+	height: 96px;
+	border-radius: 999px;
+	border: 2px solid var(--md-primary);
+	box-shadow: 0 0 20px var(--md-hero-photo-glow);
+	padding: 4px;
+	margin: 4px auto 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--md-surface);
+	animation: heroPhotoPop 600ms var(--md-ease-standard) both;
+}
+
+.md3-hero__mobile-photo-img {
+	width: 100%;
+	height: 100%;
+	border-radius: 999px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.md3-hero__headline {
+	font-size: 2rem;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	margin: 0;
+	text-align: center;
+}
+
+.md3-hero__intro {
+	color: var(--md-on-surface);
+	font-weight: 400;
+	display: block;
+}
+
+.md3-hero__name {
 	color: var(--md-primary);
+	font-weight: 700;
+	display: block;
 }
 
 .md3-hero__body {
-	color: var(--md-on-primary-container);
-	max-width: 640px;
-	font-weight: 600;
+	color: var(--md-on-surface);
+	max-width: 620px;
+	font-size: 0.95rem;
+	line-height: 1.7;
+	font-weight: 500;
+	margin: 0;
 }
 
 .md3-hero__actions {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 12px;
+	justify-content: center;
 }
 
 .md3-hero__actions .md3-button {
-	border: 1px solid var(--md-outline-variant);
+	min-height: 40px;
+	border-radius: 20px;
 }
 
 .md3-hero__image {
-	display: flex;
+	position: relative;
+	display: none;
 	justify-content: center;
+	align-items: center;
+}
+
+.md3-hero__image::before {
+	content: "";
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(circle, var(--md-hero-blob) 0, transparent 70%);
+	filter: blur(80px);
+	opacity: 0.9;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
 }
 
 .md3-hero__image-frame {
-	width: 300px;
-	height: 300px;
+	position: relative;
+	width: 240px;
+	height: 240px;
 	border-radius: 50%;
-	background: transparent;
-	border: none;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	place-items: center;
+	padding: 10px;
+	z-index: 1;
+	transition: transform 300ms var(--md-ease-standard);
+	will-change: transform;
+}
+
+.md3-hero__image-ring {
+	position: absolute;
+	inset: -8px;
+	border-radius: 50%;
+	background: conic-gradient(
+		from 180deg,
+		var(--md-hero-ring-start),
+		var(--md-hero-ring-mid),
+		transparent 70%
+	);
+	-webkit-mask: radial-gradient(circle, transparent 64%, #000 66%);
+	mask: radial-gradient(circle, transparent 64%, #000 66%);
+	animation: heroRingSpin 8s linear infinite;
+	opacity: 0.9;
+	pointer-events: none;
 }
 
 .md3-hero__image-photo {
-	width: 300px;
-	height: 300px;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	object-position: center;
 	border-radius: 50%;
-	outline: 2px solid var(--md-primary);
-	outline-offset: 3px;
+	border: 2px solid var(--md-primary);
+	box-shadow: 0 0 24px var(--md-hero-photo-glow);
+	background: var(--md-surface);
+	position: relative;
+	z-index: 1;
+	transition: transform 300ms var(--md-ease-standard);
+}
+
+.md3-hero__image-frame:hover .md3-hero__image-photo {
+	transform: scale(1.03);
 }
 
 @media (min-width: 840px) {
 	.md3-hero__content {
-		grid-template-columns: 1.1fr 0.9fr;
+		grid-template-columns: 1.2fr 0.8fr;
+		gap: 48px;
+	}
+
+	.md3-hero__image::before {
+		width: 500px;
+		height: 500px;
+	}
+
+	.md3-hero__image-frame {
+		width: 300px;
+		height: 300px;
+		padding: 12px;
+	}
+
+	.md3-hero__image-ring {
+		inset: -10px;
+	}
+
+	.md3-hero__text {
+		align-items: flex-start;
+		text-align: left;
+		padding: 28px 32px;
+	}
+
+	.md3-hero__headline {
+		font-size: 3rem;
+		text-align: left;
+	}
+
+	.md3-hero__name {
+		display: inline-block;
+		white-space: nowrap;
+		overflow: hidden;
+		border-right: 2px solid var(--md-primary);
+		max-width: 0;
+		animation:
+			heroTyping 1.8s steps(16) 0.2s forwards,
+			heroCursor 800ms steps(2) infinite;
+		text-shadow: var(--md-hero-name-shadow);
+	}
+
+	.md3-hero__body {
+		font-size: 1.06rem;
+		line-height: 1.75;
+		max-width: 580px;
+	}
+
+	.md3-hero__actions {
+		justify-content: flex-start;
+	}
+
+	.md3-hero__actions .md3-button {
+		min-height: 48px;
+		padding: 12px 22px;
+	}
+
+	.md3-hero__image {
+		display: flex;
+	}
+
+	.md3-hero__mobile-photo {
+		display: none;
 	}
 }
 
@@ -76,11 +268,59 @@ html[data-theme="dark"] .md3-hero__text {
 	.md3-hero__content {
 		grid-template-columns: 1fr;
 	}
+
 	.md3-hero__text {
 		align-items: center;
 		text-align: center;
 	}
-	.md3-hero__actions {
-		justify-content: center;
+}
+
+@keyframes heroCardIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes heroPhotoPop {
+	from {
+		opacity: 0;
+		transform: scale(0.94);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes heroRingSpin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes heroTyping {
+	from {
+		max-width: 0;
+	}
+	to {
+		max-width: 18ch;
+	}
+}
+
+@keyframes heroCursor {
+	0%,
+	100% {
+		border-right-color: transparent;
+	}
+	50% {
+		border-right-color: var(--md-primary);
 	}
 }

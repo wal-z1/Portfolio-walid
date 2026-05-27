@@ -17,8 +17,8 @@ function ProjectsContainer() {
 			viewport={viewportReplay}>
 			<motion.h2
 				variants={inOutFadeUp(10)}
-				className="md-headline"
-				style={{ textAlign: "center", marginBottom: 20 }}>
+				className="md-headline md3-section-title"
+				style={{ marginBottom: 20 }}>
 				Projects
 			</motion.h2>
 			<motion.div

@@ -24,7 +24,7 @@ const QUOTES = [
 function QuoteBox() {
 	return (
 		<motion.span
-			className="quote-box md3-card md3-card--outlined"
+			className="quote-box"
 			variants={fadeIn(0.08)}
 			initial="hidden"
 			whileInView="visible"

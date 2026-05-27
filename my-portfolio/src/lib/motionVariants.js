@@ -14,7 +14,7 @@ export const viewportReplay = {
 
 export const springSoft = {
 	type: "tween",
-	duration: 0.4,
+	duration: 0.3,
 	ease: emphasizedEase,
 };
 
@@ -27,7 +27,7 @@ export const fadeUp = (distance = 14, delay = 0) => ({
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.4,
+			duration: 0.3,
 			delay,
 			ease: emphasizedEase,
 		},
@@ -47,7 +47,7 @@ export const inOutFadeUp = (distance = 14, delay = 0, withBlur = false) => ({
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.4,
+			duration: 0.3,
 			delay,
 			ease: emphasizedEase,
 		},
@@ -61,7 +61,7 @@ export const fadeIn = (delay = 0) => ({
 	visible: {
 		opacity: 1,
 		transition: {
-			duration: 0.4,
+			duration: 0.3,
 			delay,
 			ease: emphasizedEase,
 		},
@@ -82,7 +82,7 @@ export const hoverLift = {
 	y: -4,
 	scale: 1.01,
 	transition: {
-		duration: 0.2,
+		duration: 0.3,
 		ease: standardEase,
 	},
 };

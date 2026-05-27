@@ -23,6 +23,7 @@ function Header() {
 	const [theme, setTheme] = useState(
 		document.documentElement.dataset.theme || "light",
 	);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	useEffect(() => {
 		const updateHash = () => {
@@ -32,6 +33,15 @@ function Header() {
 		updateHash();
 		window.addEventListener("hashchange", updateHash);
 		return () => window.removeEventListener("hashchange", updateHash);
+	}, []);
+
+	useEffect(() => {
+		const onScroll = () => {
+			setIsScrolled(window.scrollY > 8);
+		};
+		onScroll();
+		window.addEventListener("scroll", onScroll, { passive: true });
+		return () => window.removeEventListener("scroll", onScroll);
 	}, []);
 
 	useEffect(() => {
@@ -61,13 +71,13 @@ function Header() {
 	return (
 		<motion.header
 			id="head-thing"
-			className="md3-top-app-bar"
+			className={`md3-top-app-bar ${isScrolled ? "md3-top-app-bar--scrolled" : ""}`}
 			variants={fadeIn(0.02)}
 			initial="hidden"
 			animate="visible">
 			<div className="md3-container md3-top-app-bar__content">
 				<div id="title-text" className="md3-top-app-bar__title">
-					walid.
+					walid<span className="md3-logo-dot">.</span>
 				</div>
 				<div className="md3-top-nav">
 					<nav className="md3-top-nav__links" aria-label="Primary">
@@ -87,7 +97,7 @@ function Header() {
 					</nav>
 					<button
 						type="button"
-						className="md3-icon-button md3-theme-toggle"
+						className="md3-icon-button md3-icon-button--tonal md3-theme-toggle"
 						aria-label="Toggle dark mode"
 						onClick={toggleTheme}>
 						<span
