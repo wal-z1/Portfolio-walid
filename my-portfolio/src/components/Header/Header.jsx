@@ -39,8 +39,23 @@ function Header() {
 		localStorage.setItem("md3-theme", theme);
 	}, [theme]);
 
+	useEffect(() => {
+		const handleThemeChange = (event) => {
+			if (event?.detail) {
+				setTheme(event.detail);
+			}
+		};
+		window.addEventListener("md3-theme-change", handleThemeChange);
+		return () =>
+			window.removeEventListener("md3-theme-change", handleThemeChange);
+	}, []);
+
 	const toggleTheme = () => {
-		setTheme((current) => (current === "dark" ? "light" : "dark"));
+		const next = theme === "dark" ? "light" : "dark";
+		setTheme(next);
+		document.documentElement.dataset.theme = next;
+		localStorage.setItem("md3-theme", next);
+		window.dispatchEvent(new CustomEvent("md3-theme-change", { detail: next }));
 	};
 
 	return (

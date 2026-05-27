@@ -239,6 +239,14 @@ footer.md3-section {
 	align-items: center;
 	justify-content: space-between;
 	min-height: 64px;
+	min-width: 0;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 599px) {
+	.md3-top-app-bar__content {
+		row-gap: 4px;
+	}
 }
 
 .md3-top-app-bar__title {
@@ -296,6 +304,12 @@ footer.md3-section {
 	color: var(--md-on-secondary-container);
 }
 
+@media (max-width: 599px) {
+	.md3-top-nav__links {
+		display: none;
+	}
+}
+
 /* ======================
    BOTTOM NAV
 ====================== */
@@ -326,6 +340,8 @@ footer.md3-section {
 	gap: 4px;
 	padding: 8px 6px;
 	border-radius: var(--md-shape-full);
+	background: transparent;
+	border: none;
 	text-decoration: none;
 	color: var(--md-on-surface-variant);
 	transition:
