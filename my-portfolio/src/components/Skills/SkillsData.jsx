@@ -47,6 +47,11 @@ const SKILLS_DATA = [
 			"https://img.icons8.com/?size=96&id=40670&format=png&color=ffffff",
 	},
 	{
+		title: "Java",
+		description: "Programming Languages",
+		imageUrl: "",
+	},
+	{
 		title: "Python",
 		description: "Programming Languages",
 		imageUrl:
@@ -63,6 +68,21 @@ const SKILLS_DATA = [
 		description: "Tools & Technologies",
 		imageUrl:
 			"https://img.icons8.com/?size=96&id=17842&format=png&color=ffffff",
+	},
+	{
+		title: "OSINT",
+		description: "Security / CTF",
+		imageUrl: "",
+	},
+	{
+		title: "Forensics",
+		description: "Security / CTF",
+		imageUrl: "",
+	},
+	{
+		title: "CTF",
+		description: "Security / CTF",
+		imageUrl: "",
 	},
 	{
 		title: "Figma",
