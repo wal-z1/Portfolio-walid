@@ -1,5 +1,12 @@
 const TIMELINE_DATA = [
 	// recent first
+		{
+		category: "Achievement",
+		title: "Won 2nd place in MCTF 5.0 with team U54RK",
+		text: "Won 2nd place in MCTF 5.0 with team U54RK",
+		timetext: "May 2026",
+		icon: "emoji_events",
+	},
 	{
 		category: "Achievement",
 		title: "Onsite CTF - Cyber Summit - 2026",
@@ -12,13 +19,7 @@ const TIMELINE_DATA = [
 		text: "Competed with Team IrgaZEN at BSides Algiers 7th edition hosted by Shellmates. Placed #7 on-site and #18 online out of 330 teams.",
 		timetext: "December 2025",
 	},
-	{
-		category: "Achievement",
-		title: "Won 2nd place in MCTF 5.0 with team U54RK",
-		text: "Won 2nd place in MCTF 5.0 with team U54RK",
-		timetext: "May 2025",
-		icon: "emoji_events",
-	},
+
 	{
 		category: "Education",
 		title: "Computer Science Engineering Student",
