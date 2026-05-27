@@ -249,9 +249,29 @@ footer.md3-section {
 }
 
 .md3-top-nav {
-	display: none;
+	display: flex;
 	align-items: center;
 	gap: 8px;
+}
+
+@media (max-width: 599px) {
+	.md3-top-nav__links {
+		display: none;
+	}
+
+	.md3-theme-toggle {
+		display: inline-flex;
+	}
+}
+
+@media (min-width: 600px) {
+	.md3-bottom-nav {
+		display: none;
+	}
+
+	.md3-top-nav__links {
+		display: flex;
+	}
 }
 
 .md3-top-nav__links {
@@ -630,15 +650,6 @@ footer.md3-section {
 @media (max-width: 599px) {
 	.md3-main {
 		padding-bottom: 96px;
-	}
-}
-
-@media (min-width: 600px) {
-	.md3-bottom-nav {
-		display: none;
-	}
-	.md3-top-nav {
-		display: flex;
 	}
 }
 
