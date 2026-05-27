@@ -1,4 +1,5 @@
-const smoothEase = [0.22, 1, 0.36, 1];
+const emphasizedEase = [0.2, 0, 0, 1];
+const standardEase = [0.2, 0, 0, 1];
 
 export const viewportReveal = {
 	once: true,
@@ -12,10 +13,9 @@ export const viewportReplay = {
 };
 
 export const springSoft = {
-	type: "spring",
-	stiffness: 380,
-	damping: 28,
-	mass: 0.5,
+	type: "tween",
+	duration: 0.4,
+	ease: emphasizedEase,
 };
 
 export const fadeUp = (distance = 14, delay = 0) => ({
@@ -27,9 +27,9 @@ export const fadeUp = (distance = 14, delay = 0) => ({
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.34,
+			duration: 0.4,
 			delay,
-			ease: smoothEase,
+			ease: emphasizedEase,
 		},
 	},
 });
@@ -39,17 +39,17 @@ export const inOutFadeUp = (distance = 14, delay = 0, withBlur = false) => ({
 		opacity: 0,
 		y: distance,
 		transition: {
-			duration: 0.24,
-			ease: smoothEase,
+			duration: 0.2,
+			ease: standardEase,
 		},
 	},
 	visible: {
 		opacity: 1,
 		y: 0,
 		transition: {
-			duration: 0.34,
+			duration: 0.4,
 			delay,
-			ease: smoothEase,
+			ease: emphasizedEase,
 		},
 	},
 });
@@ -61,9 +61,9 @@ export const fadeIn = (delay = 0) => ({
 	visible: {
 		opacity: 1,
 		transition: {
-			duration: 0.34,
+			duration: 0.4,
 			delay,
-			ease: smoothEase,
+			ease: emphasizedEase,
 		},
 	},
 });
@@ -79,18 +79,18 @@ export const staggerContainer = (stagger = 0.1, delayChildren = 0) => ({
 });
 
 export const hoverLift = {
-	y: -6,
-	scale: 1.02,
+	y: -4,
+	scale: 1.01,
 	transition: {
-		duration: 0.12,
-		ease: smoothEase,
+		duration: 0.2,
+		ease: standardEase,
 	},
 };
 
 export const tapPress = {
 	scale: 0.98,
 	transition: {
-		duration: 0.06,
-		ease: smoothEase,
+		duration: 0.2,
+		ease: standardEase,
 	},
 };

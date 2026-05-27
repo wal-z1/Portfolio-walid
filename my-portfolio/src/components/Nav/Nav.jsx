@@ -1,56 +1,63 @@
 import "./Nav.css";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import {
-	fadeUp,
-	staggerContainer,
-	tapPress,
-	viewportReveal,
-} from "../../lib/motionVariants";
+import { fadeUp, staggerContainer } from "../../lib/motionVariants";
 
 const navItems = [
 	{
 		href: "#skills-experience",
-		icon: "https://img.icons8.com/?size=100&id=11240&format=png&color=ffffff",
-		alt: "Skills icon",
+		icon: "auto_awesome",
 		label: "Highlights",
 	},
 	{
 		href: "#projects",
-		icon: "https://img.icons8.com/?size=100&id=9489&format=png&color=ffffff",
-		alt: "Projects icon",
+		icon: "work",
 		label: "Projects",
 	},
 	{
 		href: "#contact",
-		icon: "https://img.icons8.com/?size=100&id=eBEo6FOQZ3v4&format=png&color=ffffff",
-		alt: "Contact icon",
+		icon: "mail",
 		label: "Contact",
 	},
 ];
 
 function Nav() {
+	const [activeHash, setActiveHash] = useState(navItems[0].href);
+
+	useEffect(() => {
+		const updateHash = () => {
+			const next = window.location.hash || navItems[0].href;
+			setActiveHash(next);
+		};
+		updateHash();
+		window.addEventListener("hashchange", updateHash);
+		return () => window.removeEventListener("hashchange", updateHash);
+	}, []);
+
 	return (
 		<motion.nav
-			id="Nav-bar"
-			className="drop-nav mr-3 rounded-full border border-white/20 bg-[#12141c80] px-2 py-1 shadow-[0_10px_30px_rgba(0,0,0,0.32),0_0_0_1px_rgba(255,255,255,0.12)] backdrop-blur-md"
-			variants={staggerContainer(0.08, 0.08)}
+			className="md3-bottom-nav"
+			variants={staggerContainer(0.06, 0.02)}
 			initial="hidden"
-			whileInView="visible"
-			viewport={viewportReveal}>
-			{navItems.map((item) => (
-				<motion.a
-					key={item.href}
-					href={item.href}
-					variants={fadeUp(12)}
-					whileHover={{ scale: 1.03, y: -1 }}
-					whileTap={tapPress}
-					className="group relative flex items-center gap-2 rounded-full px-3 py-2 text-[0.9375rem] font-medium text-[#e0e0e0] transition-all duration-300 hover:bg-[#46267a]/35 hover:text-white hover:shadow-[0_0_0_1px_rgba(70,38,122,0.45)]">
-					<img src={item.icon} alt={item.alt} className="btn-icon" />
-					<span className="relative max-md:hidden after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:bg-white after:transition-transform after:duration-300 group-hover:after:scale-x-100">
-						{item.label}
-					</span>
-				</motion.a>
-			))}
+			animate="visible">
+			<div className="md3-bottom-nav__list">
+				{navItems.map((item) => {
+					const isActive = activeHash === item.href;
+					return (
+						<motion.a
+							key={item.href}
+							href={item.href}
+							variants={fadeUp(10)}
+							className={`md3-bottom-nav__item ${isActive ? "is-active" : ""}`}
+							aria-current={isActive ? "page" : undefined}
+							onClick={() => setActiveHash(item.href)}>
+							<span className="md3-bottom-nav__indicator" aria-hidden="true" />
+							<span className="md3-bottom-nav__icon">{item.icon}</span>
+							<span className="md3-bottom-nav__label">{item.label}</span>
+						</motion.a>
+					);
+				})}
+			</div>
 		</motion.nav>
 	);
 }

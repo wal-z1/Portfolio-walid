@@ -9,20 +9,18 @@ import {
 
 function Two_grid() {
 	return (
-		<motion.div
-			className="
-      mx-auto grid max-w-7xl grid-cols-1 gap-x-6 gap-y-6 px-3 py-6 md:px-4 lg:grid-cols-2
-    ">
+		<motion.div className="md3-container md3-grid md3-grid--two">
 			{/* Skills Section */}
 			<motion.div
-				className="rounded-2xl border border-[#5a3e8f]/45 bg-[#0d111740] p-3 shadow-[0_12px_36px_rgba(0,0,0,0.2)] backdrop-blur-[2px] sm:p-4"
+				className="md3-card md3-card--filled"
 				variants={staggerContainer(0.08, 0.02)}
 				initial="hidden"
 				whileInView="visible"
 				viewport={viewportReveal}>
 				<motion.h1
 					variants={fadeUp(10)}
-					className="mb-2 text-center font-outfit text-3xl font-bold text-slate-100 md:text-4xl">
+					className="md-headline"
+					style={{ textAlign: "center" }}>
 					Skills
 				</motion.h1>
 				<Skills />
@@ -30,14 +28,15 @@ function Two_grid() {
 
 			{/* Timeline Section */}
 			<motion.div
-				className="rounded-2xl border border-[#5a3e8f]/45 bg-[#0d111740] p-3 shadow-[0_12px_36px_rgba(0,0,0,0.2)] backdrop-blur-[2px] sm:p-4"
+				className="md3-card md3-card--tonal"
 				variants={staggerContainer(0.08, 0.08)}
 				initial="hidden"
 				whileInView="visible"
 				viewport={viewportReveal}>
 				<motion.h1
 					variants={fadeUp(10)}
-					className="mb-4 text-center font-outfit text-3xl font-bold text-slate-100 md:text-4xl">
+					className="md-headline"
+					style={{ textAlign: "center" }}>
 					Timeline
 				</motion.h1>
 				<Timeline_container />

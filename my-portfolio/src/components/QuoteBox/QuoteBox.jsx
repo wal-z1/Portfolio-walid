@@ -24,7 +24,7 @@ const QUOTES = [
 function QuoteBox() {
 	return (
 		<motion.span
-			className="quote-box block rounded-xl border border-[#5a3e8f]/45 bg-[#0d111740] px-3 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.25)] backdrop-blur-sm"
+			className="quote-box md3-card md3-card--outlined"
 			variants={fadeIn(0.08)}
 			initial="hidden"
 			whileInView="visible"

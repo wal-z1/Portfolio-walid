@@ -22,69 +22,40 @@ function ProjectCard({
 			viewport={viewportReplay}
 			whileHover={hoverLift}
 			whileTap={tapPress}
-			className="
-				group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#5a3e8f]/50
-		bg-[#161026db] shadow-[0_14px_38px_rgba(0,0,0,0.26)] backdrop-blur-[2px]
-      ">
-			<div className="overflow-hidden">
+			className="md3-card md3-card--elevated">
+			<div className="md3-card__media">
 				<img
 					src={
 						imageUrl ||
 						"https://thumbs.dreamstime.com/b/green-pink-color-blur-background-ratio-green-pink-color-blur-background-ratio-123722548.jpg"
 					}
 					alt={`${title} project screenshot`}
-					className="
-            h-48 w-full object-cover object-top
-            align-middle max-w-full border-0
-            transition-transform duration-500 group-hover:scale-[1.03]
-          "
+					className="h-48 w-full object-cover object-top"
 				/>
 			</div>
 
-			<div className="flex flex-grow flex-col p-4">
-				<h3
-					className="
-            mb-1 text-lg font-bold text-white
-            m-0 p-0 leading-snug
-          ">
-					{title}
-				</h3>
-
-				<p
-					className="
-            flex-grow text-sm leading-relaxed text-gray-400
-            m-0 p-0
-          ">
-					{description}
-				</p>
-
-				<div className="mt-4 flex items-center justify-between border-t border-[#5a3e8f]/40 pt-3">
-					<motion.a
-						href={liveUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						whileHover={{ scale: 1.04 }}
-						whileTap={tapPress}
-						className="
-			  group/link flex items-center gap-2 text-sm font-semibold text-[#8a74b8]
-			  transition-colors duration-300 hover:text-[#b09dd3]
-              no-underline m-0 p-0
-            ">
-						Check Out
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							strokeWidth="2.5"
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							className="inline-block transition-transform duration-300 group-hover/link:translate-x-0.5"
-						/>
-					</motion.a>
+			<div className="flex flex-grow flex-col gap-8 p-4">
+				<div>
+					<h3 className="md-title" style={{ margin: 0 }}>
+						{title}
+					</h3>
+					<p className="md-body" style={{ margin: "8px 0 0 0" }}>
+						{description}
+					</p>
 				</div>
+
+				<div className="md3-divider" />
+				<motion.a
+					href={liveUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					whileTap={tapPress}
+					className="md3-chip">
+					<span className="material-symbols-rounded" aria-hidden="true">
+						open_in_new
+					</span>
+					Check Out
+				</motion.a>
 			</div>
 		</motion.article>
 	);

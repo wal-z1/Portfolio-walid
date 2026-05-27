@@ -10,22 +10,20 @@ import {
 function ProjectsContainer() {
 	return (
 		<motion.section
-			className="py-6 sm:py-8"
+			className="md3-container"
 			variants={staggerContainer(0.1, 0.04)}
 			initial="hidden"
 			whileInView="visible"
 			viewport={viewportReplay}>
 			<motion.h2
 				variants={inOutFadeUp(10)}
-				className="mb-5 mt-0 text-center text-3xl font-bold text-slate-100 md:text-4xl">
+				className="md-headline"
+				style={{ textAlign: "center", marginBottom: 20 }}>
 				Projects
 			</motion.h2>
 			<motion.div
 				variants={inOutFadeUp(10)}
-				className="
-          mx-auto grid max-w-7xl grid-cols-1 gap-4 px-3
-          md:grid-cols-2 md:px-4 lg:grid-cols-3
-        ">
+				className="md3-grid md3-grid--three">
 				{PROJECTS_DATA.map((project, index) => (
 					<ProjectCard
 						key={project.title}

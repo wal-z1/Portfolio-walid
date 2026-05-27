@@ -43,6 +43,18 @@ export const PROJECTS_DATA = [
 		liveUrl: "https://github.com/wal-z1/GLSL-mini",
 	},
 	{
+		title: "persona3-portfolio",
+		description: "PERSONA STYLE PERTOFOLIO",
+		liveUrl: "https://github.com/wal-z1/persona3-portfolio",
+		imageUrl: "/Images/Github.webp",
+	},
+	{
+		title: "fastapi-practice",
+		description: "repo to experiment on fastapi",
+		liveUrl: "https://github.com/wal-z1/fastapi-practice",
+		imageUrl: "/Images/Github.webp",
+	},
+	{
 		title: "Check My GitHub",
 		description:
 			"For more projects, visit my GitHub profile where I regularly update my repositories.",

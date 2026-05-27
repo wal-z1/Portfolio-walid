@@ -13,6 +13,13 @@ const TIMELINE_DATA = [
 		timetext: "December 2025",
 	},
 	{
+		category: "Achievement",
+		title: "Won 2nd place in MCTF 5.0 with team U54RK",
+		text: "Won 2nd place in MCTF 5.0 with team U54RK",
+		timetext: "May 2025",
+		icon: "emoji_events",
+	},
+	{
 		category: "Education",
 		title: "Computer Science Engineering Student",
 		text: "Currently pursuing a degree at the Higher National School of Computer Science (ESI), Algiers.",

@@ -1,29 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>walid.</title>
 
-		<!-- Google Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap"
-			rel="stylesheet" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-			rel="stylesheet" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-			rel="stylesheet" />
-			
+		<!-- Preload theme before paint -->
+		<script>
+			(() => {
+				const stored = localStorage.getItem("md3-theme");
+				const prefersDark = window.matchMedia(
+					"(prefers-color-scheme: dark)",
+				).matches;
+				const next = stored || (prefersDark ? "dark" : "light");
+				document.documentElement.dataset.theme = next;
+			})();
+		</script>
+
 		<meta name="description" content="Portfolio of walid." />
 
 		<!-- Open Graph (for Discord, WhatsApp, LinkedIn, etc.) -->
 		<meta property="og:title" content="walid." />
 		<meta property="og:description" content="Portfolio of walid." />
-		<meta property="og:image" content="https://walidb.vercel.app/Images/pfp.jpg" />
+		<meta
+			property="og:image"
+			content="https://walidb.vercel.app/Images/pfp.jpg" />
 		<meta property="og:url" content="https://walidb.vercel.app/" />
 		<meta property="og:type" content="website" />
 
@@ -31,7 +32,9 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="walid." />
 		<meta name="twitter:description" content="Portfolio of walid." />
-		<meta name="twitter:image" content="https://walidb.vercel.app/Images/pfp.jpg" />
+		<meta
+			name="twitter:image"
+			content="https://walidb.vercel.app/Images/pfp.jpg" />
 
 		<!-- Favicons -->
 		<link

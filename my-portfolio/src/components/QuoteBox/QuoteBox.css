@@ -46,15 +46,18 @@
 }
 
 .quote {
-	color: hsl(0, 0%, 80%);
+	color: var(--md-on-surface-variant);
 	position: absolute;
 	opacity: 0;
 	font-style: oblique;
-	font-weight: 300;
-	font-size: 1.02em;
+	font-weight: 600;
+	font-size: 0.95em;
+	width: 100%;
+	left: 0;
+	text-align: center;
 	animation-duration: calc(var(--quote-total) * 3.2s);
 	animation-delay: calc(var(--quote-index) * 3.2s);
-	animation-timing-function: linear;
+	animation-timing-function: var(--md-ease-standard);
 	animation-iteration-count: infinite;
 	animation-fill-mode: both;
 }
@@ -68,9 +71,11 @@
 }
 
 .quote-box {
-	min-height: 2.4em;
+	min-height: 4.2em;
 	position: relative;
-	max-width: 560px;
+	max-width: 520px;
+	width: min(520px, 100%);
+	margin: 0 auto;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	padding-bottom: 0.25em;

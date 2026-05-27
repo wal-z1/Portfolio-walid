@@ -34,42 +34,46 @@ function Footer() {
 
 	return (
 		<motion.footer
-			className="border-t border-[#5a3e8f]/35 bg-[#0d1117d9] py-6 text-slate-400 backdrop-blur-[2px]"
+			className="md3-footer"
 			variants={staggerContainer(0.08, 0.02)}
 			initial="hidden"
 			whileInView="visible"
 			viewport={viewportReveal}>
-			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div className="md3-container">
 				<div className="flex flex-col justify-between gap-4 lg:flex-row">
 					<motion.div className="lg:w-1/2" variants={fadeUp(10)}>
-						<h3 className="mb-1 text-lg font-semibold text-slate-100">
-							Walid Bouhenika
-						</h3>
-						<p className="text-sm text-slate-500">
+						<h3 className="md-title">Walid Bouhenika</h3>
+						<p
+							className="md-body"
+							style={{ color: "var(--md-on-surface-variant)" }}>
 							Building things. Breaking things. Learning.
 						</p>
 					</motion.div>
 
 					<motion.div className="lg:w-1/3" variants={fadeUp(10, 0.05)}>
-						<h3 className="mb-1 text-lg font-semibold text-slate-100">
-							Get in Touch
-						</h3>
+						<h3 className="md-title">Get in Touch</h3>
 						<SocialLinks />
 					</motion.div>
 				</div>
 
 				<motion.div
 					variants={fadeUp(10, 0.1)}
-					className="mt-4 flex flex-col items-center justify-between gap-1 border-t border-[#5a3e8f]/35 pt-3 sm:flex-row">
-					<p className="text-xs text-slate-600">
+					className="mt-4 flex flex-col items-center justify-between gap-1 pt-3 sm:flex-row">
+					<p
+						className="md-label"
+						style={{ color: "var(--md-on-surface-variant)" }}>
 						© {new Date().getFullYear()} · Updated{" "}
 						{isLoading ? (
-							<span className="inline-block w-16 h-3 bg-slate-800 rounded animate-pulse align-middle"></span>
+							<span
+								className="inline-block h-3 w-16 rounded"
+								style={{ background: "var(--md-outline-variant)" }}></span>
 						) : (
 							commitDate
 						)}
 					</p>
-					<p className="text-xs text-slate-600">
+					<p
+						className="md-label"
+						style={{ color: "var(--md-on-surface-variant)" }}>
 						React · Tailwind · Framer Motion
 					</p>
 				</motion.div>
