@@ -25,6 +25,8 @@ function Timeline_container() {
 						title={event.title}
 						category={event.category}
 						text={event.text}
+						linkedIn={event.linkedIn}
+						link={event.link}
 						url={event.url}
 						icon={event.icon}
 						timetext={event.timetext}
