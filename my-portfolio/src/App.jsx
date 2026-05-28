@@ -26,7 +26,7 @@ function App() {
 					}
 				});
 			},
-			{ threshold: 0.15, rootMargin: "0px 0px -10% 0px" },
+			{ threshold: 0.01, rootMargin: "0px" },
 		);
 		targets.forEach((item) => observer.observe(item));
 		return () => observer.disconnect();
