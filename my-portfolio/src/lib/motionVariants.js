@@ -82,7 +82,7 @@ export const hoverLift = {
 	y: -4,
 	scale: 1.01,
 	transition: {
-		duration: 0.3,
+		duration: 0.5,
 		ease: standardEase,
 	},
 };
@@ -90,7 +90,7 @@ export const hoverLift = {
 export const tapPress = {
 	scale: 0.98,
 	transition: {
-		duration: 0.2,
+		duration: 0.5,
 		ease: standardEase,
 	},
 };
