@@ -25,15 +25,7 @@ function ProjectsContainer() {
 				variants={inOutFadeUp(10)}
 				className="md3-grid md3-grid--three">
 				{PROJECTS_DATA.map((project, index) => (
-					<ProjectCard
-						key={project.title}
-						title={project.title}
-						description={project.description}
-						imageUrl={project.imageUrl}
-						techIcons={project.techIcons}
-						liveUrl={project.liveUrl}
-						index={index}
-					/>
+					<ProjectCard key={project.title} {...project} index={index} />
 				))}
 			</motion.div>
 		</motion.section>
