@@ -11,7 +11,7 @@ export const PROJECTS_DATA = [
 		title: "Sand",
 		description:
 			"A social platform named Sand, focused on clean design and simplicity.\nThe Frontend is mostly built however no backend integration YET!",
-		liveUrl: "https://github.com/wal-z1/Sand",
+		liveUrl: "https://sandplace.vercel.app/",
 		imageUrl: "/Images/SANDUncompletedScreen.png",
 	},
 	{
@@ -19,14 +19,14 @@ export const PROJECTS_DATA = [
 		description:
 			"A minimal book tracker simple design , Really simple and isn't overloaded with features",
 		imageUrl: "/Images/booktr.png",
-		liveUrl: "https://github.com/wal-z1/book-tracker",
+		liveUrl: "https://book-tr.vercel.app",
 	},
 	{
 		title: "1CP Semester Calculator",
 		description:
 			"A web-based calculator to help 1CP(ESI) students organize and calculate their semester marks.",
 		imageUrl: "/Images/Screenshot 1cpavg .png",
-		liveUrl: "https://github.com/wal-z1/1CP-Avg",
+		liveUrl: "https://1-cp-avg.vercel.app/",
 	},
 	{
 		title: "Echo",
@@ -40,13 +40,14 @@ export const PROJECTS_DATA = [
 		description:
 			"Collection of GLSL fragment shaders exploring graphics programming concepts.\nBuilt with Three.js and React, demonstrating visual effects and mathematical animations.",
 		imageUrl: "/Images/opengl.jpg",
-		liveUrl: "https://github.com/wal-z1/GLSL-mini",
+		liveUrl: "https://glsl-mini.vercel.app/",
 	},
 	{
 		title: "persona3-portfolio",
 		description: "PERSONA STYLE PERTOFOLIO",
-		liveUrl: "https://github.com/wal-z1/persona3-portfolio",
-		imageUrl: "/Images/Github.webp",
+		liveUrl: "https://wal-persona3.vercel.app/",
+		imageUrl:
+			"https://i.pinimg.com/474x/7e/f9/82/7ef982d8294d98cf72e28f3a2c272448.jpg",
 	},
 	{
 		title: "fastapi-practice",
