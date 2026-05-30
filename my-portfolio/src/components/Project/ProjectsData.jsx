@@ -10,7 +10,7 @@ export const PROJECTS_DATA = [
 	{
 		title: "Sand",
 		description:
-			"A social platform named Sand, focused on clean design and simplicity.\nThe Frontend is mostly built however no backend integration YET!",
+			"A social platform named Sand, focused on clean design and simplicity!",
 		liveUrl: "https://sandplace.vercel.app/",
 		imageUrl: "/Images/SANDUncompletedScreen.png",
 	},
