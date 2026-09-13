@@ -1,5 +1,19 @@
 export const PROJECTS_DATA = [
 	{
+		title: "LODE",
+		description:
+			"An HTTP analyzer currently under active development, built to inspect and understand web traffic.",
+		repoUrl: "https://github.com/wal-z1/LODE",
+		imageUrl: "https://opengraph.githubassets.com/1/wal-z1/LODE",
+	},
+	{
+		title: "Crypto-XP",
+		description:
+			"Cryptography algorithms and lab solutions, including hands-on experiments with Sage.",
+		repoUrl: "https://github.com/wal-z1/Crypto-XP",
+		imageUrl: "https://opengraph.githubassets.com/1/wal-z1/Crypto-XP",
+	},
+	{
 		title: "CTF Writeups",
 		description:
 			"CTF challenge writeups and solutions. They are Posted on Medium and Gitbook.",
