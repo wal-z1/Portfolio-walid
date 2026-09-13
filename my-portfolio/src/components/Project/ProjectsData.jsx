@@ -5,6 +5,7 @@ export const PROJECTS_DATA = [
 			"An HTTP analyzer currently under active development, built to inspect and understand web traffic.",
 		repoUrl: "https://github.com/wal-z1/LODE",
 		imageUrl: "https://opengraph.githubassets.com/1/wal-z1/LODE",
+		imageFit: "contain",
 	},
 	{
 		title: "Crypto-XP",
@@ -12,6 +13,7 @@ export const PROJECTS_DATA = [
 			"Cryptography algorithms and lab solutions, including hands-on experiments with Sage.",
 		repoUrl: "https://github.com/wal-z1/Crypto-XP",
 		imageUrl: "https://opengraph.githubassets.com/1/wal-z1/Crypto-XP",
+		imageFit: "contain",
 	},
 	{
 		title: "CTF Writeups",

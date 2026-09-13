@@ -75,6 +75,7 @@ function ProjectCard({
 	title,
 	description,
 	imageUrl,
+	imageFit = "cover",
 	liveUrl,
 	repoUrl,
 	index = 0,
@@ -154,7 +155,11 @@ function ProjectCard({
 						"https://thumbs.dreamstime.com/b/green-pink-color-blur-background-ratio-green-pink-color-blur-background-ratio-123722548.jpg"
 					}
 					alt={`${title} project screenshot`}
-					className="h-48 w-full object-cover object-top"
+					className={`h-48 w-full project-card__image ${
+						imageFit === "contain"
+							? "project-card__image--contain"
+							: "project-card__image--cover"
+					}`}
 				/>
 				<div className="project-card__ribbon" aria-hidden="true">
 					<span

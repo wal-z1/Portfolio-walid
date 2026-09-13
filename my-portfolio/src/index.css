@@ -541,6 +541,17 @@ footer.md3-section {
 	overflow: hidden;
 }
 
+.project-card__image--cover {
+	object-fit: cover;
+	object-position: top;
+}
+
+.project-card__image--contain {
+	object-fit: contain;
+	object-position: center;
+	background: var(--md-surface-container-low);
+}
+
 .project-card__media::after {
 	content: "";
 	position: absolute;
