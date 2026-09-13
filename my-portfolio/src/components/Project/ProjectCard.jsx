@@ -40,7 +40,7 @@ function getProjectFreshness(updatedAt, isLoading = false) {
 
 	const ageInDays = differenceInCalendarDays(new Date(), updatedAt);
 
-	if (ageInDays <= 120) {
+	if (ageInDays <= 30) {
 		return {
 			label: "Fresh",
 			color: "#22c55e",
@@ -48,7 +48,7 @@ function getProjectFreshness(updatedAt, isLoading = false) {
 		};
 	}
 
-	if (ageInDays <= 240) {
+	if (ageInDays <= 90) {
 		return {
 			label: "Growing",
 			color: "#84cc16",
@@ -56,7 +56,7 @@ function getProjectFreshness(updatedAt, isLoading = false) {
 		};
 	}
 
-	if (ageInDays <= 420) {
+	if (ageInDays <= 180) {
 		return {
 			label: "Established",
 			color: "#f59e0b",
@@ -160,7 +160,10 @@ function ProjectCard({
 						}`}
 					/>
 				) : (
-					<div className="project-card__fallback" role="img" aria-label={`${title} project thumbnail`}>
+					<div
+						className="project-card__fallback"
+						role="img"
+						aria-label={`${title} project thumbnail`}>
 						<span className="project-card__fallback-kicker">Project</span>
 						<strong>{title}</strong>
 					</div>

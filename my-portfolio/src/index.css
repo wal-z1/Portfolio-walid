@@ -559,8 +559,11 @@ footer.md3-section {
 	gap: 8px;
 	height: 12rem;
 	padding: 24px;
-	background:
-		linear-gradient(135deg, var(--md-surface-container-high) 0%, var(--md-surface-container-low) 100%);
+	background: linear-gradient(
+		135deg,
+		var(--md-surface-container-high) 0%,
+		var(--md-surface-container-low) 100%
+	);
 	color: var(--md-on-surface);
 	position: relative;
 	overflow: hidden;
