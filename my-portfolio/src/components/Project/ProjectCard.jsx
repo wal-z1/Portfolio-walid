@@ -149,18 +149,22 @@ function ProjectCard({
 			className="md3-card md3-card--elevated project-card"
 			style={cardStyle}>
 			<div className="md3-card__media project-card__media">
-				<img
-					src={
-						imageUrl ||
-						"https://thumbs.dreamstime.com/b/green-pink-color-blur-background-ratio-green-pink-color-blur-background-ratio-123722548.jpg"
-					}
-					alt={`${title} project screenshot`}
-					className={`h-48 w-full project-card__image ${
-						imageFit === "contain"
-							? "project-card__image--contain"
-							: "project-card__image--cover"
-					}`}
-				/>
+				{imageUrl ? (
+					<img
+						src={imageUrl}
+						alt={`${title} project screenshot`}
+						className={`h-48 w-full project-card__image ${
+							imageFit === "contain"
+								? "project-card__image--contain"
+								: "project-card__image--cover"
+						}`}
+					/>
+				) : (
+					<div className="project-card__fallback" role="img" aria-label={`${title} project thumbnail`}>
+						<span className="project-card__fallback-kicker">Project</span>
+						<strong>{title}</strong>
+					</div>
+				)}
 				<div className="project-card__ribbon" aria-hidden="true">
 					<span
 						className="project-card__ribbon-dot"
