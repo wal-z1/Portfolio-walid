@@ -4,6 +4,8 @@ export const PROJECTS_DATA = [
 		description:
 			"An HTTP analyzer currently under active development, built to inspect and understand web traffic.",
 		repoUrl: "https://github.com/wal-z1/LODE",
+		imageUrl: "https://github.com/wal-z1/LODE/blob/main/frontend/public/Untitled.png?raw=true",
+		liveUrl: "https://lode-sec.vercel.app/",
 	},
 	{
 		title: "Crypto-XP",
