@@ -8,6 +8,15 @@ export const PROJECTS_DATA = [
 		liveUrl: "https://lode-sec.vercel.app/",
 	},
 	{
+		title: "Stratum",
+		description:
+			"A web-based PCAP network traffic analyzer that parses packet captures, groups traffic into flows, extracts protocol events, correlates activity, and detects security findings.",
+		repoUrl: "https://github.com/wal-z1/Stratum",
+		imageUrl:
+			"https://raw.githubusercontent.com/wal-z1/Stratum/main/frontend/Startum/public/blocks_transparent.png",
+		liveUrl: "https://stratum-pcap.vercel.app/",
+	},
+	{
 		title: "Crypto-XP",
 		description:
 			"Cryptography algorithms and lab solutions, including hands-on experiments with Sage.",
